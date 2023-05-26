@@ -1,12 +1,12 @@
 import json
 import re
 import pandas as pd
-import urllib
-import urllib.request
 from bs4 import BeautifulSoup
 from concurrent.futures import ThreadPoolExecutor
 import csv
 import threading
+import requests
+import time
 
 
 
@@ -18,6 +18,7 @@ hdr = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML,
         'Accept-Encoding': 'none',
         'Accept-Language': 'en-US,en;q=0.8',
         'Connection': 'keep-alive'}
+delay = 5
 class Loader:
     def __init__(self) -> None:
         self.lock = threading.Lock()
@@ -30,26 +31,34 @@ class Loader:
                 return True
         return False
     
+    def get(self,url):
+        res = requests.get(url,headers=hdr)
+        while res.status_code != 200:
+            print("Status code: ",res.status_code)
+            print(f"Requesting again in {delay} seconds...")
+            time.sleep(delay)
+            res = requests.get(url,headers=hdr)
+        return res
     def get_text(self,x):
         return x.text
     
     def load_offer(self,url):
-        with urllib.request.urlopen(urllib.request.Request(url,headers=hdr)) as resp:
-                data = [0 for _ in range(10)]
-                processed_page = BeautifulSoup(resp.read().decode('utf-8'), "html.parser")
-                name = processed_page.find(class_="offer-viewkHIhn3").text
-                data[0] = name
-                attrs = processed_page.find_all(class_="offer-viewXo2dpV")
-                for i,x in enumerate(attrs):
-                    if(i+1<10):
-                        data[i+1]= x.text
-                self.lock.acquire()
-                try:
-                    with open('./data/pracuj_detailed.csv', 'a+',newline='', encoding='utf-8') as f:
-                        writer = csv.writer(f)
-                        writer.writerow(data)
-                finally:
-                    self.lock.release()
+        resp = self.get(url)
+        data = [0 for _ in range(10)]
+        processed_page = BeautifulSoup(resp.text, "html.parser")
+        name = processed_page.find(class_="offer-viewkHIhn3").text
+        data[0] = name
+        attrs = processed_page.find_all(class_="offer-viewXo2dpV")
+        for i,x in enumerate(attrs):
+            if(i+1<10):
+                data[i+1]= x.text
+        self.lock.acquire()
+        try:
+            with open('./data/pracuj_detailed.csv', 'a+',newline='', encoding='utf-8') as f:
+                writer = csv.writer(f)
+                writer.writerow(data)
+        finally:
+            self.lock.release()
     def scrap(self,page):
         print("_")
         for a in page.find_all(class_="offers_item"):
@@ -72,13 +81,13 @@ class Loader:
         does_next_exist = True
         while page<3000 and does_next_exist:
             print(f'Pobieranie strony {page}')
-            with urllib.request.urlopen(urllib.request.Request(self.page_url(2022,1,page),headers=hdr)) as resp:
-                print(f'Parsowanie strony {page}')
-                processed_page = BeautifulSoup(resp.read().decode('utf-8'), "html.parser")
-                future = executor.submit(self.scrap, (processed_page))
-                future.result()
-                if(processed_page.find(class_="offers_nav_next") == None):
-                    does_next_exist=False
+            resp = self.get(self.page_url(2022,1,page))
+            print(f'Parsowanie strony {page}')
+            processed_page = BeautifulSoup(resp.text, "html.parser")
+            future = executor.submit(self.scrap, (processed_page))
+            future.result()
+            if(processed_page.find(class_="offers_nav_next") == None):
+                does_next_exist=False
             page+=1
         
         
