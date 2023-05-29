@@ -11,3 +11,4 @@ Scraper:
 - [ ] Dodać kolejne pola do scrapowanych danych
 - [ ] Zaimplementować wczytywanie stanu scrapera w poprzedniej sesji, aby umożliwić wychodzenie z programu, które nie usuwa progressu.
 - [ ] Umieścić writera w __init__, co może pomóc w implementacji punktu wyżej.
+- [ ] Rozważyć zapis szczegółowych danych do json.
