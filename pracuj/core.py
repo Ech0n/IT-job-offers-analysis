@@ -36,6 +36,9 @@ class Loader:
         atexit.register(self.save_progress)
         self.open_file()
         self.tags = set()
+        self.stats = {}
+        for i in range(2014,2024):
+            self.stats[i]=[{"pages":0,"all_offers":0,"matched_offers":0} for _ in range (12)]
 
     def open_file(self):
         try:
@@ -43,7 +46,7 @@ class Loader:
             self.load_file(out_file)
             out_file.close()
         except Exception as ex:
-            print("Could not open json file, ",ex)
+            print("Could not open json file: "+self.file_name+";",ex)
 
     def load_file(self,file):
         if file != None:
@@ -104,7 +107,7 @@ class Loader:
                 while month <= current_month and month >0:
                     self.last_month = month
                     print(f"Scraping for month {month}")
-                    self.load_all_pages(month,year)
+                    self.load_all_pages(month,year,page)
                     month += inc
                     print("Scraping next month!!")
 
@@ -112,7 +115,7 @@ class Loader:
                 while month <= 12 and month >0:
                     self.last_month = month
                     print(f"Scraping for month {month}")
-                    self.load_all_pages(month,year)
+                    self.load_all_pages(month,year,page)
                     month += inc
                     print("Scraping next month!!")
             if inc>0:
@@ -125,7 +128,6 @@ class Loader:
     def load_all_pages(self,month,year,page=1):        
         print("Loading data...")
         executor = ThreadPoolExecutor(8)
-        page = 1500
         does_next_exist = True
         while page<3000 and does_next_exist:
             print(f'Pobieranie strony {page}')
@@ -138,19 +140,27 @@ class Loader:
                 does_next_exist=False
             page+=1
             self.last_page=page
+            self.stats[year][month]["pages"] = page
+
     def save_progress(self):
+        if 'stats' in self.conf:
+            staty_stare = self.conf['stats']
+            for key in staty_stare.keys():
+                for i in range(12):
+                    self.stats[key][i] = staty_stare[key][i]
         progress = {
             'page':self.last_page,
             'month':self.last_month,
-            'year':self.last_year
+            'year':self.last_year,
+            'stats':self.stats
         }
         with open('./config/last_session.json', 'w+') as file:
             json.dump(progress, file)
         with open('./data/'+self.file_name, 'w') as file:
             json.dump(self.data, file)
-        # with open('./config/pracuj_attribute_names.txt', 'w+') as file:
-        #     for element in self.tags:
-        #         file.write(str(element) + "\n")
+        with open('./config/pracuj_attribute_names.txt', 'w+') as file:
+            for element in self.tags:
+                file.write(str(element) + "\n")
 loader = None
 if __name__ ==  "__main__":
     with Loader() as loader:

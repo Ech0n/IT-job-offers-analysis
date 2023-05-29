@@ -2,8 +2,8 @@
     "delay":5,
     "search_from_oldest_to_newer":false,
     "use_save_file_if_exists":true,
-    "start_from_year":2022,
-    "start_from_month":1,
+    "start_from_year":2023,
+    "start_from_month":5,
     "start_from_page":1,
     "current_year":2023,
     "current_month":5

@@ -19,6 +19,7 @@ hdr = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML,
         'Accept-Language': 'en-US,en;q=0.8',
         'Connection': 'keep-alive'}
 delay = 5
+excluded_tags = ["about-us-extented","about-us-extented-1","about-us-extension","about-us-extension-1"]
 class Detailed_Loader(Loader):
     def __init__(self) -> None:
         self.file_name = "detailed.json"
@@ -40,12 +41,16 @@ class Detailed_Loader(Loader):
 
         data[0] = name
         attrs = processed_page.find_all(attrs={"data-scroll-id":True})
-        company = processed_page.find("h2",{"data-scroll-id":"employer-name"}).text
+        company = processed_page.find("h2",{"data-scroll-id":"employer-name"}).contents[0]
         dane = {}
         for i,x in enumerate(attrs):
             if(i+1<10):
                 data[i+1]= x.text
-            dane[x.get("data-scroll-id")] = x.text
+
+            tag = x.get("data-scroll-id")
+            if tag not in excluded_tags:
+                dane[tag] = x.text
+            self.tags.add(tag)
         self.lock.acquire()
         try:
             with open('./data/pracuj_detailed.csv', 'a+',newline='', encoding='utf-8') as f:
@@ -55,17 +60,7 @@ class Detailed_Loader(Loader):
             self.data[date[0]][date[1]][company][name] = dane
         finally:
             self.lock.release()
-    def print_attrs(self,x):
-        print("Printing attrs:")
-        for y in x:
-            if y.text:
-                print("   "+y.text,end=" ")
-            if y.get("data-test"):
-                o = y.get("data-test")
-                print("||| "+o,end=" ")
-                self.tags.add(o)
 
-            print(" ")
 
     def scrap(self,page,date):
         print("_")
@@ -81,6 +76,8 @@ class Detailed_Loader(Loader):
                 x = a.find(class_="offers_item_link")
                 if x:
                     self.load_offer(x.get("href"),date)    
+                    self.stats[date[0]][date[1]]["matched_offers"] += 1
+            self.stats[date[0]][date[1]]["all_offers"] +=1
         print("Done processing page ")
 
         
