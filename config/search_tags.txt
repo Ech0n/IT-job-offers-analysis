@@ -1,3 +1,6 @@
 software
 programmer
 programista
+developer
+frontend
+backend

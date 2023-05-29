@@ -21,56 +21,68 @@ hdr = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML,
 delay = 5
 class Detailed_Loader(Loader):
     def __init__(self) -> None:
+        self.file_name = "detailed.json"
         super().__init__()
         self.out_file_name = './data/pracuj_detailed.csv'
         with open(self.out_file_name, 'w+',newline='', encoding='utf-8') as f:
             f.truncate(0)
-    def load_offer(self,url):
+
+        with open("./config/pracuj_attribute_names.txt","r") as file:
+            self.attr_tags = []
+            for line in file.readlines():
+                self.attr_tags.append(line)
+
+    def load_offer(self,url,date):
         resp = self.get(url)
         data = [0 for _ in range(10)]
         processed_page = BeautifulSoup(resp.text, "html.parser")
         name = processed_page.find(class_="offer-viewkHIhn3").text
+
         data[0] = name
-        attrs = processed_page.find_all(class_="offer-viewXo2dpV")
+        attrs = processed_page.find_all(attrs={"data-scroll-id":True})
+        company = processed_page.find("h2",{"data-scroll-id":"employer-name"}).text
+        dane = {}
         for i,x in enumerate(attrs):
             if(i+1<10):
                 data[i+1]= x.text
+            dane[x.get("data-scroll-id")] = x.text
         self.lock.acquire()
         try:
             with open('./data/pracuj_detailed.csv', 'a+',newline='', encoding='utf-8') as f:
                 writer = csv.writer(f)
                 writer.writerow(data)
+            self.data[date[0]][date[1]][company] = {}
+            self.data[date[0]][date[1]][company][name] = dane
         finally:
             self.lock.release()
-    def scrap(self,page):
+    def print_attrs(self,x):
+        print("Printing attrs:")
+        for y in x:
+            if y.text:
+                print("   "+y.text,end=" ")
+            if y.get("data-test"):
+                o = y.get("data-test")
+                print("||| "+o,end=" ")
+                self.tags.add(o)
+
+            print(" ")
+
+    def scrap(self,page,date):
         print("_")
+        if date[0] not in self.data:
+            self.data[date[0]] = {}
+            self.data[date[0]][date[1]] = {}
+        elif date[1] not in self.data[date[0]]:
+            self.data[date[0]][date[1]] = {}
+    
         for a in page.find_all(class_="offers_item"):
             x = a.find(class_="offers_item_link_cnt_part")
             if x and self.check_tags(x.text):
                 x = a.find(class_="offers_item_link")
                 if x:
-                    self.load_offer(x.get("href"))    
+                    self.load_offer(x.get("href"),date)    
         print("Done processing page ")
 
-    # def load_data(self):
-    #     with open('./data/pracuj_detailed.csv', 'w+',newline='', encoding='utf-8') as f:
-    #         f.truncate(0)
-    #     print("Loading data...")
-    #     executor = ThreadPoolExecutor(8)
-    #     pages = []
-    #     oferty = []
-    #     page = 1
-    #     does_next_exist = True
-    #     while page<3000 and does_next_exist:
-    #         print(f'Pobieranie strony {page}')
-    #         resp = self.get(self.page_url(2022,1,page))
-    #         print(f'Parsowanie strony {page}')
-    #         processed_page = BeautifulSoup(resp.text, "html.parser")
-    #         future = executor.submit(self.scrap, (processed_page))
-    #         future.result()
-    #         if(processed_page.find(class_="offers_nav_next") == None):
-    #             does_next_exist=False
-    #         page+=1
         
         
 if __name__ ==  "__main__":

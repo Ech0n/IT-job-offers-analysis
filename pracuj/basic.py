@@ -24,11 +24,19 @@ delay = 5
 
 class Basic_Loader(Loader):
     def __init__(self) -> None:
+        self.file_name = "basic.json"
         super().__init__()
         self.out_file_name = './data/pracuj_detailed.csv'
         with open(self.out_file_name, 'w+',newline='', encoding='utf-8') as f:
             f.truncate(0)
-    def scrap(self,page):
+    # def open_file(self):
+    #     try:
+    #         out_file = open("./data/basic.json","r")
+    #         self.load_file(out_file)
+    #         out_file.close()
+    #     except Exception as ex:
+    #         print("Could not open json file, ",ex)
+    def scrap(self,page,date):
         print("_")
         f = open('./data/pracuj_basic.csv', 'a+',newline='', encoding='utf-8')
         writer = csv.writer(f)
