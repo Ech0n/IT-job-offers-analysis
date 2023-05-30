@@ -37,6 +37,7 @@ class Loader:
         self.open_file()
         self.tags = set()
         self.stats = {}
+        self.auto_save_value = self.conf["auto_save_every_n_pages"]
         for i in range(2014,2024):
             self.stats[i]=[{"pages":0,"all_offers":0,"matched_offers":0} for _ in range (12)]
 
@@ -58,13 +59,14 @@ class Loader:
         return str(f'https://archiwum.pracuj.pl/archive/offers?Year={rok}&Month={miesiac}&PageNumber={strona}')
 
     def get(self,url):
-        res = requests.get(url,headers=hdr)
+        res = requests.get(url,headers=hdr,allow_redirects=True)
         while res.status_code != 200:
             print("Status code: ",res.status_code)
             print(f"Requesting again in {self.conf['delay']} seconds...")
             time.sleep(self.conf['delay'])
-            res = requests.get(url,headers=hdr)
+            res = requests.get(url,headers=hdr,allow_redirects=True)
         res.encoding = 'utf-8'
+        
         return res
 
     def check_tags(self,title):
@@ -108,6 +110,7 @@ class Loader:
                     self.last_month = month
                     print(f"Scraping for month {month}")
                     self.load_all_pages(month,year,page)
+                    page = 1
                     month += inc
                     print("Scraping next month!!")
 
@@ -117,6 +120,7 @@ class Loader:
                     print(f"Scraping for month {month}")
                     self.load_all_pages(month,year,page)
                     month += inc
+                    page = 1
                     print("Scraping next month!!")
             if inc>0:
                 month = 0
@@ -130,7 +134,7 @@ class Loader:
         executor = ThreadPoolExecutor(8)
         does_next_exist = True
         while page<3000 and does_next_exist:
-            print(f'Pobieranie strony {page}')
+            print(f'Pobieranie strony {page} m:{month},y:{year}')
             resp = self.get(self.url(year,month,page))
             print(f'Parsowanie strony {page}')
             processed_page = BeautifulSoup(resp.text, "html.parser")
@@ -139,8 +143,10 @@ class Loader:
             if(processed_page.find(class_="offers_nav_next") == None):
                 does_next_exist=False
             page+=1
+            if (page%self.auto_save_value)==0:
+                self.save_progress()
             self.last_page=page
-            self.stats[year][month]["pages"] = page
+            self.stats[year][month-1]["pages"] = page
 
     def save_progress(self):
         if 'stats' in self.conf:
@@ -155,9 +161,9 @@ class Loader:
             'stats':self.stats
         }
         with open('./config/last_session.json', 'w+') as file:
-            json.dump(progress, file)
-        with open('./data/'+self.file_name, 'w') as file:
-            json.dump(self.data, file)
+            json.dump(progress, file,indent=4)
+        with open('./data/'+self.file_name, 'w', encoding="utf-8") as file:
+            json.dump(self.data, file,indent=self.conf["data_indent"],ensure_ascii=False)
         with open('./config/pracuj_attribute_names.txt', 'w+') as file:
             for element in self.tags:
                 file.write(str(element) + "\n")

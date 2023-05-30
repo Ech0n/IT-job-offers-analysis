@@ -1,620 +1,1015 @@
 {
-  "2021": {
-    "11": {
-      "IPF DigitalAbout the company": {
-        "PHP (Laravel) developer": {
-          "job-title": "PHP (Laravel) developer",
-          "employer-name": "IPF DigitalAbout the company",
-          "workplaces": "WarszawaWarszawa, Masovian",
-          "publication-dates": "offer expired a year ago",
-          "contract-types": "B2B contract, agency agreement",
-          "work-schedules": "full-time",
-          "position-levels": "specialist (Mid / Regular)",
-          "work-modes": "hybrid work",
-          "remote-recruitment": "remote recruitment",
-          "technologies-1": "Technologies we useExpectedPHPLaravelSQLOperating system",
-          "technologies-expected-1": "ExpectedPHPLaravelSQL",
-          "technologies-os-1": "Operating system",
-          "about-project-1": "About the projectWe are looking for a Laravel Developer to work with our internal teams to develop and maintain our platform offering digital financial solutions. You will be primarily responsible for designing and developing the back-end of the web application but will also be tasked with integrating front-end components into the database. Due to the collaborative nature of our work, the ideal candidate possesses strong communication skills in order to efficiently and effectively articulate issues found and solutions for the application.",
-          "responsibilities-1": "Your responsibilitiesCollaborate with an internal teams of to create a PHP based web applicationDesign and develop server-side logic using LaravelDefine and maintain databaseCreate reusable, effective, and scalable PHP codeEnsure HTML, CSS, and shared JavaScript is valid and consistent across related applicationsDesign the different layers of the web applicationImplement security and data protection measuresDevelop components of the database such as storage, queries, and triggersIntegrate the application with AWSWilling to grow in front-end technologies - mainly React JS framework",
-          "requirements-1": "Our requirementsEnglish skills good enough to work in fully international environment2+ years of professional experience in Laravel web framework within PHP programming languageProficient in SQL schema design, SOLID principles, and REST API designProficient understanding with software testingGood understanding of one or more popular front end languages (e.g. HTML, CSS, JavaScript, etc)",
-          "requirements-expected-1": "English skills good enough to work in fully international environment2+ years of professional experience in Laravel web framework within PHP programming languageProficient in SQL schema design, SOLID principles, and REST API designProficient understanding with software testingGood understanding of one or more popular front end languages (e.g. HTML, CSS, JavaScript, etc)",
-          "work-organization-1": "This is how we organize our workThis is how we workin houseyou develop several projects simultaneouslyyou can change the projectyou have influence on the productagilescrumkanbanTeam membersproduct ownerproject managerscrum master",
-          "work-organization-work-style-1": "This is how we workin houseyou develop several projects simultaneouslyyou can change the projectyou have influence on the productagilescrumkanban",
-          "work-organization-team-members-1": "Team membersproduct ownerproject managerscrum master",
-          "offered-1": "What we offerWe offer a great salary, working alongside a fantastic and supportive local and international team where you will learn something new every day. You will also have the opportunity to make an impact globally through involvement with projects.You will work with people that are passionate about what we do and be a part of a team that has ambitious plans for growth.",
-          "benefits-1": "Benefitsprivate medical caresharing the costs of foreign language classessharing the costs of professional training & courseslife insuranceremote work opportunitiesflexible working timefruitsintegration eventsdental carecorporate sports teamno dress codecoffee / teadrinksholiday fundschristmas giftsemployee referral programopportunity to obtain permits and licensescharity initiativesmedical care",
-          "about-us-extended-1": "IPF DigitalIPF Polska Sp. z. o.o. is a part of IPF Digital Group which belongs to International Personal Finance listed on London Stock Exchange (IPF.L). IPF has a rich history dating back to 1880 and now, company is a home credit and online lending leader in Central Europe, Mexico, Fenno - Baltic countries and Australia.IPF Digital is a global FinTech providing consumer loans. This is a rapidly growing business that offers customers online lending options under the brands of Credit 24, Sving and Hapiloans. Our mission is to make everyday life better by offering simple and personalized financial solutions.Scroll to the company’s profile",
-          "about-us-description-1": "IPF DigitalIPF Polska Sp. z. o.o. is a part of IPF Digital Group which belongs to International Personal Finance listed on London Stock Exchange (IPF.L). IPF has a rich history dating back to 1880 and now, company is a home credit and online lending leader in Central Europe, Mexico, Fenno - Baltic countries and Australia.IPF Digital is a global FinTech providing consumer loans. This is a rapidly growing business that offers customers online lending options under the brands of Credit 24, Sving and Hapiloans. Our mission is to make everyday life better by offering simple and personalized financial solutions.Scroll to the company’s profile"
-        }
-      },
-      "Accenture InteractiveO firmie": {
-        "Drupal Developer": {
-          "job-title": "Drupal Developer",
-          "employer-name": "Accenture InteractiveO firmie",
-          "workplaces": "Warszawa, mazowieckie",
-          "publication-dates": "ogłoszenie wygasło rok temu",
-          "contract-types": "Umowa o pracę, Kontrakt B2B",
-          "work-schedules": "Pełny etat",
-          "position-levels": "Specjalista (Mid / Regular)",
-          "work-modes": "praca zdalna",
-          "remote-recruitment": "rekrutacja zdalna"
-        }
-      },
-      "T-MobileO firmie": {
-        "Mid Fullstack Developer": {
-          "job-title": "Mid Fullstack Developer",
-          "employer-name": "T-MobileO firmie",
-          "workplaces": "Warszawa, mazowieckie",
-          "publication-dates": "ogłoszenie wygasło rok temu",
-          "contract-types": "Kontrakt B2B",
-          "work-schedules": "Pełny etat",
-          "position-levels": "Specjalista (Mid / Regular)",
-          "remote-recruitment": "rekrutacja zdalna"
-        }
-      },
-      "PKO Bank Polski SAO firmie": {
-        "Młodszy Programista .Net w Zespole Wsparcia Ryzyka": {
-          "job-title": "Młodszy Programista .Net w Zespole Wsparcia Ryzyka",
-          "employer-name": "PKO Bank Polski SAO firmie",
-          "workplaces": "WarszawaWarszawa, mazowieckie",
-          "publication-dates": "ogłoszenie wygasło rok temu",
-          "contract-types": "umowa o pracę",
-          "work-schedules": "pełny etat",
-          "position-levels": "młodszy specjalista (Junior)",
-          "work-modes": "praca hybrydowa",
-          "remote-recruitment": "rekrutacja zdalna",
-          "technologies-1": "Technologie, których używamyWymagane.Net FrameworkMS SQL",
-          "technologies-expected-1": "Wymagane.Net FrameworkMS SQL",
-          "responsibilities-1": "Twój zakres obowiązkówtworzysz, rozwijasz, testujesz oraz wdrażasz zmiany w zaawansowanych aplikacjach z obszaru backoffice,rozwiązujesz problemy z oprogramowaniem, jak również wprowadzasz ulepszenia i usprawnienia,zbierasz doświadczenie w analizie wymagań biznesowych,przygotowujesz dokumentację techniczną,otrzymujesz wsparcie mentorskie od doświadczonych programistów z zespołu,szkolisz się z technologii chmurowych,realizujesz zadania w oparciu o metodykę scrum współpracując z innymi członkami zespołu,zdobywasz doświadczenie w pracy nad rozwojem dużych systemów klasy Enterprise.",
-          "requirements-1": "Nasze wymaganiamasz min. 1 rok doświadczenia w tworzeniu aplikacji w .Net Framework, C#,znasz narzędzia: Visual Studio, SQL Management Studio,znasz technologie integracyjne (WebAPI, WCF, Web Services),znasz relacyjne bazy danych, w szczególności MS SQL i język SQL,nie jest Ci obcy SVN/GIT,nie boisz się słów JavaScript, HTML, CSS,masz wykształcenie wyższe lub jesteś na ostatnim roku studiów (kierunek informatyczny lub pokrewny),jesteś osobą komunikatywną i potrafisz pracować w zespole,znasz język angielski na poziomie czytania dokumentacji technicznej,interesujesz się tematami CI/CD będzie to dodatkowy atut.",
-          "requirements-expected-1": "masz min. 1 rok doświadczenia w tworzeniu aplikacji w .Net Framework, C#,znasz narzędzia: Visual Studio, SQL Management Studio,znasz technologie integracyjne (WebAPI, WCF, Web Services),znasz relacyjne bazy danych, w szczególności MS SQL i język SQL,nie jest Ci obcy SVN/GIT,nie boisz się słów JavaScript, HTML, CSS,masz wykształcenie wyższe lub jesteś na ostatnim roku studiów (kierunek informatyczny lub pokrewny),jesteś osobą komunikatywną i potrafisz pracować w zespole,znasz język angielski na poziomie czytania dokumentacji technicznej,interesujesz się tematami CI/CD będzie to dodatkowy atut.",
-          "benefits-1": "Benefitydofinansowanie zajęć sportowychprywatna opieka medycznadofinansowanie nauki językówdofinansowanie szkoleń i kursówubezpieczenie na życiemożliwość pracy zdalnejzniżki na firmowe produkty i usługispotkania integracyjnefirmowa drużyna sportowaprogram emerytalnypreferencyjne pożyczkifirmowa bibliotekadodatkowe świadczenia socjalnedofinansowanie usług turystycznychprogram rekomendacji pracowników",
-          "about-us-extended-1": "PKO Bank Polski SAW PKO Banku Polskim sami tworzymy, rozwijamy oraz zabezpieczamy nasze systemy i produkty. Z rozmachem korzystamy z innowacyjnych rozwiązań oraz nowoczesnych technologii. Z sukcesem wdrożyliśmy blockchain i sztuczną inteligencję. To nie wszystko! Wspieramy startupy w ich drodze do sukcesu! Od lat wyznaczamy standardy na rynku polskiej bankowości. Aby utrzymać pozycję lidera, zatrudniamy najlepszych specjalistów i ekspertów. Dołącz do nas, żeby wspólnie tworzyć PKO Bank Przyszłości.Przewiń do profilu firmy",
-          "about-us-description-1": "PKO Bank Polski SAW PKO Banku Polskim sami tworzymy, rozwijamy oraz zabezpieczamy nasze systemy i produkty. Z rozmachem korzystamy z innowacyjnych rozwiązań oraz nowoczesnych technologii. Z sukcesem wdrożyliśmy blockchain i sztuczną inteligencję. To nie wszystko! Wspieramy startupy w ich drodze do sukcesu! Od lat wyznaczamy standardy na rynku polskiej bankowości. Aby utrzymać pozycję lidera, zatrudniamy najlepszych specjalistów i ekspertów. Dołącz do nas, żeby wspólnie tworzyć PKO Bank Przyszłości.Przewiń do profilu firmy"
-        }
-      },
-      "FDM Grupa Polska sp. z o.o.About the company": {
-        "Junior Software Developer": {
-          "job-title": "Junior Software Developer",
-          "employer-name": "FDM Grupa Polska sp. z o.o.About the company",
-          "workplaces": "KrakówKraków, Lesser Poland",
-          "publication-dates": "offer expired a year ago",
-          "contract-types": "contract of employment",
-          "work-schedules": "full-time",
-          "position-levels": "junior specialist (Junior)",
-          "responsibilities-1": "Your responsibilitiesThis specific role will be based within a leading global bank and will provide fantastic cutting-edge experience combining technology with the financial services sector. We are hiring multiple individuals to work in a team of Software Development Consultants with one of our clients based in central Kraków.In your role you will gain invaluable hands-on experience working on the latest technologies while helping our clients design and build software solutions. You will learn to create code that is modular, robust, scalable and maintainable to a professional standard. Your responsibilities will involve ensuring that programmes and applications are working effectively and meeting all technical and business requirements. A career in Software Development suits those who enjoy applying their technical and creative minds to finding solutions to real-world software problems.FDM will provide you with the necessary training to gain the skills needed for this role. We welcome applicants from all degree backgrounds. All you need is your drive and passion for building an exciting and dynamic career in the world’s fastest growing industry.",
-          "requirements-1": "Our requirementsBachelors degree (score 4 and above) – preferably within a technology discipline, but all degrees are welcomeEligibility to work in PolandPreferred English level B2 or higherPassion for technology - no previous experience in the field requiredExcellent communication skills and ability to build relationshipsMotivation, ambition and a drive to succeedStrong analytical and decision-making skillsInterest in working in Kraków to support our international clientsCommitment to an 18-months contract with FDM upon completion of the training period",
-          "requirements-expected-1": "Bachelors degree (score 4 and above) – preferably within a technology discipline, but all degrees are welcomeEligibility to work in PolandPreferred English level B2 or higherPassion for technology - no previous experience in the field requiredExcellent communication skills and ability to build relationshipsMotivation, ambition and a drive to succeedStrong analytical and decision-making skillsInterest in working in Kraków to support our international clientsCommitment to an 18-months contract with FDM upon completion of the training period",
-          "offered-1": "What we offer13 weeks of acclaimed and commercially relevant paid training in: Professional and Communication skills (employability skills, interview preparation and CV tailoring), SQL, Unix, OO Development using Java or .NET, Web Application Design, Java Data Access, Java EE and Java Spring,Opportunity to achieve industry-recognised qualificationsChance to secure a placement with world-renowned companies - after 18 months of commercial experience, you can decide to continue working for the client, progress to be a senior consultant at FDM or choose a different pathway using the connections and experience you have gainedOpportunities for career development in Poland as well as internationallyIndividual mentoring and ongoing support throughout your entire FDM journeyOpen door to tech talks, networking and social events",
-          "about-us-1": "About UsFDM is a FTSE 250 company, multi award-winning employer and market leader in the Recruit, Train and Deploy industry. We’re new to Poland, but with over 5,000+ employees, we provide IT services on a global scale and work with clients in 30+ industries across the UK, Europe, North America and APAC, launching the careers of over 2,000 graduates every year.With 90+ nationalities working together as a team, we encourage inclusivity and celebrate diversity, in terms of background, culture and skills. Our Women in Tech initiative supports women in the industry, aiming to create a more gender balanced workforce. As a part of the FDM consultant community, your efforts will always be recognised and rewarded, and you will be supported throughout your FDM journey to achieve your career goals.Whether you've been studying for a role in the technology industry or not, we have exciting opportunities available for you. Why not make an application today to secure your place for our upcoming training sessions?",
-          "additional-module-1": "The Role and Salary:Salary:Fully Funded Training 5,000 PLN gross/monthFirst year - 5,420 PLN gross/month +BenefitsSecond year - 7,500 PLN gross/month +Benefits(until 18 month contract ends)Benefits:Health/life insuranceSports packagePension"
-        }
-      },
-      "Arla Global Shared Services Sp. z o.o.About the company": {
-        "Salesforce Solutions Developer": {
-          "job-title": "Salesforce Solutions Developer",
-          "employer-name": "Arla Global Shared Services Sp. z o.o.About the company",
-          "workplaces": "aleja Grunwaldzka 103a, GdańskGdańsk, Pomeranian",
-          "publication-dates": "offer expired a year ago",
-          "contract-types": "contract of employment",
-          "work-schedules": "full-time",
-          "position-levels": "specialist (Mid / Regular)",
-          "remote-recruitment": "remote recruitment",
-          "technologies-1": "Technologies we useExpectedSalesforceApexCSSJavaScriptAppExchangeOptionalSalesforce certification",
-          "technologies-expected-1": "ExpectedSalesforceApexCSSJavaScriptAppExchange",
-          "technologies-optional-1": "OptionalSalesforce certification",
-          "responsibilities-1": "Your responsibilitiesWork on Salesforce developer tasks, specifically in Service & Community CloudFront-end development in Community CloudFocus on technologies: Including Apex, Lightning components, CSS, JavaScriptContribute to development best practices in Arla Salesforce teamConfiguration of Salesforce products and AppExchange packagesWork in Agile development team setupParticipate in distributed global teamCollaborate with Business stakeholders on feature delivery",
-          "requirements-1": "Our requirementsExperience with custom application development in Salesforce ecosystem – as well as declarative methods for delivering Salesforce functionalityExperience with the Salesforce.com platform, specifically Service and community Clouds; certification not essential but additional advantageStrong English verbal and written communication skillsUnderstanding of larger salesforce eco-system – including integrationsSalesforce developer experience on implementation projects using Agile and Iterative approachForce.com platform experience, including the limitation of the platformSalesforce.com Certifications - nice to haveStrong knowledge of software quality assurance best practices and methodologiesFront-end developer experience is an assetMaster degree within Information Systems, Computer Science, Engineering or Business",
-          "requirements-expected-1": "Experience with custom application development in Salesforce ecosystem – as well as declarative methods for delivering Salesforce functionalityExperience with the Salesforce.com platform, specifically Service and community Clouds; certification not essential but additional advantageStrong English verbal and written communication skillsUnderstanding of larger salesforce eco-system – including integrationsSalesforce developer experience on implementation projects using Agile and Iterative approachForce.com platform experience, including the limitation of the platformSalesforce.com Certifications - nice to haveStrong knowledge of software quality assurance best practices and methodologiesFront-end developer experience is an assetMaster degree within Information Systems, Computer Science, Engineering or Business",
-          "offered-1": "What we offerInternational operating environmentMedical care & life insuranceAdditional benefits like gym card, vouchers, travel points or cinema tickets, etc.Scandinavian working style & no dress codeTrainings with experts & professional induction in a new positionDevelopment programs (function additions, coordinator programme)Financial support of your educationRelocation packageReferral program for employeesEmployee Assistance Program (legal, psychological, health, financial consulting, etc. )Support for your healthy lifestyle (fruit day, facility for sportsmen, sport challenges and activities, Arla active teams / sport groups)Flexible working time (start your day of work between 7-9) and home office work possibilityAdditional holiday depending on length of employment (up to 4 days)Fully paid 30 min. break",
-          "benefits-1": "Benefitsprivate medical caresharing the costs of professional training & coursesremote work opportunitiesflexible working timefruitsintegration eventsdental carecorporate sports teamno dress codevideo games at workcoffee / tealeisure zoneredeployment packagechristmas giftsemployee referral programcharity initiativesfully paid 30 min break",
-          "about-us-extended-1": "Arla Global Shared Services Sp. z o.o.Arla is a global farmer-owned organisation that is behind many well-known and loved brands, including Arla Apetina®, Castello®, Lurpak® and many, many more.At Arla, we do so much more than make some of the world’s favorite dairy products. In Shared Service Centre in Gdansk we support our colleagues worldwide by providing them with world- class accounting, finance, procurement, tax, master data and HR processes.As a Salesforce Solutions Developer you become a part of our Global Shared Services in Gdansk. Here, you won’t find factory machines or farmers. Instead, you will join over 400 colleagues dedicated to supporting all of Arla with IT, HR, financial and procurement opera-tions. Joining us, you will take part in our mission to make a real difference for colleagues near and far.With over 10 years of existence in Gdansk, we offer you a lot of knowledge and the opportunity to partake in challenging and exciting innovation projects. As a part of the Arla organisation, you will also enjoy a Scandinavian, collaborative work culture. We are all on first name terms with each other, and we truly appreciate diversity and individuality.Scroll to the company’s profile",
-          "about-us-description-1": "Arla Global Shared Services Sp. z o.o.Arla is a global farmer-owned organisation that is behind many well-known and loved brands, including Arla Apetina®, Castello®, Lurpak® and many, many more.At Arla, we do so much more than make some of the world’s favorite dairy products. In Shared Service Centre in Gdansk we support our colleagues worldwide by providing them with world- class accounting, finance, procurement, tax, master data and HR processes.As a Salesforce Solutions Developer you become a part of our Global Shared Services in Gdansk. Here, you won’t find factory machines or farmers. Instead, you will join over 400 colleagues dedicated to supporting all of Arla with IT, HR, financial and procurement opera-tions. Joining us, you will take part in our mission to make a real difference for colleagues near and far.With over 10 years of existence in Gdansk, we offer you a lot of knowledge and the opportunity to partake in challenging and exciting innovation projects. As a part of the Arla organisation, you will also enjoy a Scandinavian, collaborative work culture. We are all on first name terms with each other, and we truly appreciate diversity and individuality.Scroll to the company’s profile",
-          "additional-module-2": "Read more about Arla Global Shared ServicesGlobal Shared Services consists of multiple functions that are all placed in the Neptun building in Gdansk – with colourful offices and a beautiful sea view.As of now, we have an IT Operations and an IT Solutions division dedicated to SAP as well as a variety of app development and implementation projects. Our procurement and finance func-tions support a wide array of processes such as purchasing, distribution and sales globally.We also have a dedicated HR operations division to ensure we attract, develop and retain the very best of talent around the world.Together, we are all dedicated to one collective mission: ensuring an optimal global supply of fresh Arla products – every single day.",
-          "additional-module-3": "We have a purpose for GoodAt Arla, we strive to unlock the highest potential in each other while working together to create a sustainable future of dairy. We call it Stronger People Stronger Planet and it is deeply an-chored in our organisation and founded on our commitment to respecting human rights, in-creasing access to healthy dairy nutrition, inspiring good food habits, and improving the envi-ronment for future generations. In order to succeed we need to hire people with a sustainable mindset. Could this be you?"
-        }
-      },
-      "Diehl Controls PolskaO firmie": {
-        "Programista C/C++ (Embedded Linux)": {
-          "job-title": "Programista C/C++ (Embedded Linux)",
-          "employer-name": "Diehl Controls PolskaO firmie",
-          "workplaces": "WrocławWrocław, dolnośląskie",
-          "publication-dates": "ogłoszenie wygasło rok temu",
-          "contract-types": "umowa o pracę",
-          "work-schedules": "pełny etat",
-          "position-levels": "specjalista (Mid / Regular)",
-          "work-modes": "praca hybrydowa",
-          "attribute-primary-immediate-employment": "Praca od zaraz",
-          "attribute-primary-many-vacancies": "Szukamy wielu kandydatów",
-          "remote-recruitment": "rekrutacja zdalna",
-          "technologies-1": "Technologie, których używamySystem operacyjny",
-          "technologies-os-1": "System operacyjny",
-          "about-project-1": "O projekcieTak pracujemy:•\tWewnątrz organizacji oraz z klientem;•\tMamy realny wpływ na rozwiązania technologiczne i miejsce pracy;•\tNie nudzimy się, rozwijamy różne projekty;•\tJesteśmy zaprzyjaźnieni ze zwinnymi metodykami pracy.Nasz zespół:•\tTo wielokulturowa mieszanka ludzi;•\tLiczy 25 osób;•\tRealizuje ambitne projekty;•\tDba o dobrą atmosferę, aby wszyscy czuli się z nami dobrze.",
-          "responsibilities-1": "Twój zakres obowiązkówRozwijanie oraz utrzymywanie rozwiązań z obszaru Connectivity bazujących na Embedded LinuxDevelopment w obszarze BSP, Kernela, oraz driverówAktywny wpływ na tworzenie platformy sprzętowej będącej podstawą dla przyszłych produktów;Wspieranie zespołu projektowego wiedzą i doświadczeniemBudowanie know-how w obszarze Embedded Linux we Wrocławskiej lokalizacji Diehl Controls przy wsparciu kolegów z pozostałych regionów",
-          "requirements-1": "Nasze wymagania5 lat doświadczenia na podobnym stanowiskuBardzo dobrej znajomości języka C, C++Duże doświadczenie w Embedded linux (z uwzględnieniem wyżej wymienionych obszarów/technologii)Doświadczenie z PTX-Dist (Pengutronix), Yocto, u-bootZnajomość interfejsów i protokołów komunikacyjnychDobrej znajomości języka angielskiego (umiejętności czytania dokumentacji technicznej oraz swobodnego komunikowania się w międzynarodowym zespole)Praktyczna umiejętność pracy z elektroniką: programowanie, debuggowanie, wykorzystanie narzędzi pomiarowych;Mile widzianeZnajomość Python, Ansible, Yaml, Shell Scipt, Groovy, LuaZnajomość platform i.mx6, Raspberry PI, RevPi,Znajomość protokołów BLE, LTE-M, NB-IoTPraktyczna znajomość UML;Znajomość metodologii zwinnego realizowania projektów (Scrum, Kanban);Znajomość języka niemieckiego.Znajomość narzędzi do testowania takich jak Freescale MFG-Tool and Production Support",
-          "requirements-expected-1": "5 lat doświadczenia na podobnym stanowiskuBardzo dobrej znajomości języka C, C++Duże doświadczenie w Embedded linux (z uwzględnieniem wyżej wymienionych obszarów/technologii)Doświadczenie z PTX-Dist (Pengutronix), Yocto, u-bootZnajomość interfejsów i protokołów komunikacyjnychDobrej znajomości języka angielskiego (umiejętności czytania dokumentacji technicznej oraz swobodnego komunikowania się w międzynarodowym zespole)Praktyczna umiejętność pracy z elektroniką: programowanie, debuggowanie, wykorzystanie narzędzi pomiarowych;",
-          "requirements-optional-1": "Mile widzianeZnajomość Python, Ansible, Yaml, Shell Scipt, Groovy, LuaZnajomość platform i.mx6, Raspberry PI, RevPi,Znajomość protokołów BLE, LTE-M, NB-IoTPraktyczna znajomość UML;Znajomość metodologii zwinnego realizowania projektów (Scrum, Kanban);Znajomość języka niemieckiego.Znajomość narzędzi do testowania takich jak Freescale MFG-Tool and Production Support",
-          "work-organization-1": "Tak organizujemy naszą pracęLiczba osób w zespole25Tak pracujemywewnątrz organizacjiu klienta",
-          "work-organization-team-size-1": "Liczba osób w zespole25",
-          "work-organization-work-style-1": "Tak pracujemywewnątrz organizacjiu klienta",
-          "offered-1": "To oferujemyUmowę o pracę bez okresu próbnego;Bogate pakiety: Medyczny, Socjalny (dofinansowanie do posiłków dostarczanych do biura);Parking dla rowerów w budynku;Wartościowe szkolenia specjalistyczne oraz językowe.",
-          "benefits-1": "Benefitydofinansowanie zajęć sportowychprywatna opieka medycznadofinansowanie nauki językówdofinansowanie szkoleń i kursówubezpieczenie na życiemożliwość pracy zdalnejelastyczny czas pracyfirmowa drużyna sportowafirmowa bibliotekabrak dress code’ukawa / herbatabony żywieniowepaczki świątecznedofinansowanie dojazdów do pracyprogram rekomendacji pracownikówpikniki rodzinne",
-          "about-us-extended-1": "Diehl Controls PolskaObecnie ponad 17 tysięcy pracowników tworzy innowacyjne rozwiązania technologiczne w pięciu dywizjach naszej korporacji: Metall, Controls, Defence, Aviation i Metering. Diehl Controls jest czołowym, międzynarodowym producentem i dostawcą urządzeń sterujących dla sprzętów gospodarstwa domowego, wykorzystujących energooszczędne rozwiązania oraz systemy komunikacji bezprzewodowej. Złóż aplikację w firmie Diehl i dołącz do grona osób tworzących fascynujące technologie. Znajdź z nami swoją wyjątkową ścieżkę kariery zawodowej w dobrze prosperującym oraz zorientowanym na przyszłość przedsiębiorstwie.Przewiń do profilu firmy",
-          "about-us-description-1": "Diehl Controls PolskaObecnie ponad 17 tysięcy pracowników tworzy innowacyjne rozwiązania technologiczne w pięciu dywizjach naszej korporacji: Metall, Controls, Defence, Aviation i Metering. Diehl Controls jest czołowym, międzynarodowym producentem i dostawcą urządzeń sterujących dla sprzętów gospodarstwa domowego, wykorzystujących energooszczędne rozwiązania oraz systemy komunikacji bezprzewodowej. Złóż aplikację w firmie Diehl i dołącz do grona osób tworzących fascynujące technologie. Znajdź z nami swoją wyjątkową ścieżkę kariery zawodowej w dobrze prosperującym oraz zorientowanym na przyszłość przedsiębiorstwie.Przewiń do profilu firmy",
-          "additional-module-1": "Technologie, których używamy: Technologie:\tLinux Kernel, Linux BSP, PKI, Openssl, Openssh, Reverse-Tunnel, TCP/IP, TLS, mbed-tls, TPM, Secure-Boot, High-Assurance-Boot (HAB imx), HTTPS, NginX, REST, MQTT, HSP, JSON, Protobuf, LAN, WLAN, GSM, GPRS(GSM), LTE-M, (NB-IoT), Bluetooth, I2C, RS485, Modbus, HawkBit, RAUC (Pengutronix)Języki Programowania:\tC, C++ 17, Python 3, Ansible, Yaml, Shell Scipt, Groovy, LuaPlatformy:\ti.mx6, Raspberry PI, RevPi, Multi-Core TargetsLinux:\tPTX-Dist (Pengutronix), Barebox, Linux Kernel, Linux Driver, Yocto, u-bootSystemy operacyjne:\tembedded Linux, LinuxNarzędzia:\tGCC, GDB, Clang, Make, CMake, Ninja, Docker, Git, Git-Submodule, Jenkins, Helgrind, Linux & Apps , VPNMetody:\tSCRUM, KANBAN, Modular flexible Software Architecture, OOD(UML), UT",
-          "additional-module-2": "Jeżeli jesteś zainteresowany/a powyższym stanowiskiem i chcesz wykorzystywać swoje pomysły i umiejętności w międzynarodowym przedsiębiorstwie, prosimy o przesyłanie ofert w j.polskim za pomocą przycisku APLIKUJ."
-        }
-      },
-      "HARDWARE DIRECTO firmie": {
-        "Programista .NET C# - Web Developer": {
-          "job-title": "Programista .NET C# - Web Developer",
-          "employer-name": "HARDWARE DIRECTO firmie",
-          "workplaces": "Cybernetyki 9, Mokotów, WarszawaWarszawa, mazowieckie",
-          "publication-dates": "ogłoszenie wygasło rok temu",
-          "contract-types": "umowa o pracę, kontrakt B2B",
-          "work-schedules": "pełny etat",
-          "position-levels": "specjalista (Mid / Regular)",
-          "work-modes": "praca stacjonarna",
-          "attribute-primary-immediate-employment": "Praca od zaraz",
-          "attribute-primary-many-vacancies": "Szukamy wielu kandydatów",
-          "technologies-1": "Technologie, których używamyWymaganeC#.NETSQLHTMLjQueryJavaScriptTypeScriptASP.NETSystem operacyjny",
-          "technologies-expected-1": "WymaganeC#.NETSQLHTMLjQueryJavaScriptTypeScriptASP.NET",
-          "technologies-os-1": "System operacyjny",
-          "about-project-1": "O projekcieRozwój systemu ERP tworzonego w oparciu o .NET Framework 4.8 MVC, .Net 5.0 oraz SQL Server 2019. Do pracy używamy Visual Studio 2019 ,TFS, Git, JIRA oraz Confluence.",
-          "responsibilities-1": "Twój zakres obowiązkówrozwój i utrzymanie istniejącej aplikacjiprojektowanie i tworzenie nowych funkcjonalności aplikacjitworzenie nowych aplikacji zgodnie ze specyfikacjąintegracja aplikacji z systemami zewnętrznymi poprzez API",
-          "requirements-1": "Nasze wymaganiabardzo dobra znajomość technologii webowych (HTML5, CSS, Javascript/Typescript, jQuery)doświadczenie zawodowe na podobnym stanowisku przynajmniej 2-lataumiejętność programowania asynchronicznego i wielowątkowego, znajomość RESTbardzo znajomość platformy .NET Framework oraz języka C#znajomość podejścia Domain Driven Design oraz Test Driven Developmentznajomość SQL Server oraz T-SQLznajomość narzędzia Visual Studioznajomość języka angielskiego umożliwiająca czytanie dokumentacjiznajomość dobrych praktyk i wzorców programistycznychumiejętność pracy samodzielnejumiejętność pracy w zespoleMile widzianeznajomość TFS lub Git Labznajomość JIRAznajomość frameworków JS (React, Vue, Angular)",
-          "requirements-expected-1": "bardzo dobra znajomość technologii webowych (HTML5, CSS, Javascript/Typescript, jQuery)doświadczenie zawodowe na podobnym stanowisku przynajmniej 2-lataumiejętność programowania asynchronicznego i wielowątkowego, znajomość RESTbardzo znajomość platformy .NET Framework oraz języka C#znajomość podejścia Domain Driven Design oraz Test Driven Developmentznajomość SQL Server oraz T-SQLznajomość narzędzia Visual Studioznajomość języka angielskiego umożliwiająca czytanie dokumentacjiznajomość dobrych praktyk i wzorców programistycznychumiejętność pracy samodzielnejumiejętność pracy w zespole",
-          "requirements-optional-1": "Mile widzianeznajomość TFS lub Git Labznajomość JIRAznajomość frameworków JS (React, Vue, Angular)",
-          "work-organization-1": "Tak organizujemy naszą pracęTak pracujemywewnątrz organizacjimasz wpływ na wybór narzędzi i technologiimasz wpływ na rozwiązania technologicznetworzysz kod \"od zera\"agileSkład zespołufrontend developerfullstack developerproduct ownergraphic designerUI designeradministrator IT",
-          "work-organization-work-style-1": "Tak pracujemywewnątrz organizacjimasz wpływ na wybór narzędzi i technologiimasz wpływ na rozwiązania technologicznetworzysz kod \"od zera\"agile",
-          "work-organization-team-members-1": "Skład zespołufrontend developerfullstack developerproduct ownergraphic designerUI designeradministrator IT",
-          "development-practices-1": "Tak pracujemy nad projektemClean Codewzorce projektoweDDDdokumentacjaautomatyzacja testówśrodowiska testowetesty funkcjonalnetesty integracyjnetesty jednostkowetesty manualne",
-          "offered-1": "To oferujemypracę w ciekawej branży w dynamicznie rosnącej firmieatrakcyjne wynagrodzeniemożliwość podnoszenia kwalifikacji zawodowychmożliwość poznawania najnowszych technologii informatycznychsamodzielność w wykonywaniu zadaństabilne zatrudnienie w oparciu o umowę o pracęprzyjazne środowisko pracy",
-          "benefits-1": "Benefityprywatna opieka medycznakawa / herbatanapojeparking dla pracowników",
-          "about-us-extended-1": "HARDWARE DIRECTJesteśmy dystrybutorem sprzętu serwerowego z magazynem wypełnionym ponad 6000 serwerami gotowymi do sprzedaży. Świadczymy także wyspecjalizowane usługi Data Center i chmury obliczeniowej.Jako programista będziesz odpowiedzialny za tworzenie i rozwój naszego własnego systemu ERP. Między innymi będziesz odpowiedzialny za graficzny konfigurator serwerów oraz inne narzędzia i funkcjonalności usprawniające pracę naszej firmy.Do dyspozycji będziesz miał całą masę najnowszego sprzętu klasy enterprise, w tym maszyny do sztucznej inteligencji czy kopania kryptowalut. Aktualnie pracujemy na łączu symetrycznym 12Gb/s, a programiści mają do dyspozycji dwuprocesorowe stacje robocze z trzema monitorami.Przewiń do profilu firmy",
-          "about-us-description-1": "HARDWARE DIRECTJesteśmy dystrybutorem sprzętu serwerowego z magazynem wypełnionym ponad 6000 serwerami gotowymi do sprzedaży. Świadczymy także wyspecjalizowane usługi Data Center i chmury obliczeniowej.Jako programista będziesz odpowiedzialny za tworzenie i rozwój naszego własnego systemu ERP. Między innymi będziesz odpowiedzialny za graficzny konfigurator serwerów oraz inne narzędzia i funkcjonalności usprawniające pracę naszej firmy.Do dyspozycji będziesz miał całą masę najnowszego sprzętu klasy enterprise, w tym maszyny do sztucznej inteligencji czy kopania kryptowalut. Aktualnie pracujemy na łączu symetrycznym 12Gb/s, a programiści mają do dyspozycji dwuprocesorowe stacje robocze z trzema monitorami.Przewiń do profilu firmy"
-        }
-      },
-      "Huuuge Games Sp. z o.o.About the company": {
-        "Business Intelligence Developer": {
-          "job-title": "Business Intelligence Developer",
-          "employer-name": "Huuuge Games Sp. z o.o.About the company",
-          "workplaces": "rondo Daszyńskiego 2B, Wola, WarszawaWarszawa, Masovian",
-          "publication-dates": "offer expired 2 years ago",
-          "contract-types": "contract of employment",
-          "work-schedules": "full-time",
-          "position-levels": "specialist (Mid / Regular)",
-          "remote-recruitment": "remote recruitment",
-          "responsibilities-1": "Your responsibilitiesDevelop data products based on our Big Data platform and data-oriented applications and tools.Perform research, analysis and proof of concepts for new technologies.Build, review and challenging technical design and architecture definitions.Deliver state-of-the-art data visualisations.",
-          "requirements-1": "Our requirements2+ years of experience working with Big Data technologies (Redshift, Snowflake, Hadoop, Databricks, BigQuery)Strong SQL skills, especially in terms of analytical functionsExperience working with gitExperience with data visualisation packages (e.g. Tableau, Shiny, Looker, Qlik)Gamer in heart – huuuge advantageFluent in EnglishBachelor’s/Master’s degree in Computer Science or relatedOptionalExperience working in Python",
-          "requirements-expected-1": "2+ years of experience working with Big Data technologies (Redshift, Snowflake, Hadoop, Databricks, BigQuery)Strong SQL skills, especially in terms of analytical functionsExperience working with gitExperience with data visualisation packages (e.g. Tableau, Shiny, Looker, Qlik)Gamer in heart – huuuge advantageFluent in EnglishBachelor’s/Master’s degree in Computer Science or related",
-          "requirements-optional-1": "OptionalExperience working in Python",
-          "offered-1": "What we offerAccess to knowledge & skills developmentWork in the industry of the futureInternational career opportunitiesConvenient office locationsHuuuge hapy hour and free lunch friday",
-          "benefits-1": "Benefitssharing the costs of sports activitiesprivate medical caresharing the costs of foreign language classeslife insurancefruitsintegration eventsvideo games at workcoffee / teadrinksleisure zoneextra social benefitsredeployment package",
-          "about-us-extended-1": "Huuuge Games Sp. z o.o.Huuuge Games, a global leading Mobile Gaming company, is using a state-of-the-art Big Data & ML platform to support the company's analytics and data service needs. We are looking for a talented Senior BI Developer that will be in charge of developing data products based on the company's Big Data & ML platform, which handles billions of records per day, through complex processing (CEPs, graphs, machine learning).Join Huuuge Games and get your ticket to take part in one of the greatest stories ever told. Team Huuuge is all about making truly social mobile games, and people who love games and dream about building experiences enjoyed by millions around the globe are who we are looking for.Scroll to the company’s profile",
-          "about-us-description-1": "Huuuge Games Sp. z o.o.Huuuge Games, a global leading Mobile Gaming company, is using a state-of-the-art Big Data & ML platform to support the company's analytics and data service needs. We are looking for a talented Senior BI Developer that will be in charge of developing data products based on the company's Big Data & ML platform, which handles billions of records per day, through complex processing (CEPs, graphs, machine learning).Join Huuuge Games and get your ticket to take part in one of the greatest stories ever told. Team Huuuge is all about making truly social mobile games, and people who love games and dream about building experiences enjoyed by millions around the globe are who we are looking for.Scroll to the company’s profile",
-          "additional-module-1": "What makes us special is our company culture. We worship everyday learning and playing together as a team of teams. People who are professional, humble, and hungry to learn are the ones Huuuge Games is looking for.Want to Play Together in Team Huuuge? Join us!"
-        }
-      },
-      "IDENTEC SOLUTIONS AGO firmie": {
-        "Programista .NET": {
-          "job-title": "Programista .NET",
-          "employer-name": "IDENTEC SOLUTIONS AGO firmie",
-          "workplaces": "WrocławWrocław, dolnośląskie",
-          "publication-dates": "ogłoszenie wygasło rok temu",
-          "contract-types": "umowa o pracę, kontrakt B2B",
-          "work-schedules": "pełny etat",
-          "position-levels": "specjalista (Mid / Regular), młodszy specjalista (Junior)",
-          "attribute-primary-immediate-employment": "Praca od zaraz",
-          "remote-recruitment": "rekrutacja zdalna",
-          "technologies-1": "Technologie, których używamyWymagane.NETC#Entity FrameworkMS SQL ServerWCFRESTGitMile widzianeAngularAzureIoTWPF.NET CoreScrumSystem operacyjny",
-          "technologies-expected-1": "Wymagane.NETC#Entity FrameworkMS SQL ServerWCFRESTGit",
-          "technologies-optional-1": "Mile widzianeAngularAzureIoTWPF.NET CoreScrum",
-          "technologies-os-1": "System operacyjny",
-          "responsibilities-1": "Twój zakres obowiązkówW związku z rozwojem oddziału we Wrocławiu, poszukujemy zaangażowanego i zmotywowanego programisty .NET. Dołącz do zespołu tworzącego, rozwijającego i utrzymującego nasze wiodące w branży rozwiązania Reefer Runner (transport morski) i Crew Companion (przemysł naftowy i górnictwo). Wsparcie ze strony doświadczonej kadry zapewni płynną i skuteczną integrację oraz rozwój osobisty.",
-          "requirements-1": "Nasze wymaganiaWyższe wykształcenie w kierunku informatycznym lub pokrewnymZnajomość .NET, SQL, WCF, REST, GitDoświadczenie w tworzeniu oprogramowania (minimum 1 rok)Gotowość pracy w rozproszonych zespołachMile widzianeZnajomość .NET Core, WPF, AngularDoświadczenie w metodyce SCRUMZainteresowanie nowymi technologiamiMicrosoft Certification",
-          "requirements-expected-1": "Wyższe wykształcenie w kierunku informatycznym lub pokrewnymZnajomość .NET, SQL, WCF, REST, GitDoświadczenie w tworzeniu oprogramowania (minimum 1 rok)Gotowość pracy w rozproszonych zespołach",
-          "requirements-optional-1": "Mile widzianeZnajomość .NET Core, WPF, AngularDoświadczenie w metodyce SCRUMZainteresowanie nowymi technologiamiMicrosoft Certification",
-          "work-organization-1": "Tak organizujemy naszą pracęTak pracujemywewnątrz organizacjirozwijasz kilka projektów jednocześniemasz wpływ na wybór narzędzi i technologiimasz wpływ na rozwiązania technologicznemasz wpływ na produktkoncentrujesz się na rozwoju produktukoncentrujesz się na utrzymaniu koduscrum",
-          "work-organization-work-style-1": "Tak pracujemywewnątrz organizacjirozwijasz kilka projektów jednocześniemasz wpływ na wybór narzędzi i technologiimasz wpływ na rozwiązania technologicznemasz wpływ na produktkoncentrujesz się na rozwoju produktukoncentrujesz się na utrzymaniu koduscrum",
-          "offered-1": "To oferujemyZmotywowany zespółPracę z nowymi technologiamiRozwój osobisty",
-          "about-us-extended-1": "IDENTEC SOLUTIONS AGJesteśmy rozwijającą się, międzynarodową firmą technologiczną z ponad 20-letnią historią z oddziałami w Austrii, Norwegii, Niemczech, Australii i USA. Podejmujemy wyzwania i pracujemy dla klientów z wymagających branż, takich jak: przemysł naftowy, transport morski, górnictwo oraz motoryzacja. Z naszymi rozwiązaniami, praca klientów staje się łatwiejsza, bezpieczniejsza i bardziej wydajna. Zgłoś się teraz i dołącz do #IDENTECFamily.Przewiń do profilu firmy",
-          "about-us-description-1": "IDENTEC SOLUTIONS AGJesteśmy rozwijającą się, międzynarodową firmą technologiczną z ponad 20-letnią historią z oddziałami w Austrii, Norwegii, Niemczech, Australii i USA. Podejmujemy wyzwania i pracujemy dla klientów z wymagających branż, takich jak: przemysł naftowy, transport morski, górnictwo oraz motoryzacja. Z naszymi rozwiązaniami, praca klientów staje się łatwiejsza, bezpieczniejsza i bardziej wydajna. Zgłoś się teraz i dołącz do #IDENTECFamily.Przewiń do profilu firmy"
-        }
-      },
-      "Avenga PolandO firmie": {
-        "Front-end Developer": {
-          "job-title": "Front-end Developer",
-          "employer-name": "Avenga PolandO firmie",
-          "workplaces": "WarszawaWarszawa, mazowieckie",
-          "publication-dates": "ogłoszenie wygasło rok temu",
-          "contract-types": "Umowa o pracę, Kontrakt B2B",
-          "work-schedules": "Pełny etat",
-          "position-levels": "Specjalista (Mid / Regular)",
-          "work-modes": "praca zdalna",
-          "remote-recruitment": "rekrutacja zdalna"
-        }
-      },
-      "NCBR+ sp. z o.o.O firmie": {
-        "Developer JIRA": {
-          "job-title": "Developer JIRA",
-          "employer-name": "NCBR+ sp. z o.o.O firmie",
-          "contract-types-salary": "8 000–12 000 zł brutto / mies.",
-          "workplaces": "Nowogrodzka 50, Śródmieście, WarszawaWarszawa, mazowieckie",
-          "publication-dates": "ogłoszenie wygasło rok temu",
-          "contract-types": "umowa o pracę",
-          "work-schedules": "pełny etat",
-          "position-levels": "specjalista (Mid / Regular)",
-          "work-modes": "praca zdalna",
-          "remote-recruitment": "rekrutacja zdalna",
-          "technologies-1": "Technologie, których używamyWymaganeJIRAScriptRunnerConfluenceGroovyEazyBISystem operacyjny",
-          "technologies-expected-1": "WymaganeJIRAScriptRunnerConfluenceGroovyEazyBI",
-          "technologies-os-1": "System operacyjny",
-          "about-project-1": "O projekcieDołącz do nas i zostań członkiem zespołu, który wprowadza transformację cyfrową w naszej firmie. Będziesz pracować z grupą specjalistów odpowiedzialnych za utrzymanie istniejących oraz tworzenie nowych systemów informatycznych obsługujących cykl życiowy konkursów i programów organizowanych przez Narodowe Centrum Badań i Rozwoju, mając realny wpływ na kształt rozwiązań powstających przy użyciu najnowszych technologii. Nasza organizacja da Ci możliwość wszechstronnego rozwoju, a Ty wykorzystasz swoje umiejętności by zapewnić najwyższą jakość produktu.",
-          "responsibilities-1": "Twój zakres obowiązkówtworzenie dedykowanych rozwiązań dopasowanych do potrzeb klientakonfiguracja narzędzia za pomocą zarówno natywnych mechanizmów jak i szerokiej gamy rozszerzeńrozszerzanie aplikacji o autorskie rozwiązania przez m.in: automatyzację za pomocą skryptów, projektowanie/tworzenie dedykowanych rozszerzeńwsparcie klienta w rozwiązywaniu problemówwspółpraca z klientem przy rozwoju narzędzia",
-          "requirements-1": "Nasze wymaganiaminimum 2 lata doświadczenia na stanowisku Jira Developer lub Jira Administratordoświadczenie z pakietem narzędzi Atlassian (JIRA, Confluence)doświadczenie w korzystaniu z rozszerzeń do JIRA oraz Confluence (ze szczególną uwagą na ScriptRunner)doświadczenie w skryptowaniu w Groovydoświadczenie z EazyBIMile widziane3 lata doświadczenia na stanowisku Jira Developer lub Jira Administratormile widziana znajomość rozszerzeń: BigPicture, BigPicture Enterprise, SLA PowerBox, Xporter, Email Task, Insight, Out Of Office Assistant, Cross Project Queues",
-          "requirements-expected-1": "minimum 2 lata doświadczenia na stanowisku Jira Developer lub Jira Administratordoświadczenie z pakietem narzędzi Atlassian (JIRA, Confluence)doświadczenie w korzystaniu z rozszerzeń do JIRA oraz Confluence (ze szczególną uwagą na ScriptRunner)doświadczenie w skryptowaniu w Groovydoświadczenie z EazyBI",
-          "requirements-optional-1": "Mile widziane3 lata doświadczenia na stanowisku Jira Developer lub Jira Administratormile widziana znajomość rozszerzeń: BigPicture, BigPicture Enterprise, SLA PowerBox, Xporter, Email Task, Insight, Out Of Office Assistant, Cross Project Queues",
-          "work-time-1": "Podział czasu pracy50%praca z danymi40%praca z ludźmi/w projekcie10%spotkania",
-          "work-organization-1": "Tak organizujemy naszą pracęLiczba osób w zespole15Tak pracujemywewnątrz organizacjirozwijasz kilka projektów jednocześniemasz wpływ na produktagilescrumkanban",
-          "work-organization-team-size-1": "Liczba osób w zespole15",
-          "work-organization-work-style-1": "Tak pracujemywewnątrz organizacjirozwijasz kilka projektów jednocześniemasz wpływ na produktagilescrumkanban",
-          "training-space-1": "Takie dajemy możliwości rozwojubranżowe platformy e-learningowebudżet rozwojowyszkolenia wewnątrzfirmoweszkolenia zewnętrznetreningi umiejętności miękkichwymiana wiedzy technicznej w firmie",
-          "benefits-1": "Benefitydofinansowanie zajęć sportowychprywatna opieka medycznadofinansowanie nauki językówdofinansowanie szkoleń i kursówubezpieczenie na życiemożliwość pracy zdalnejelastyczny czas pracypreferencyjne pożyczkidodatkowe świadczenia socjalnedofinansowanie wypoczynkudofinansowanie wakacji dziecidofinansowanie dojazdów do pracysystem kafeteryjny",
-          "recruitment-stages-1": "Etapy rekrutacji1analiza CV2kontakt telefoniczny3spotkanie online",
-          "about-us-extended-1": "NCBR+ sp. z o.o.Wspólnie z Narodowym Centrum Badań i Rozwoju (w ramach Grupy NCBR) jesteśmy największym ośrodkiem finansującym rozwój prac badawczo-rozwojowych w Europie Centralnej. Pracujemy na rzecz wzrostu konkurencyjności polskiej gospodarki. Wspieramy tworzenie i wprowadzanie na rynek nowych produktów i usług, które mogą zrewolucjonizować rzeczywistość każdego z nas. Opracowujemy oraz realizujemy programy, w ramach których naukowcy i przedsiębiorstwa mogą uzyskać finansowanie różnorodnych innowacji. Od początku swojej działalności przeznaczyliśmy na ten cel przeszło 50 miliardów złotych, finansując tysiące projektów badawczych, które codziennie przyczyniają się do poprawy jakości życia milionów Polaków.Przewiń do profilu firmy",
-          "about-us-description-1": "NCBR+ sp. z o.o.Wspólnie z Narodowym Centrum Badań i Rozwoju (w ramach Grupy NCBR) jesteśmy największym ośrodkiem finansującym rozwój prac badawczo-rozwojowych w Europie Centralnej. Pracujemy na rzecz wzrostu konkurencyjności polskiej gospodarki. Wspieramy tworzenie i wprowadzanie na rynek nowych produktów i usług, które mogą zrewolucjonizować rzeczywistość każdego z nas. Opracowujemy oraz realizujemy programy, w ramach których naukowcy i przedsiębiorstwa mogą uzyskać finansowanie różnorodnych innowacji. Od początku swojej działalności przeznaczyliśmy na ten cel przeszło 50 miliardów złotych, finansując tysiące projektów badawczych, które codziennie przyczyniają się do poprawy jakości życia milionów Polaków.Przewiń do profilu firmy"
-        }
-      },
-      "Nippon Seiki (Europe) B.V. sp z o.o. oddział w PolsceAbout the company": {
-        "Senior Software Project Manager (Automotive)": {
-          "job-title": "Senior Software Project Manager (Automotive)",
-          "employer-name": "Nippon Seiki (Europe) B.V. sp z o.o. oddział w PolsceAbout the company",
-          "workplaces": "aleja Grunwaldzka 415, Oliwa, GdańskGdańsk, Pomeranian",
-          "publication-dates": "offer expired a year ago",
-          "contract-types": "contract of employment",
-          "work-schedules": "full-time",
-          "position-levels": "team manager",
-          "remote-recruitment": "remote recruitment",
-          "technologies-1": "Technologies we useExpectedAgileIPMAPMIPrince2",
-          "technologies-expected-1": "ExpectedAgileIPMAPMIPrince2",
-          "responsibilities-1": "Your responsibilitiesEnsure customer satisfaction by managing (plan, track, control) flawlessly execution and delivery of technical development projects in time, quality and costManage project releases and deliveries as well as project resource plan, effort and tools budgetContinuously measure the performance of the project and report project status and KPIsActively perform risk assessments, report risks and related countermeasuresHandle change requests and problem reports in technical developmentMonitor deliverables of 3rd party suppliers",
-          "requirements-1": "Our requirementsUniversity degree in engineering, preferably software engineering, electrical engineering, automotive engineering or an equivalent qualificationAt least three years of project management experience in automotive or embedded industry environmentKnowledge of project management methods to plan, monitor and control of technical development (Agile, IPMA, PMI, Prince2)Excellent communication skills, ability to work under time and customer pressureKnowledge of V-Model, Scrum, Automotive SPICE and AUTOSAR is considered as an advantageGood command of the English language, both written and spokenGerman language knowledge would be an advantage",
-          "requirements-expected-1": "University degree in engineering, preferably software engineering, electrical engineering, automotive engineering or an equivalent qualificationAt least three years of project management experience in automotive or embedded industry environmentKnowledge of project management methods to plan, monitor and control of technical development (Agile, IPMA, PMI, Prince2)Excellent communication skills, ability to work under time and customer pressureKnowledge of V-Model, Scrum, Automotive SPICE and AUTOSAR is considered as an advantageGood command of the English language, both written and spokenGerman language knowledge would be an advantage",
-          "offered-1": "What we offerA competitive salaryA pleasant working environment with strong focus on flexibility and work-life balanceWorking with state-of-the-art technologies on development of premium brand carsA chance to boost up your career in a multi-national companyParticipation in a benefits program consisting of premium health insurance package, sports card, multi-benefit cafeteria system, life and accident insurance, English classes, fresh fruitBonus programmes i.e. vacation payment, yearly bonus, employee awardsAdditional vacation daysRelocation package",
-          "about-us-extended-1": "Nippon Seiki (Europe) B.V. sp z o.o. oddział w PolsceNippon Seiki Group is one of the world’s leading suppliers for the Automotive Industry with an innovative product range in Driver Information Systems. Our passion and goal is deliver instrument panels and display modules with high quality, readability and reliability throughout the entire lifecycle of a car.Being market leader in high-end Head-Up Display, Nippon Seiki is a benchmark to the industry for middle and high segment automobile brands.Our 15.000 employees all over the globe strive every day to design, develop and produce high-end product solutions for our customers. Working closely with larger international automotive manufacturers, from the early life stage of new car models to the manufacturing process, we operate at the center of next generation driver information systems development.Nippon Seiki (Europe) B.V (NSEU) has been established in 2002 and is a fully owned subsidiary of Nippon Seiki Co. Ltd., based in Nagaoka, Japan. Our European headquarter is located in Hoofddorp - The Netherlands. We focus on the European automotive market with our engineering sites located close to the industry in Munich, Rüsselsheim, Paris and Redditch (UK) and a software development office in Gdansk.Scroll to the company’s profile",
-          "about-us-description-1": "Nippon Seiki (Europe) B.V. sp z o.o. oddział w PolsceNippon Seiki Group is one of the world’s leading suppliers for the Automotive Industry with an innovative product range in Driver Information Systems. Our passion and goal is deliver instrument panels and display modules with high quality, readability and reliability throughout the entire lifecycle of a car.Being market leader in high-end Head-Up Display, Nippon Seiki is a benchmark to the industry for middle and high segment automobile brands.Our 15.000 employees all over the globe strive every day to design, develop and produce high-end product solutions for our customers. Working closely with larger international automotive manufacturers, from the early life stage of new car models to the manufacturing process, we operate at the center of next generation driver information systems development.Nippon Seiki (Europe) B.V (NSEU) has been established in 2002 and is a fully owned subsidiary of Nippon Seiki Co. Ltd., based in Nagaoka, Japan. Our European headquarter is located in Hoofddorp - The Netherlands. We focus on the European automotive market with our engineering sites located close to the industry in Munich, Rüsselsheim, Paris and Redditch (UK) and a software development office in Gdansk.Scroll to the company’s profile"
-        }
-      },
-      "Capgemini Software Solutions CenterO firmie": {
-        "Java Developer": {
-          "job-title": "Java Developer",
-          "employer-name": "Capgemini Software Solutions CenterO firmie",
-          "workplaces": "KrakówKraków, małopolskie",
-          "publication-dates": "ogłoszenie wygasło rok temu",
-          "contract-types": "umowa o pracę",
-          "work-schedules": "pełny etat",
-          "position-levels": "specjalista (Mid / Regular)",
-          "remote-recruitment": "rekrutacja zdalna",
-          "technologies-1": "Technologie, których używamyWymaganeJavaJEE",
-          "technologies-expected-1": "WymaganeJavaJEE",
-          "responsibilities-1": "Twój zakres obowiązkówbędziesz tworzyć aplikacje w różnych branżach oraz pracować w międzynarodowych zespołach w oparciu o zwinne metodyki i profesjonalny proces wytwarzania oprogramowania;rozwijać się w obszarze One Click Deployment, Clean Code, Behavior Driven Development, Automation First itp.",
-          "requirements-1": "Nasze wymaganiaposiadasz co najmniej 2-3 letnie komercyjne doświadczenie w tworzeniu systemów w oparciu o technologie Java / JEE;umiejętnie programujesz w językach obiektowych (Java);posiadasz dobrą, praktyczną znajomość technologii webowych (np. JSP, JSF, Spring, Struts, XML, Web Services, Servlets);znasz produkty bazodanowe (np. Oracle / SQL Server);ukończyłeś/aś studia inżynierskie lub magisterskie z dziedziny nauk ścisłych;płynnie posługujesz się językiem angielskim.",
-          "requirements-expected-1": "posiadasz co najmniej 2-3 letnie komercyjne doświadczenie w tworzeniu systemów w oparciu o technologie Java / JEE;umiejętnie programujesz w językach obiektowych (Java);posiadasz dobrą, praktyczną znajomość technologii webowych (np. JSP, JSF, Spring, Struts, XML, Web Services, Servlets);znasz produkty bazodanowe (np. Oracle / SQL Server);ukończyłeś/aś studia inżynierskie lub magisterskie z dziedziny nauk ścisłych;płynnie posługujesz się językiem angielskim.",
-          "training-space-1": "Takie dajemy możliwości rozwojubranżowe platformy e-learningowebudżet rozwojowyczas na rozwój Twoich pomysłówkonferencje w Polscekonferencje zagranicznementoringszkolenia wewnątrzfirmoweszkolenia zewnętrznewsparcie merytoryczne od liderów technologicznychwsparcie w przygotowaniu do bycia prelegentemwspieramy wydarzenia dla ITwymiana wiedzy technicznej w firmie",
-          "offered-1": "To oferujemyszkolenia i certyfikacje techniczne;bezpłatny dostęp do dedykowanej platformy learningowej NEXT, na której dostępne są materiały szkoleniowe oferowane m.in. przez Pluralsight, Coursera i Harvard;benefity w ramach pakietu socjalnego, m.in. prywatna opieka medyczna, pakiet ubezpieczeniowy, karta Multisport, dofinansowanie zajęć sportowych;szkolenia językowe (angielski i niemiecki na różnym poziomie zaawansowania);abonament samochodowy na preferencyjnych warunkach – Master Benefit;możliwość zastosowania podwyższonych kosztów uzyskania przychodu w przypadku pracy twórczej;elastyczne godziny pracy;wsparcie w relokacji;pracę w modelu hybrydowym, umożliwiającą łączenie pracy w biurze z pracą w domu;bezpłatne miejsca parkingowe oraz zamykane boksy rowerowe;możliwość uczestnictwa w Communities (np. Agile, IoT, [email protected] i inne);dostęp online do ponad 2000 audiobooków i podcastów;rekrutacja prowadzona online.",
-          "benefits-1": "Benefityprywatna opieka medycznadofinansowanie nauki językówdofinansowanie szkoleń i kursówubezpieczenie na życieelastyczny czas pracyspotkania integracyjnefirmowa drużyna sportowafirmowa bibliotekabrak dress code’ugry wideo w pracykawa / herbataparking dla pracownikówstrefa relaksudodatkowe świadczenia socjalnedofinansowanie biletów do kina, teatrupakiet relokacyjnypaczki świąteczneprogram rekomendacji pracownikówkarta Multisport",
-          "recruitment-stages-1": "Etapy rekrutacji1Aplikacja online2Weryfikacja językowa3Telco techniczne (opcjonalnie)4Rozmowa kwalifikacyjna (online)5Witamy na pokładzie Capgeminers! :) ",
-          "about-us-extended-1": "Capgemini Software Solutions CenterSoftware Solutions Center we Wrocławiu i Poznaniu jest częścią Grupy Capgemini.Jesteśmy światowym liderem w dziedzinie doradztwa, usług technologicznych i transformacji cyfrowej. Celem grupy jest wprowadzanie czołowych i innowacyjnych rozwiązań oraz udostępnianie klientom całej gamy możliwości cyfrowego świata, w oparciu o ponad 50-letnią tradycję i szeroką wiedzę branżową. Firma powstała w 1967 roku we Francji. Kierujemy się przekonaniem, że wartość biznesowa technologii pochodzi od ludzi i powinna im służyć. Jesteśmy wielokulturową organizacją, liczącą ponad270 000 pracowników, zatrudnionych w 50 krajach.Więcej o nas dowiesz się odwiedzając naszą stronę:https://capgeminisoftware.pl/poznaj-nas/Przewiń do profilu firmy",
-          "about-us-description-1": "Capgemini Software Solutions CenterSoftware Solutions Center we Wrocławiu i Poznaniu jest częścią Grupy Capgemini.Jesteśmy światowym liderem w dziedzinie doradztwa, usług technologicznych i transformacji cyfrowej. Celem grupy jest wprowadzanie czołowych i innowacyjnych rozwiązań oraz udostępnianie klientom całej gamy możliwości cyfrowego świata, w oparciu o ponad 50-letnią tradycję i szeroką wiedzę branżową. Firma powstała w 1967 roku we Francji. Kierujemy się przekonaniem, że wartość biznesowa technologii pochodzi od ludzi i powinna im służyć. Jesteśmy wielokulturową organizacją, liczącą ponad270 000 pracowników, zatrudnionych w 50 krajach.Więcej o nas dowiesz się odwiedzając naszą stronę:https://capgeminisoftware.pl/poznaj-nas/Przewiń do profilu firmy"
-        }
-      },
-      "LEAD INVESTMENTS sp. z o.o.O firmie": {
-        "Front-end Developer": {
-          "job-title": "Front-end Developer",
-          "employer-name": "LEAD INVESTMENTS sp. z o.o.O firmie",
-          "contract-types-salary": "4 000–12 000 zł netto (+ VAT) / mies.",
-          "workplaces": "Abrahama 18, Stare Miasto, PoznańPoznań, wielkopolskie",
-          "publication-dates": "ogłoszenie wygasło rok temu",
-          "contract-types": "umowa zlecenie, kontrakt B2B",
-          "work-schedules": "pełny etat",
-          "position-levels": "specjalista (Mid / Regular)",
-          "work-modes": "praca zdalna",
-          "attribute-primary-immediate-employment": "Praca od zaraz",
-          "remote-recruitment": "rekrutacja zdalna",
-          "responsibilities-1": "Twój zakres obowiązkówBieżące realizowanie powierzonych zadań programistycznych,Opieka nad serwisem oraz wprowadzenie nowych funkcji i aplikacji,Zapewnienie sprawnego funkcjonowania firmy oraz portalu,Sprawienie, by MyLead wyraźnie wyróżniał się na tle konkurencji,Pomoc w kreowaniu standardów i procedur.",
-          "requirements-1": "Nasze wymaganiaZnajomość JavaScript ES6 i wyższych,Znajomość Angular,Znajomość Bootstrap lub podobne,Znajomość bugów, ograniczeń, polyfillsów dla poszczególnych przeglądarek,Umiejętność pracy pod presją oraz pracy w zespole,Kreatywność i głowa pełna pomysłów.Mile widzianeDoświadczenie z aplikacjami typu SPA, z dużymi zbiorami danych,Znajomość metodyki CSS (BEM lub innych),Poczucie estetyki, wraz z pracą pixel-perfect,Znajomość języka angielskiego umożliwiająca czytanie dokumentacji technicznej,Doświadczenie w pracy na podobnym stanowisku,Znajomość RWD.",
-          "requirements-expected-1": "Znajomość JavaScript ES6 i wyższych,Znajomość Angular,Znajomość Bootstrap lub podobne,Znajomość bugów, ograniczeń, polyfillsów dla poszczególnych przeglądarek,Umiejętność pracy pod presją oraz pracy w zespole,Kreatywność i głowa pełna pomysłów.",
-          "requirements-optional-1": "Mile widzianeDoświadczenie z aplikacjami typu SPA, z dużymi zbiorami danych,Znajomość metodyki CSS (BEM lub innych),Poczucie estetyki, wraz z pracą pixel-perfect,Znajomość języka angielskiego umożliwiająca czytanie dokumentacji technicznej,Doświadczenie w pracy na podobnym stanowisku,Znajomość RWD.",
-          "offered-1": "To oferujemyPracę zdalną,Bardzo atrakcyjne wynagrodzenie - 4000 - 12000 netto, adekwatne do posiadanych zdolności i osiągniętych celów,Umowę zlecenie lub B2B.",
-          "about-us-1": "O nasMyLead to nowoczesna firma z branży internetowej. Od 2014 roku zajmujemy się wsparciem w zdobywaniu nowych klientów dla firm, w tym dla największych marek w Polsce i na świecie. Pomaga nam w tym prawie 100 tysięcy zarejestrowanych użytkowników z całego świata. MyLead to portal posiadający wiele nagród, w tym elitarne wyróżnienie “wschodząca gwiazda” zdobyte w 2019 roku.",
-          "additional-module-1": "Jeśli..●\tNie chcesz być małym, nic nie znaczącym trybikiem w wielkiej, korporacyjnej maszynie,●\tLubisz ten moment, kiedy Twoja praca jest doceniana,●\tChcesz świętować wspólnie osiągnięte sukcesy,●\tLiczysz na rozwój i ważne jest dla Ciebie zdobywanie nowych umiejętności...to gwarantujemy Ci, że ta praca jest dla Ciebie stworzona!"
-        }
-      },
-      "Profi-Data Sp. z o.o.O firmie": {
-        "Junior Developer ASP.NET": {
-          "job-title": "Junior Developer ASP.NET",
-          "employer-name": "Profi-Data Sp. z o.o.O firmie",
-          "workplaces": "Milczańska 30A, SzczecinSzczecin, zachodniopomorskie",
-          "publication-dates": "ogłoszenie wygasło rok temu",
-          "contract-types": "umowa o pracę, kontrakt B2B",
-          "work-schedules": "pełny etat",
-          "position-levels": "młodszy specjalista (Junior)",
-          "technologies-1": "Technologie, których używamyWymaganeASP.NET MVCASP.NET CoreSVNGitT-SQL",
-          "technologies-expected-1": "WymaganeASP.NET MVCASP.NET CoreSVNGitT-SQL",
-          "responsibilities-1": "Twój zakres obowiązkówudział w zespołach przygotowujących analizy przedwdrożeniowe, w tym projektowanie modelu rozwiązań dodatkowychtworzenie i testowanie nowych rozwiązań ASP.NET, raportów i aplikacji zgodnie z wymogami klientówwsparcie w integracji SAP BO z innymi rozwiązaniami informatycznymiuczestnictwo w pracach wdrożeniach systemu SAP Business Onerozwój zawodowy i stałe podnoszenia własnych kwalifikacji",
-          "requirements-1": "Nasze wymaganiaumiejętność tworzenia aplikacji webowych typu MPA przy wykorzystaniu ASP.NET MVC oraz ASP.NET Coreumiejętność pracy z systemami kontroli wersji – SVN oraz GITpraktyczna umiejętność tworzenia zapytań do bazy danych z wykorzystaniem T-SQL (Microsoft SQL Server)znajomość dobrych praktyk w zakresie tworzenia oprogramowaniaMile widzianeposiadanie wiedzy biznesowej z zakresu systemów ERP w zakresie rozumienia i identyfikacji potrzeb klientauprawnienia do kierowania pojazdami kat. B",
-          "requirements-expected-1": "umiejętność tworzenia aplikacji webowych typu MPA przy wykorzystaniu ASP.NET MVC oraz ASP.NET Coreumiejętność pracy z systemami kontroli wersji – SVN oraz GITpraktyczna umiejętność tworzenia zapytań do bazy danych z wykorzystaniem T-SQL (Microsoft SQL Server)znajomość dobrych praktyk w zakresie tworzenia oprogramowania",
-          "requirements-optional-1": "Mile widzianeposiadanie wiedzy biznesowej z zakresu systemów ERP w zakresie rozumienia i identyfikacji potrzeb klientauprawnienia do kierowania pojazdami kat. B",
-          "offered-1": "To oferujemystabilne i atrakcyjne warunki zatrudnienia (umowa o pracę), pakiet socjalny (karta MultiSport), w firmie działającej w branży IT ponad 25 latmożliwość pracy na warunkach umowy B2Bswobodną atmosferę pracy i elastyczny czas pracymożliwość awansu zawodowegopracę w ambitnym zespoleciągłe kształcenie i podnoszenie kwalifikacji zawodowychmożliwość uzyskania certyfikacji firmy SAP",
-          "benefits-1": "Benefitydofinansowanie zajęć sportowychelastyczny czas pracybrak dress code’u",
-          "about-us-extended-1": "Profi-Data Sp. z o.o.PROFI-DATA (www.profidata.com.pl) - firma informatyczna realizująca m.in. projekty wdrożeniowe dla sektora MŚP w oparciu o system ERP SAP Business One, poszukuje do siedziby firmy w Szczecinie osób na stanowisko:Junior Developer ASP .NETPrzewiń do profilu firmy",
-          "about-us-description-1": "Profi-Data Sp. z o.o.PROFI-DATA (www.profidata.com.pl) - firma informatyczna realizująca m.in. projekty wdrożeniowe dla sektora MŚP w oparciu o system ERP SAP Business One, poszukuje do siedziby firmy w Szczecinie osób na stanowisko:Junior Developer ASP .NETPrzewiń do profilu firmy"
-        }
-      }
-    },
-    "12": {
-      "MAKRO Cash & Carry Polska S.A.O firmie": {
-        "Programista Oracle APEX PL/SQL": {
-          "job-title": "Programista Oracle APEX PL/SQL",
-          "employer-name": "MAKRO Cash & Carry Polska S.A.O firmie",
-          "workplaces": "WarszawaWarszawa, mazowieckie",
-          "publication-dates": "ogłoszenie wygasło rok temu",
-          "contract-types": "umowa o pracę",
-          "work-schedules": "pełny etat",
-          "position-levels": "specjalista (Mid / Regular)",
-          "work-modes": "praca hybrydowa",
-          "technologies-1": "Technologie, których używamySystem operacyjny",
-          "technologies-os-1": "System operacyjny",
-          "responsibilities-1": "Twój zakres obowiązkówprojektowanie, programowanie, testowanie oraz wdrażanie nowych rozwiązańrozwój funkcjonujących rozwiązań i aplikacjitworzenie dokumentacji w zakresie przygotowywanych rozwiązań",
-          "requirements-1": "Nasze wymaganiaznajomość środowiska Oracledobra znajomość PL/SQLumiejętność pracy w zespole i pod presją czasudobra organizacja pracy, komunikatywnośćchęć uczenia się i rozwiązywania problemówsamodzielność w wykonywaniu zadań i ukierunkowanie na osiąganie celówMile widzianedoświadczenie w projektowaniu i programowaniu aplikacji w Oracle Application Express wersja >= 18 (APEX)doświadczenie w używaniu narzędzi jak GitLab, Jira, Confluencedoświadczenie w zakresie integracji aplikacji (wykorzystanie różnych interfejsów np. WebServices)znajomość narzędzi i środowisk pracy w JavaScript i Microsoft np. SQL Server Integration Serviceswysoko rozwinięte zdolności analitycznekomunikatywna znajomość języka angielskiego",
-          "requirements-expected-1": "znajomość środowiska Oracledobra znajomość PL/SQLumiejętność pracy w zespole i pod presją czasudobra organizacja pracy, komunikatywnośćchęć uczenia się i rozwiązywania problemówsamodzielność w wykonywaniu zadań i ukierunkowanie na osiąganie celów",
-          "requirements-optional-1": "Mile widzianedoświadczenie w projektowaniu i programowaniu aplikacji w Oracle Application Express wersja >= 18 (APEX)doświadczenie w używaniu narzędzi jak GitLab, Jira, Confluencedoświadczenie w zakresie integracji aplikacji (wykorzystanie różnych interfejsów np. WebServices)znajomość narzędzi i środowisk pracy w JavaScript i Microsoft np. SQL Server Integration Serviceswysoko rozwinięte zdolności analitycznekomunikatywna znajomość języka angielskiego",
-          "offered-1": "To oferujemyzatrudnienie na podstawie umowy o pracękonkurencyjne wynagrodzenie oraz system premiowyatrakcyjny pakiet benefitów (m.in. prywatną opiekę medyczną, zniżki na zakupy w MAKRO, dofinansowanie kart sportowo-rekreacyjnych, dofinansowanie do posiłków)możliwość podnoszenia kwalifikacji zawodowych w międzynarodowym środowisku w jednej z czołowych, globalnych firm handlowychpracę w dynamicznym, kreatywnym zespoledużą samodzielność w realizacji zadań, możliwość organizacji pracy własnej, realny wpływ na osiągane wyniki i nieformalną atmosferę pracymożliwość zbudowania nowych obszarów kompetencji,wsparcie merytoryczne i szkolenie w pierwszych miesiącach pracymożliwości rozwoju w obszarze różnych technologii programowaniawspółpracę z doświadczonymi programistami",
-          "benefits-1": "Benefitydofinansowanie zajęć sportowychprywatna opieka medycznaubezpieczenie na życiemożliwość pracy zdalnejelastyczny czas pracy",
-          "about-us-extended-1": "MAKRO Cash & Carry Polska S.A.MAKRO Cash & Carry to międzynarodowa firma działająca w branży handlu hurtowego w 30 lokalizacjach w całym kraju.Więcej ofert i informacji o naszej firmie znajdziesz na: www.makro.plPrzewiń do profilu firmy",
-          "about-us-description-1": "MAKRO Cash & Carry Polska S.A.MAKRO Cash & Carry to międzynarodowa firma działająca w branży handlu hurtowego w 30 lokalizacjach w całym kraju.Więcej ofert i informacji o naszej firmie znajdziesz na: www.makro.plPrzewiń do profilu firmy"
-        }
-      },
-      "MM AutomationO firmie": {
-        "Automatyk - Programista PLC": {
-          "job-title": "Automatyk - Programista PLC",
-          "employer-name": "MM AutomationO firmie",
-          "workplaces": "KatowiceKatowice, śląskie",
-          "publication-dates": "ogłoszenie wygasło rok temu",
-          "contract-types": "umowa o pracę",
-          "work-schedules": "pełny etat",
-          "position-levels": "specjalista (Mid / Regular)",
-          "responsibilities-1": "Twój zakres obowiązkówProgramowanie sterowników PLCTworzenie wizualizacji procesu HMIParametryzacja oraz rozruch urządzeń",
-          "requirements-1": "Nasze wymaganiaWykształcenie wyższe techniczne -kierunek: automatyka, robotyka, elektronika, informatyka i pokrewneZnajomość programowania sterowników PLCZnajomość języka angielskiego lub niemieckiego w stopniu komunikatywnymMyślenie analityczne, umiejętność logicznej analizy przyczynowo-skutkowejSamodzielność, silna motywacja, zaangażowanieGotowość do częstych wyjazdów służbowychPrawo jazdy kat. BMile widziane: doświadczenie w programowaniu PLC; znajomość standardów BMW, VW, GM itp.; znajomość schematów elektrycznych",
-          "requirements-expected-1": "Wykształcenie wyższe techniczne -kierunek: automatyka, robotyka, elektronika, informatyka i pokrewneZnajomość programowania sterowników PLCZnajomość języka angielskiego lub niemieckiego w stopniu komunikatywnymMyślenie analityczne, umiejętność logicznej analizy przyczynowo-skutkowejSamodzielność, silna motywacja, zaangażowanieGotowość do częstych wyjazdów służbowychPrawo jazdy kat. BMile widziane: doświadczenie w programowaniu PLC; znajomość standardów BMW, VW, GM itp.; znajomość schematów elektrycznych",
-          "offered-1": "To oferujemyAtrakcyjne warunki zatrudnieniaSzkolenia z programowania oraz ze standardówDuże możliwości rozwoju osobistego W przyszłości możliwość awansu w strukturach firmyNowoczesne narzędzia do pracyPrzyjazną atmosferę pracy w młodym zespole",
-          "about-us-1": "O nasJesteśmy dynamicznie rozwijającą się firmą, dostarczającą rozwiązania softwarowe dla wiodących europejskich producentów z branży Automotive. "
-        }
-      },
-      "Trimtab Arteria Management Sp. z o.o. Sp.k.O firmie": {
-        "NET / C# Developer": {
-          "job-title": "NET / C# Developer",
-          "employer-name": "Trimtab Arteria Management Sp. z o.o. Sp.k.O firmie",
-          "workplaces": "Stawki 2A, Śródmieście, WarszawaWarszawa, mazowieckie",
-          "publication-dates": "ogłoszenie wygasło rok temu",
-          "contract-types": "umowa o pracę, umowa o dzieło, kontrakt B2B",
-          "work-schedules": "pełny etat",
-          "position-levels": "specjalista (Mid / Regular)",
-          "work-modes": "praca hybrydowa",
-          "remote-recruitment": "rekrutacja zdalna",
-          "technologies-1": "Technologie, których używamyWymaganeC#ASP.NETXMLMS SQLEntity FrameworkSystem operacyjny",
-          "technologies-expected-1": "WymaganeC#ASP.NETXMLMS SQLEntity Framework",
-          "technologies-os-1": "System operacyjny",
-          "responsibilities-1": "Twój zakres obowiązkówProjektowanie i tworzenie nowych aplikacjiRozbudowa istniejących aplikacjiRealizacja testów oprogramowaniaOpracowywanie dokumentacji technicznej",
-          "requirements-1": "Nasze wymaganiaUmiejętność programowania w języku C# z wykorzystaniem .NET Framework 4.6 lub nowszyZnajomość ASP.NETZnajomość SOAPZnajomość baz danych MS SQL Server 2008 lub nowszyZnajomość XMLZnajomości języka angielskiego na poziomie umożliwiającym czytanie ze zrozumieniem dokumentacji i literatury technicznej",
-          "requirements-expected-1": "Umiejętność programowania w języku C# z wykorzystaniem .NET Framework 4.6 lub nowszyZnajomość ASP.NETZnajomość SOAPZnajomość baz danych MS SQL Server 2008 lub nowszyZnajomość XMLZnajomości języka angielskiego na poziomie umożliwiającym czytanie ze zrozumieniem dokumentacji i literatury technicznej",
-          "offered-1": "To oferujemyStabilne zatrudnienieMożliwość pracy zdalnej (po przeszkoleniu)Elastyczny czas pracyZatrudnienie w ramach Umowy o pracę/Umowy o dzieło/Współpracy B2BDofinansowanie do prywatnej opieki medycznejDofinansowanie do karty Multisport",
-          "benefits-1": "Benefitydofinansowanie zajęć sportowychprywatna opieka medycznaelastyczny czas pracy",
-          "about-us-extended-1": "Trimtab Arteria Management Sp. z o.o. Sp.k.Jesteśmy dostawcą internetowych rozwiązań wspomagających zarządzanie procesami biznesowymi. Budujemy własne systemy, platformę klasy Business Process Management (BPM), dedykowane portale i rozwiązania mobilne.Pracujemy dla bardzo dużych klientów: największe wdrożenie to ponad 10 000 użytkowników pracujących w jednym systemie. Jesteśmy jedną z najbardziej dynamicznie rozwijających się organizacji na rynku rozwiązań informatycznych w obszarze wsparcia procesów biznesowych.Przewiń do profilu firmy",
-          "about-us-description-1": "Trimtab Arteria Management Sp. z o.o. Sp.k.Jesteśmy dostawcą internetowych rozwiązań wspomagających zarządzanie procesami biznesowymi. Budujemy własne systemy, platformę klasy Business Process Management (BPM), dedykowane portale i rozwiązania mobilne.Pracujemy dla bardzo dużych klientów: największe wdrożenie to ponad 10 000 użytkowników pracujących w jednym systemie. Jesteśmy jedną z najbardziej dynamicznie rozwijających się organizacji na rynku rozwiązań informatycznych w obszarze wsparcia procesów biznesowych.Przewiń do profilu firmy",
-          "additional-module-1": "Osoby zainteresowane prosimy o przesyłanie aplikacji klikając w przycisk aplikowania."
-        }
-      },
-      "Global4Net Sp. z o.o.O firmie": {
-        "PHP Developer": {
-          "job-title": "PHP Developer",
-          "employer-name": "Global4Net Sp. z o.o.O firmie",
-          "contract-types-salary": "10 000–18 000 zł netto (+ VAT) / mies.",
-          "workplaces": "WrocławWrocław, dolnośląskie",
-          "publication-dates": "ogłoszenie wygasło rok temu",
-          "contract-types": "umowa o pracę, kontrakt B2B",
-          "work-schedules": "pełny etat",
-          "position-levels": "specjalista (Mid / Regular)",
-          "work-modes": "praca stacjonarna, praca zdalna, praca hybrydowa",
-          "remote-recruitment": "rekrutacja zdalna",
-          "technologies-1": "Technologie, których używamyWymaganePHPMagentoSoapUIOOPMySQLRESTSystem operacyjny",
-          "technologies-expected-1": "WymaganePHPMagentoSoapUIOOPMySQLREST",
-          "technologies-os-1": "System operacyjny",
-          "responsibilities-1": "Twój zakres obowiązkówWdrażanie sklepów internetowych w oparciu o platformę Magento wspieraną przez mikroserwisy w Symfony;Rozwój systemów backendowych w sklepach internetowych;Integracje API (SOAP, REST);",
-          "requirements-1": "Nasze wymaganiaDoświadczenie w tworzeniu aplikacji z użyciem języka PHP (wersje 7.3, 7.4, 8.0),Praktyczna znajomość OOP;Praktyczna znajomość SQL (MySQL/PostgreSQL);Znajomość jęz. angielskiego na poziomie min. B2 (umożliwiająca korzystanie z dokumentacji technicznej w jęz. angielskim);Mile widzianeZnajomość Magento/Symfony;Znajomość wzorców projektowych;Znajomość Redis;Znajomość Solr/ELASTICSEARCH;Znajomość Docker;Znajomość RabitMQ;Praktyczna znajomość PHP Unit;Umiejętność pracy z systemem kontroli wersji GIT;",
-          "requirements-expected-1": "Doświadczenie w tworzeniu aplikacji z użyciem języka PHP (wersje 7.3, 7.4, 8.0),Praktyczna znajomość OOP;Praktyczna znajomość SQL (MySQL/PostgreSQL);Znajomość jęz. angielskiego na poziomie min. B2 (umożliwiająca korzystanie z dokumentacji technicznej w jęz. angielskim);",
-          "requirements-optional-1": "Mile widzianeZnajomość Magento/Symfony;Znajomość wzorców projektowych;Znajomość Redis;Znajomość Solr/ELASTICSEARCH;Znajomość Docker;Znajomość RabitMQ;Praktyczna znajomość PHP Unit;Umiejętność pracy z systemem kontroli wersji GIT;",
-          "work-organization-1": "Tak organizujemy naszą pracęTak pracujemywewnątrz organizacji",
-          "work-organization-work-style-1": "Tak pracujemywewnątrz organizacji",
-          "offered-1": "To oferujemyElastyczne podejście w kwestii formy współpracy.W przypadku B2B - oferujemy 26 dni wolnych od świadczenia usług, płatne z naszej strony.Narzędzia pracy: gwarantujemy niezbędny sprzęt do wykonywania pracy/usług.W przypadku B2B: masz możliwość zakupu własnego sprzętu do pracy, a my pomożemy Ci sfinansować comiesięczne raty.Wynagrodzenie adekwatne do poziomu umiejętności.W przypadku B2B: wraz z Twoim rozwojem gwarantujemy stały wzrost wynagrodzenia poprzez ustalone podwyżki w określonym odstępie czasu.Dajemy Ci możliwość rozwoju w projektach, uczestnictwo w wewnętrznych warsztatach oraz możliwość zdawania certyfikatów.Dostęp do platform edukacyjnych online, dzięki którym możesz poszerzać swoje umiejętności techniczne.Pakiet medyczny Medicover, który pozwoli Ci zadbać o swoje zdrowie.Kartę Multisport abyś zawsze był/a w dobrej formie.Lekcje języka angielskiego byś mógł/a podszlifować swój akcent.Pracę w dopasowanym do Ciebie trybie: 100% z biura lub domowej kanapy? a może hybrydowo? wybór należy do Ciebie.",
-          "benefits-1": "Benefitydofinansowanie zajęć sportowychprywatna opieka medycznadofinansowanie nauki językówdofinansowanie szkoleń i kursówmożliwość pracy zdalnejelastyczny czas pracyowoce",
-          "about-us-extended-1": "Global4Net Sp. z o.o.Global4Net to Software House działający na rynku polskim oraz zagranicznym. Znajdujemy się w centrum Wrocławia, do tej pory zrealizowaliśmy blisko 200 projektów.Nasze działania skupiają się w obszarze e-commerce, rozwijamy projekty z wykorzystaniem dobrych praktyk i wzorców projektowych (stosujemy metodologię pracy SCRUM, frameworki, systemy rozproszone, programowanie w parach).Dbamy o nasz Zespół poprzez zapewnienie szkoleń i warsztatów, umożliwiamy zdawanie certyfikatów(Zend, Magento), zapewniamy doskonałe warunki pracy w klimatyzowanych pomieszczeniach w miłej atmosferze - wszyscy się znamy, brak struktury korporacji.Obecnie do naszego zespołu poszukujemy PHP Developera - być może Ciebie? Jeśli spełniasz większość poniższych wymagań - wyślij nam swoje CV!Przewiń do profilu firmy",
-          "about-us-description-1": "Global4Net Sp. z o.o.Global4Net to Software House działający na rynku polskim oraz zagranicznym. Znajdujemy się w centrum Wrocławia, do tej pory zrealizowaliśmy blisko 200 projektów.Nasze działania skupiają się w obszarze e-commerce, rozwijamy projekty z wykorzystaniem dobrych praktyk i wzorców projektowych (stosujemy metodologię pracy SCRUM, frameworki, systemy rozproszone, programowanie w parach).Dbamy o nasz Zespół poprzez zapewnienie szkoleń i warsztatów, umożliwiamy zdawanie certyfikatów(Zend, Magento), zapewniamy doskonałe warunki pracy w klimatyzowanych pomieszczeniach w miłej atmosferze - wszyscy się znamy, brak struktury korporacji.Obecnie do naszego zespołu poszukujemy PHP Developera - być może Ciebie? Jeśli spełniasz większość poniższych wymagań - wyślij nam swoje CV!Przewiń do profilu firmy"
-        }
-      },
-      "eService Sp. z o.o.O firmie": {
-        ".NET Developer": {
-          "job-title": ".NET Developer",
-          "employer-name": "eService Sp. z o.o.O firmie",
-          "workplaces": "Jana Olbrachta 94, Wola, WarszawaWarszawa, mazowieckie",
-          "publication-dates": "ogłoszenie wygasło rok temu",
-          "contract-types": "umowa o pracę",
-          "work-schedules": "pełny etat",
-          "position-levels": "specjalista (Mid / Regular)",
-          "work-modes": "praca hybrydowa",
-          "attribute-primary-immediate-employment": "Praca od zaraz",
-          "remote-recruitment": "rekrutacja zdalna",
-          "technologies-1": "Technologie, których używamyWymaganeC#VB.NETASP.NETSQLMile widzianeMVCSOAPRESTWCFSystem operacyjny",
-          "technologies-expected-1": "WymaganeC#VB.NETASP.NETSQL",
-          "technologies-optional-1": "Mile widzianeMVCSOAPRESTWCF",
-          "technologies-os-1": "System operacyjny",
-          "responsibilities-1": "Twój zakres obowiązkówRozwój aplikacji w technologii Microsoft .NET i SQL ServerAnaliza zgłoszonych rozszerzeń funkcjonalnościProjektowanie nowych rozwiązańWspółpraca z zespołami wdrożeniowymiWsparcie systemów technologii .NET",
-          "requirements-1": "Nasze wymaganiaC# 3/3VB.NET 2/3Team Foundation Server (TFS) 1/3SQL Server 2/3ASP.NET Web Forms 2/3Windows Forms 2/3Angular 2/3NET Core 2/3Znajomość języka angielskiego na poziomie umożliwiającym swobodną komunikację w środowisku międzynarodowymMile widzianeminimum 2-lata doświadczania na podobnym stanowiskuMVCWeb Services – SOAP i RESTWindows Communications Foundations (WCF)",
-          "requirements-expected-1": "C# 3/3VB.NET 2/3Team Foundation Server (TFS) 1/3SQL Server 2/3ASP.NET Web Forms 2/3Windows Forms 2/3Angular 2/3NET Core 2/3Znajomość języka angielskiego na poziomie umożliwiającym swobodną komunikację w środowisku międzynarodowym",
-          "requirements-optional-1": "Mile widzianeminimum 2-lata doświadczania na podobnym stanowiskuMVCWeb Services – SOAP i RESTWindows Communications Foundations (WCF)",
-          "work-organization-1": "Tak organizujemy naszą pracęTak pracujemywewnątrz organizacji",
-          "work-organization-work-style-1": "Tak pracujemywewnątrz organizacji",
-          "development-practices-1": "Tak pracujemy nad projektemClean Codecode reviewstatyczna analiza koduwzorce projektoweTDDContinuous Deploymentdokumentacjatesty funkcjonalnetesty integracyjnetesty jednostkowe",
-          "training-space-1": "Takie dajemy możliwości rozwojubranżowe platformy e-learningowekonferencje w Polsceszkolenia wewnątrzfirmoweszkolenia zewnętrzne",
-          "benefits-1": "Benefitydofinansowanie zajęć sportowychprywatna opieka medycznadofinansowanie nauki językówdofinansowanie szkoleń i kursówubezpieczenie na życieelastyczny czas pracyopieka stomatologicznafirmowa bibliotekabrak dress code’ugry wideo w pracykawa / herbatastrefa relaksudodatkowe świadczenia socjalnewyprawka dla dzieckaprogram rekomendacji pracownikówinicjatywy dobroczynne",
-          "recruitment-stages-1": "Etapy rekrutacji1Wyślij CV2Spotkajmy się online3Dołącz do eService",
-          "about-us-extended-1": "eService Sp. z o.o.Dołącz do nas i rozwijaj się w międzynarodowym środowisku EVO Payments International. Jesteśmy najszybciej rozwijającą się firmą w obszarze transakcji bezgotówkowych w kraju, a także największym agentem rozliczeniowym w Europie Środkowej. Procesujemy blisko 1,5 mld transakcji bezgotówkowych rocznie.Przewiń do profilu firmy",
-          "about-us-description-1": "eService Sp. z o.o.Dołącz do nas i rozwijaj się w międzynarodowym środowisku EVO Payments International. Jesteśmy najszybciej rozwijającą się firmą w obszarze transakcji bezgotówkowych w kraju, a także największym agentem rozliczeniowym w Europie Środkowej. Procesujemy blisko 1,5 mld transakcji bezgotówkowych rocznie.Przewiń do profilu firmy"
-        }
-      },
-      "Athenasoft Sp. z o.o.O firmie": {
-        "Front End Developer": {
-          "job-title": "Front End Developer",
-          "employer-name": "Athenasoft Sp. z o.o.O firmie",
-          "workplaces": "WarszawaWarszawa, mazowieckie",
-          "publication-dates": "ogłoszenie wygasło rok temu",
-          "contract-types": "umowa o pracę, kontrakt B2B",
-          "work-schedules": "pełny etat",
-          "position-levels": "specjalista (Mid / Regular), starszy specjalista (Senior)",
-          "work-modes": "praca zdalna",
-          "remote-recruitment": "rekrutacja zdalna",
-          "responsibilities-1": "Twój zakres obowiązkówFront End Developer (mid/senior)Siedziba firmy: Warszawa (Białołęka), praca w większości zdalna.Twój zakres obowiązkówProjektowanie i rozwój oprogramowania zgodnie z dostarczoną specyfikacją;Tworzenie wysokiej jakości kodu w oparciu o testy jednostkowe;Bieżąca identyfikacja problemów;Analiza potrzeb Klientów, współpraca z analitykami nad uszczegółowieniem założeń projektowych;Tworzenie dokumentacji technicznej;Odpowiedzialność za realizację i utrzymanie powierzonych projektów.Umiejętność implementacji obsługi użytkowników w aplikacjach.",
-          "requirements-1": "Nasze wymaganiaNasze oczekiwania:Wiedza na temat tworzenia nowoczesnych aplikacji webowych;Umiejętność zastosowania wzorców projektowych;Dogłębne zrozumienie odpowiedzialności poszczególnych elementów aplikacji: bazy danych, API, cache, proxy i innych usług internetowych używanych w systemie;Znajomość Angular 8+ (przewidywany upgrade do wersji 11);Znajomość JavaScript, TypeScript, CSS i HTML5;Znajomość Git, Git Flow;Umiejętność pracy w zespole, analitycznego myślenia;Znajomość języka angielskiego w stopniu umożliwiającym prowadzenie dokumentacji i komunikację z klientami oraz innymi członkami zespołu projektowego.Mile widziane:Znajomość DevOps, a szczególnie CI/CD;Znajomość biblioteki Highcharts;Umiejętność implementacji obsługi użytkowników w aplikacjach.",
-          "requirements-expected-1": "Nasze oczekiwania:Wiedza na temat tworzenia nowoczesnych aplikacji webowych;Umiejętność zastosowania wzorców projektowych;Dogłębne zrozumienie odpowiedzialności poszczególnych elementów aplikacji: bazy danych, API, cache, proxy i innych usług internetowych używanych w systemie;Znajomość Angular 8+ (przewidywany upgrade do wersji 11);Znajomość JavaScript, TypeScript, CSS i HTML5;Znajomość Git, Git Flow;Umiejętność pracy w zespole, analitycznego myślenia;Znajomość języka angielskiego w stopniu umożliwiającym prowadzenie dokumentacji i komunikację z klientami oraz innymi członkami zespołu projektowego.Mile widziane:Znajomość DevOps, a szczególnie CI/CD;Znajomość biblioteki Highcharts;Umiejętność implementacji obsługi użytkowników w aplikacjach.",
-          "offered-1": "To oferujemyPracę w pełnym wymiarze godzin na umowę o pracę lub B2BPrzyjazne środowisko, w którym wzajemnie się szanujemy.Dostęp do wiedzy oraz niezbędne narzędzia pracy.",
-          "about-us-1": "O nasFirma Athenasoft jest wiodącym na rynku polskim producentem oprogramowania dla budownictwa. Najbardziej rozpoznawalnymi produktami naszej firmy są programy do kosztorysowania NORMA (Norma EXPERT, Norma STANDARD 2, Norma PRO).Jesteśmy zgranym zespołem doświadczonych i bardzo doświadczonych programistów w wieku 30-50 lat. W obecnym składzie pracujemy ze sobą co najmniej 10 lat. Nie jesteśmy korporacją tylko firmą inżynierów pragnących stworzyć coś konkretnego i użytecznego. Nie mamy rozbudowanej hierarchii w zespole - preferujemy płaskie struktury i swobodną wymianę myśli z konstruktywną krytyką włącznie.Poszukujemy osoby na stanowisko Front End Developer do długofalowej współpracy przy tworzeniu projektów w postaci serwisów internetowych oraz rozwoju bieżących aplikacji."
-        }
-      },
-      "SMOKED SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄO firmie": {
-        "Full Stack Developer (Angular + Spring)": {
-          "job-title": "Full Stack Developer (Angular + Spring)",
-          "employer-name": "SMOKED SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄO firmie",
-          "workplaces": "Łopuszańska 32, Włochy, WarszawaWarszawa, mazowieckie",
-          "publication-dates": "ogłoszenie wygasło rok temu",
-          "contract-types": "umowa o pracę, kontrakt B2B",
-          "work-schedules": "pełny etat",
-          "position-levels": "specjalista (Mid / Regular)",
-          "work-modes": "praca zdalna",
-          "responsibilities-1": "Twój zakres obowiązkówWdrażanie nowych funkcjonalności w aplikacji WEBUsprawnianie obecnych rozwiązańWsparcie programistyczne dla Senior developerów",
-          "requirements-1": "Nasze wymaganiaFRONTEND:2+ lata doświadczenia w pracy z Angularem(Typescript), Angular Material, RxJS, LESS/SASSMile widziane: OpenLayers, NgRx, JasmineDobre rozumienie zasad KISS, SOLID, ReduxBACKEND:2+ lata doświadczenia w pracy z Spring, KotlinDoświadczenie w REST APIs, Agile oraz w pisaniu unit testsDoskonała znajomość SQL i relacyjnych baz danych: PostgreSQLDobre rozumienie zasad REST Architecture, CQRS, innych wzorców projektowychMILE WIDZIANE:Doświadczenie z Kubernetes, DockerDoświadczenie w używaniu Firebase Cloud Messaging, PusherPraca z JenkinsZnajomość usług AWS",
-          "requirements-expected-1": "FRONTEND:2+ lata doświadczenia w pracy z Angularem(Typescript), Angular Material, RxJS, LESS/SASSMile widziane: OpenLayers, NgRx, JasmineDobre rozumienie zasad KISS, SOLID, ReduxBACKEND:2+ lata doświadczenia w pracy z Spring, KotlinDoświadczenie w REST APIs, Agile oraz w pisaniu unit testsDoskonała znajomość SQL i relacyjnych baz danych: PostgreSQLDobre rozumienie zasad REST Architecture, CQRS, innych wzorców projektowychMILE WIDZIANE:Doświadczenie z Kubernetes, DockerDoświadczenie w używaniu Firebase Cloud Messaging, PusherPraca z JenkinsZnajomość usług AWS",
-          "offered-1": "To oferujemyPracę w 100% zdalną oraz elastyczne godziny pracyDostęp do platformy medycznej",
-          "about-us-1": "O nasJesteśmy prężnym startup'em zajmującym się i rozwijającym autorskie systemy do wczesnego wykrywania pożarów."
-        }
-      },
-      "Silky Coders sp. z o.o.O firmie": {
-        "Business Intelligence Developer": {
-          "job-title": "Business Intelligence Developer",
-          "employer-name": "Silky Coders sp. z o.o.O firmie",
-          "workplaces": "Długie Ogrody 12, GdańskGdańsk, pomorskie",
-          "publication-dates": "ogłoszenie wygasło rok temu",
-          "contract-types": "umowa o pracę, kontrakt B2B",
-          "work-schedules": "pełny etat",
-          "position-levels": "specjalista (Mid / Regular), starszy specjalista (Senior)",
-          "work-modes": "praca stacjonarna, praca hybrydowa",
-          "remote-recruitment": "rekrutacja zdalna",
-          "technologies-1": "Technologie, których używamyWymaganeT-SQLPL/SQLETLOLAPMDXBI/DWMile widzianeSSASSSRSSSISSystem operacyjny",
-          "technologies-expected-1": "WymaganeT-SQLPL/SQLETLOLAPMDXBI/DW",
-          "technologies-optional-1": "Mile widzianeSSASSSRSSSIS",
-          "technologies-os-1": "System operacyjny",
-          "responsibilities-1": "Twój zakres obowiązkówModelowanie oraz tworzenie hurtowni danychProjektowanie oraz implementacja ETLTworzenie kostek OLAP, kalkulacji oraz raportów z wykorzystaniem języka MDXUdział przy budowie zaawansowanych algorytmów Forecast, Data Mining, StatystykBudowa Raportów, Dasboadrów, Wizualizacji na urządzenia przenośneTworzenie dokumentacji technicznej i projektowej",
-          "requirements-1": "Nasze wymaganiaBardzo dobrze znasz T-SQL lub PL/SQLWykazujesz zaangażowanie w zdobywaniu wiedzyPosiadasz doświadczenia w programowaniu rozwiązań BI/DWWykazujesz zdolności analitycznego myślenia, entuzjazm i samodzielnośćPosiadasz znajomość języka angielskiego (praca z dokumentacją)Mile widzianeZnajomość MS SSAS, SSRS, SSIS",
-          "requirements-expected-1": "Bardzo dobrze znasz T-SQL lub PL/SQLWykazujesz zaangażowanie w zdobywaniu wiedzyPosiadasz doświadczenia w programowaniu rozwiązań BI/DWWykazujesz zdolności analitycznego myślenia, entuzjazm i samodzielnośćPosiadasz znajomość języka angielskiego (praca z dokumentacją)",
-          "requirements-optional-1": "Mile widzianeZnajomość MS SSAS, SSRS, SSIS",
-          "work-organization-1": "Tak organizujemy naszą pracęTak pracujemywewnątrz organizacjiagilescrum",
-          "work-organization-work-style-1": "Tak pracujemywewnątrz organizacjiagilescrum",
-          "training-space-1": "Takie dajemy możliwości rozwojubranżowe platformy e-learningowekonferencje w Polscementoringszkolenia wewnątrzfirmoweszkolenia zewnętrznewsparcie merytoryczne od liderów technologicznychwsparcie w przygotowaniu do bycia prelegentemwspieramy wydarzenia dla ITwymiana wiedzy technicznej w firmie",
-          "offered-1": "To oferujemyNowoczesny stack technologiczny i otwartość na wdrażanie nowych rozwiązańPracę z własnym produktem - naszymi aplikacjami i systemamiAtrakcyjne wynagrodzenieUmowę o pracę lub współpracę B2B w nowej spółce technologicznej LPP - Silky CodersDużą samodzielność działaniaPracę na dużej ilości danych, a co za tym idzie doświadczenie, które zaprocentuje w przyszłościMożliwość pracy zdalnej, hybrydowej lub całkowicie z biura, w zależności od twoich potrzebUczestnictwo w szkoleniach i hackatonachKody zniżkowe na zakupy w sklepach marek LPPOpiekę medyczną, kartę sportową i ubezpieczenie na życie na preferencyjnych warunkachProgramy wolontariatu pracowniczegoUczestnictwo w Silky Team - naszej firmowej drużynie sportowejSiłownię dla naszych pracownikówBudżet integracyjnyDodatkowe benefity (prezenty świąteczne, wyprawki dla młodych rodziców, i in.)",
-          "benefits-1": "Benefitydofinansowanie zajęć sportowychdofinansowanie nauki językówdofinansowanie szkoleń i kursówubezpieczenie na życiemożliwość pracy zdalnejowocezniżki na firmowe produkty i usługispotkania integracyjnesiłownia w biurzefirmowa drużyna sportowafirmowa bibliotekabrak dress code’ugry wideo w pracykawa / herbatastrefa relaksudofinansowanie biletów do kina, teatruwyprawka dla dzieckapaczki świąteczneinicjatywy dobroczynnedofinansowanie do opieki medycznej",
-          "recruitment-stages-1": "Etapy rekrutacji11 - wstępna rozmowa telefoniczna22 - rekrutacja zdalna33 - informacja zwrotna",
-          "about-us-extended-1": "Silky Coders sp. z o.o.Silky Coders to polska spółka technologiczna należąca do Grupy Kapitałowej LPP, właściciela marek odzieżowych: Reserved, Cropp, House, Mohito i Sinsay.Silky Coders to firma stworzona przez ekspertów z branży IT.Zatrudniamy ponad 500 specjalistów, takich jak: Java Developer, Frontend Developer, PHP Developer, DevOps, Administrator, Tester, Scrum Master, Product Owner, Analityk Biznesowy i Systemowy, Project Manager, Data Engineer, Data Scientist, Business Intelligence Analyst.Realizujemy autorskie projekty z wykorzystaniem najnowszych technologii z zakresu IT, data science oraz e-commerce.https://www.silkycoders.com/Przewiń do profilu firmy",
-          "about-us-description-1": "Silky Coders sp. z o.o.Silky Coders to polska spółka technologiczna należąca do Grupy Kapitałowej LPP, właściciela marek odzieżowych: Reserved, Cropp, House, Mohito i Sinsay.Silky Coders to firma stworzona przez ekspertów z branży IT.Zatrudniamy ponad 500 specjalistów, takich jak: Java Developer, Frontend Developer, PHP Developer, DevOps, Administrator, Tester, Scrum Master, Product Owner, Analityk Biznesowy i Systemowy, Project Manager, Data Engineer, Data Scientist, Business Intelligence Analyst.Realizujemy autorskie projekty z wykorzystaniem najnowszych technologii z zakresu IT, data science oraz e-commerce.https://www.silkycoders.com/Przewiń do profilu firmy"
-        }
-      },
-      "Swift Software Development Spółka z o.o.O firmie": {
-        "Front-end developer": {
-          "job-title": "Front-end developer",
-          "employer-name": "Swift Software Development Spółka z o.o.O firmie",
-          "workplaces": "KatowiceKatowice, śląskie",
-          "publication-dates": "ogłoszenie wygasło rok temu",
-          "contract-types": "umowa o pracę",
-          "work-schedules": "pełny etat",
-          "position-levels": "specjalista (Mid / Regular)",
-          "remote-recruitment": "rekrutacja zdalna",
-          "technologies-1": "Technologie, których używamyWymaganeJavaScriptHTMLCSSSASSLESSBootstrap",
-          "technologies-expected-1": "WymaganeJavaScriptHTMLCSSSASSLESSBootstrap",
-          "responsibilities-1": "Twój zakres obowiązkówW czym możesz nam pomóc?Od 2014 roku w ramach jednego z projektów rozwijamy nasze własne oprogramowanie dla gabinetów lekarskich – medchart.pl, a ostatnio również serwis dla pacjentów – teleporada.plJako członek zespołu będziesz odpowiedzialny za tworzenie nowoczesnego interfejsu użytkownika. W swojej pracy będziesz korzystać z najnowszych narzędzi i technologii.Pracujemy w oparciu o metodyki zwinne (SCRUM)",
-          "requirements-1": "Nasze wymaganiaJeden z frameworków: Angular, Vue, ReactHTML5, CSS3, SASS/LESS, Bootstrap/Material UIJavaScript ES2015 (i wyższe) i jQueryPodstawowa znajomość MySQL, MongoDB, MariaDBPodstawowa znajomość PHP 7+Znajomość dobrych praktyk programistycznychPraca na systemie kontroli wersji, preferowany GITMile widzianeDobra znajomość Webpack, TypeScript, ReduxUmiejętność pisania testów jednostkowychPraktyczna znajomość zwinnych metodyk projektowych (SCRUM)Samodzielność, pasja, zaangażowanie",
-          "requirements-expected-1": "Jeden z frameworków: Angular, Vue, ReactHTML5, CSS3, SASS/LESS, Bootstrap/Material UIJavaScript ES2015 (i wyższe) i jQueryPodstawowa znajomość MySQL, MongoDB, MariaDBPodstawowa znajomość PHP 7+Znajomość dobrych praktyk programistycznychPraca na systemie kontroli wersji, preferowany GIT",
-          "requirements-optional-1": "Mile widzianeDobra znajomość Webpack, TypeScript, ReduxUmiejętność pisania testów jednostkowychPraktyczna znajomość zwinnych metodyk projektowych (SCRUM)Samodzielność, pasja, zaangażowanie",
-          "offered-1": "To oferujemyUmowę o pracę, elastyczne godziny, możliwość pracy zdalnejAtrakcyjne wynagrodzenie: preferowane UOP (6-8 tyś. PLN netto)Premie i dodatki (bezpłatny lunch i zaopatrzony kącik kuchenny, darmowy parking w centrum Katowic lub dopłata do komunikacji, imprezy firmowe, etc.)Możliwość uczestnictwa w szkoleniach i konferencjach branżowychCiekawe, duże i różnorodne projekty sprzyjające szybkiemu rozwojowiRealny wpływ na implementowane rozwiązaniaDobrą atmosferę i ciekawych ludzi",
-          "benefits-1": "Benefitydofinansowanie szkoleń i kursówmożliwość pracy zdalnejelastyczny czas pracyspotkania integracyjneparking dla pracownikówbony żywieniowedofinansowanie dojazdów do pracy",
-          "additional-module-1": "Kogo potrzebujemy?Szukamy ludzi nieprzeciętnych, pełnych pasji i zaangażowanych w to co robią, chcących się rozwijać i pracować przy ciekawych projektach. Jeżeli jesteś osobą samodzielną i chcesz mieć realny wpływ na to co robisz, nasza firma jest miejscem dla Ciebie :)",
-          "additional-module-2": "Zainteresowane osoby prosimy o przesyłanie CV wraz z przykładami autorskiego kodu, linku do repozytorium lub portfolio poprzez przycisk Aplikuj."
-        }
-      },
-      "SII Sp. z o.o.O firmie": {
-        "Graphics Driver Developer": {
-          "job-title": "Graphics Driver Developer",
-          "employer-name": "SII Sp. z o.o.O firmie",
-          "workplaces": "Wrocław, dolnośląskie",
-          "publication-dates": "ogłoszenie wygasło rok temu",
-          "contract-types": "Umowa o pracę, Kontrakt B2B",
-          "work-schedules": "Pełny etat",
-          "position-levels": "Specjalista (Mid / Regular)",
-          "remote-recruitment": "rekrutacja zdalna"
-        }
-      }
-    }
-  },
-  "2022": {
-    "1": {
-      "Nexio Management Sp. z o.o.O firmie": {
-        "Programista Java": "NONE"
-      },
-      "PwCAbout the company": {
-        "Cross-platform Integration Developer Java": "NONE"
-      },
-      "Arvato PolskaO firmie": {
-        "ABAP (OMS) Developer": "NONE"
-      },
-      "Bank Millennium S.A.O firmie": {
-        "Programista Java": "NONE"
-      },
-      "Asseco Business Solutions S.A.O firmie": {
-        "Programista .NET": "NONE"
-      },
-      "ex7 Sp. z o.o.O firmie": {
-        "NET C# Developer": "NONE"
-      },
-      "BAZA SKOLIMÓW SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄO firmie": {
-        "Programista front-end (React)": "NONE"
-      },
-      "Mobilinktech Sp. z o.o.O firmie": {
-        "Programista aplikacji mobilnych": "NONE"
-      },
-      "PwC IT Services Sp. z o.o.O firmie": {
-        "Starszy programista .NET": "NONE"
-      },
-      "Autosoftware Wojciech ZalewskiO firmie": {
-        "Programista C#": "NONE"
-      },
-      "VEWD SOFTWARE POLAND SP. Z O.O.O firmie": {
-        "C++ Developer with Linux": "NONE"
-      },
-      "Action S.A.O firmie": {
-        "Programista C#": "NONE"
-      },
-      "Polska Grupa Farmaceutyczna S.A.O firmie": {
-        "Programista Oracle": "NONE"
-      }
-    }
-  }
+"2023": {
+"5": {
+"BMS sp. z o.o.": {
+"Programista .NET": {
+"localization": [
+"zachodniopomorskiezachodniopomorskie",
+"wielkopolskie",
+"warmińsko-mazurskie",
+"świętokrzyskie",
+"śląskie",
+"pomorskie",
+"podlaskie",
+"podkarpackie",
+"opolskie",
+"małopolskie",
+"lubuskie",
+"lubelskie",
+"łódzkie",
+"kujawsko-pomorskie",
+"dolnośląskie"
+],
+"job-title": "Programista .NET",
+"employer-name": "BMS sp. z o.o.O firmie",
+"contract": [
+{
+"min": "10 000–",
+"max": "14 000 zł",
+"unit": " brutto / mies.",
+"type": "umowa o pracę"
+},
+{
+"min": "12 000–",
+"max": "17 000 zł",
+"unit": " netto (+ VAT) / mies.",
+"type": "kontrakt B2B"
+}
+],
+"publication-dates": "ogłoszenie wygasło 11 dni temu",
+"contract-types": "umowa o pracę, kontrakt B2B",
+"work-schedules": "pełny etat",
+"position-levels": "specjalista (Mid / Regular)",
+"work-modes": "praca zdalna, praca hybrydowa",
+"remote-recruitment": "rekrutacja zdalna",
+"technologies-1": [
+"C#",
+".NET",
+"ASP.NET MVC",
+"TSQL",
+"Web Services",
+"MS SQL (2016+)",
+"Visual Studio (2017+)",
+"SQL"
+],
+"technologies-expected-1": [
+"C#",
+".NET",
+"ASP.NET MVC",
+"TSQL",
+"Web Services",
+"MS SQL (2016+)",
+"Visual Studio (2017+)",
+"SQL"
+],
+"technologies-optional-1": [
+"Angular (4+)",
+"REST API (JSON)",
+"JavaScript",
+"jQuery",
+"CSS",
+"DevExpress",
+"Docker",
+"Git",
+"CQRS",
+"HTML5",
+"Entity Framework",
+".NET Core"
+],
+"technologies-os-1": "System operacyjny",
+"about-project-1": "O projekcieOd 25 lat tworzymy kompleksowe i zaawansowane technologicznie oprogramowanie dla banków i instytucji finansowych. Jako Programista .NET będziesz tworzył i rozwijał duże systemy klasy enterprise, są to między innymi obszary bankowości korporacyjnej, bankowości transakcyjnej czy produkty faktoringowe. Realizujemy kompleksowe rozwiązania obejmujące back-office, jak i aplikacje frontowe. Dołączając do nas będziesz mieć realny wpływ na kształt systemu. Zależy nam na jakości naszych produktów i rozumiemy, że praca jest bardziej efektywna bez konieczności ciągłego przełączania się między kontekstami.We współpracy stawiamy na przyjazną, partnerską atmosferę. Jesteśmy otwarci na innowacje. Cenimy samodzielność, niezależność i inicjatywę oraz chęć dzielenia się wiedzą. Wspieramy Twój rozwój zapewniając szkolenia i udział w konferencjach branżowych.",
+"responsibilities-1": [
+"tworzenie, rozwój i utrzymywanie systemów",
+"wykonywanie code-review (z czasem)",
+"dbanie o test coverage",
+"dbanie o buildy CI / proces CD",
+"dbanie o jakość i user experience naszych systemów",
+"przygotowywanie paczek i wsparcie przy wdrażaniu nowych wydań naszych systemów"
+],
+"requirements-1": [
+"minimum 3 lata doświadczenia doświadczenia komercyjnego na stanowisku programisty",
+"dobra znajomość C#, .NET Framework, Visual Studio",
+"dobra znajomość SQL, zwłaszcza w wydaniu MS SQL Server (2016+), wiedza czym jest ACID, transakcyjność",
+"umiejętność pisania unit testów",
+"doświadczenie w rozwiązaniach MVC (takich jak ASP.NET MVC)",
+"dobra znajomość REST API",
+"styczność z Angular (4+)",
+"umiejętność czytania i współtworzenia dokumentacji technicznej",
+"chęć ułatwiania sobie życie poprzez automatyzację powtarzalnych zadań (na przykład w obszarze CI/CD, skrypty)",
+"zaangażowanie i praca zespołowa"
+],
+"requirements-expected-1": [
+"minimum 3 lata doświadczenia doświadczenia komercyjnego na stanowisku programisty",
+"dobra znajomość C#, .NET Framework, Visual Studio",
+"dobra znajomość SQL, zwłaszcza w wydaniu MS SQL Server (2016+), wiedza czym jest ACID, transakcyjność",
+"umiejętność pisania unit testów",
+"doświadczenie w rozwiązaniach MVC (takich jak ASP.NET MVC)",
+"dobra znajomość REST API",
+"styczność z Angular (4+)",
+"umiejętność czytania i współtworzenia dokumentacji technicznej",
+"chęć ułatwiania sobie życie poprzez automatyzację powtarzalnych zadań (na przykład w obszarze CI/CD, skrypty)",
+"zaangażowanie i praca zespołowa"
+],
+"requirements-optional-1": [
+"Dużym plusem będzie jeżeli posiadasz już doświadczenie w tworzeniu rozwiązań (najlepiej wielowątkowych) integrujących się z zewnętrznymi systemami i znasz się na zagadnieniach bądź systemach związanych z bankowością/finansami.",
+"Znajomość: WCF, WinForms/DevExpress, Angular (4+), Entity Framework"
+],
+"work-organization-1": "Tak organizujemy naszą pracęTak pracujemywewnątrz organizacjikoncentrujesz się na jednym projekciemożesz zmienić projektmasz wpływ na rozwiązania technologicznekoncentrujesz się na rozwoju produktukoncentrujesz się na utrzymaniu koduscrum",
+"work-organization-work-style-1": "Tak pracujemywewnątrz organizacjikoncentrujesz się na jednym projekciemożesz zmienić projektmasz wpływ na rozwiązania technologicznekoncentrujesz się na rozwoju produktukoncentrujesz się na utrzymaniu koduscrum",
+"development-practices-1": "Tak pracujemy nad projektemcode reviewmierniki jakości koduwzorce projektoweContinuous DeploymentContinuous Integrationwsparcie architekta / lidera technicznegonarzędzia do trackowania zadańautomatyzacja testówśrodowiska testowetesty funkcjonalnetesty integracyjnetesty jednostkowetesty regresyjnetesty wydajnościowetesty manualne",
+"training-space-1": "Takie dajemy możliwości rozwojubudżet rozwojowyszkolenia wewnątrzfirmowewsparcie merytoryczne od liderów technologicznychwymiana wiedzy technicznej w firmie",
+"offered-1": "To oferujemyoprogramowaniagwarancję rozwoju zawodowego dzięki ciągłemu strumieniowi nowych projektówbezpłatną opiekę medycznąbezpłatne doskonalenie języka angielskiego (zajęcia z native speakerem)dofinansowanie do karty Multisportmiłą i swobodną atmosferę pracy",
+"benefits-1": [
+"dofinansowanie zajęć sportowych",
+"prywatna opieka medyczna",
+"dofinansowanie nauki języków",
+"dofinansowanie szkoleń i kursów",
+"możliwość pracy zdalnej",
+"elastyczny czas pracy",
+"owoce",
+"spotkania integracyjne",
+"brak dress code’u",
+"kawa / herbata",
+"napoje",
+"bezpłatny parking",
+"wyjazdy integracyjne",
+"Dyski SSD, IntelliJ Ultimate Edition, zewnętrzny monitor",
+"Hackathony, szkolenia, konferencje"
+],
+"recruitment-stages-1": [
+"1Telefon z działu HR",
+"2Rozmowa telefoniczna z programistą",
+"3Spotkanie online z managerem zespołu",
+"4Oferta współpracy lub informacja zwrotna"
+]
+}
+},
+"Objectivity - part of Accenture": {
+".NET Software Engineer with Python": {
+"localization": [
+"Kuyavia-PomeraniaKuyavia-Pomerania",
+"łódzkie",
+"lubelskie",
+"lubuskie",
+"małopolskie",
+"zachodniopomorskie",
+"wielkopolskie",
+"warmińsko-mazurskie",
+"świętokrzyskie",
+"śląskie",
+"podlaskie",
+"podkarpackie",
+"opolskie",
+"mazowieckie"
+],
+"job-title": ".NET Software Engineer with Python",
+"employer-name": "Objectivity - part of AccentureAbout the company",
+"contract": [
+{
+"min": "8 000–",
+"max": "13 000 zł",
+"unit": " gross / mth.",
+"type": "contract of employment"
+},
+{
+"min": "77,00–",
+"max": "122,00 zł",
+"unit": " net (+ VAT) / hr.",
+"type": "B2B contract"
+}
+],
+"publication-dates": "offer expired 4 days ago",
+"contract-types": "contract of employment, B2B contract",
+"work-schedules": "full-time",
+"position-levels": "specialist (Mid / Regular)",
+"work-modes": "home office work, hybrid work",
+"attribute-primary-immediate-employment": "Immediate employment",
+"remote-recruitment": "remote recruitment",
+"technologies-1": [
+".NET",
+"Python",
+"C#",
+"SQL",
+"Git"
+],
+"technologies-expected-1": [
+".NET",
+"Python",
+"C#",
+"SQL",
+"Git"
+],
+"technologies-os-1": "Operating system",
+"about-project-1": "About the projectSoftware Engineer at Objectivity works as a member of our agile team alongside with Service Delivery Managers to stabilize and deliver solutions. We are looking for a person who is keen on coming up with new versions and functionalities of applications for our clients. In this way, you have an opportunity to learn different technology set-ups as well as new and innovative ways of working.We are looking for a person who - just like us - believes in the value of mistakes made and is eager to search for solutions and bravely recommend improvements in the existing systems. We need an individual who likes working on operational environments and combines the ability to work independently with teamwork skills. It's important for us to find a person who approaches Clients' needs in a pro-active way by proposing new solutions.We believe in engineers who specialise in one field, but at the same time have broad knowledge of technology as a whole - in order to be ready to deliver and maintain a code and to feel comfortable in the DevOps culture",
+"responsibilities-1": [
+"You will be responsible for analysis, maintenance, enhancements and automation of a variety of core applications for different customers.",
+"You will investigate and analyse defects in order to provide the root cause.",
+"You will create and improve monitoring.",
+"You will support releases, changes, tests and planned fail-overs, and you will also take part in on-call rotation.",
+"You will be a member of a code level support team, but you will also cooperate with 3rd/2nd level of support.",
+"You will write a code and unit tests for implementing user stories.",
+"You will monitor the build quality and provide the right unit and component tests that will ensure the right coverage for your design."
+],
+"requirements-1": [
+"You are good with C#/.NET.",
+"You are experienced with Python in web-based solutions.",
+"You are good at debugging, troubleshooting - and you have analytical skills.",
+"You have already worked with a source repository, such as GIT or Azure DevOps.",
+"You are familiar with the TDD principles.",
+"You know the SQL language and databases (Microsoft SQL preferable).",
+"You know JavaScript and any JS/TS framework (Angular, React, Aurelia, etc.).",
+"You have good English language skills both in writing and speaking."
+],
+"requirements-expected-1": [
+"You are good with C#/.NET.",
+"You are experienced with Python in web-based solutions.",
+"You are good at debugging, troubleshooting - and you have analytical skills.",
+"You have already worked with a source repository, such as GIT or Azure DevOps.",
+"You are familiar with the TDD principles.",
+"You know the SQL language and databases (Microsoft SQL preferable).",
+"You know JavaScript and any JS/TS framework (Angular, React, Aurelia, etc.).",
+"You have good English language skills both in writing and speaking."
+],
+"offered-1": "What we offerWe are an agile-oriented, value-driven team of professionals, who strive to deliver excellent software to our clients.We offer an inspiring working environment - where you cooperate with experts from various fields. Our organizational culture is based on knowledge-sharing and helping one another.We offer a relocation package for candidates from outside of Lower Silesia.Your voice is heard - our philosophy is based on good practices and open communication.We invest in our people through the support of several active communities (AWS, Azure, .NET, Architecture, Frontend etc.), online courses, workshops and conferences to keep their expert knowledge up-to-date. Each of us has 8 days for their personal upskill. This time is just for you to learn a new skill or hone the ones that you already have.We make you feel comfortable with us by offering benefits such as: English classes during working hours, medical care for you and your family or partner, Multisport card.",
+"benefits-1": [
+"‘Great Place to Work’ Certificate",
+"Contract for an indefinite period from day one",
+"Private medical care for you, your partner and kids",
+"Life and travel insurance",
+"Multisport card that can be exchanged for Cafeteria System",
+"Development within working hours (8 days/year)",
+"Over 70 internal technical training and soft skill workshops",
+"English or German classes during working hours",
+"Certifications",
+"Pluralsight package",
+"33 days of sick-leave with 100% of salary paid",
+"Bonus for recommending (2000/8000 PLN)",
+"Working remotely or at the Gdańsk/Wrocław office",
+"Insurance capital fund",
+"Relocation bonus (7000 PLN)"
+],
+"recruitment-stages-1": [
+"1CV analysis",
+"2Online interview",
+"3Recruitment feedback"
+],
+"additional-module-1": "The type of contract shall depend on the actual rules of cooperation established between us during the recruitment process.Only employees are entitled to benefits package.",
+"additional-module-2": [
+"C#/.NET - Latest version of Visual Studio (2022).",
+"JavaScript or TypeScript depends on a project.",
+"Microsoft SQL Server Database / CosmosDB.",
+"GIT/DevOps source code repository.",
+"Python 2/3",
+"Django"
+],
+"additional-module-3": [
+"Azure",
+"Aws",
+"MongoDB",
+"Docker"
+]
+}
+},
+"Revolut LTD": {
+"Software Engineer (Backend)": {
+"localization": [
+"Hungaryabroad",
+"zagranica",
+"Porto, zagranica",
+"Madrid, zagranica"
+],
+"job-title": "Software Engineer (Backend)",
+"employer-name": "Revolut LTDAbout the company",
+"publication-dates": "offer expired 2 days ago",
+"contract-types": "contract of employment",
+"work-schedules": "full-time",
+"position-levels": "specialist (Mid / Regular)",
+"work-modes": "home office work",
+"attribute-primary-immediate-employment": "Immediate employment",
+"remote-recruitment": "remote recruitment",
+"attribute-primary-ukrainian-friendly": "запрошуємо працівників з України",
+"attribute-primary-ukrainian-without-polish-language": "Робота для іноземцівбез польської",
+"technologies-1": [
+"Java"
+],
+"technologies-expected-1": [
+"Java"
+],
+"technologies-optional-1": [
+"Kotlin",
+"Scala"
+],
+"technologies-os-1": "Operating system",
+"about-project-1": "About the projectOur Technology team isn’t just one of the best in the industry, it’s one of the best in the world. And we’re proud of it. It’s our driving force; our engine 🚀 From building a new banking backend to creating an award-winning app, there’s nothing (and we mean nothing) our tech team can’t do. Our Technology team isn’t here to fix legacy systems – it’s here to build world-class financial products from the ground up. Products that will be used by millions of people around the world 🌎We’re looking for a Backend Engineer that wants to change the world. If you like to work at a steady pace with no surprises, keep scrolling. If you want your work to change the global financial landscape, you might be just who we’re looking for. We have a minimalist approach to using external frameworks, with emphasis on maintainability and fast turnaround with TDD, DDD and Continuous Integration & Delivery. Sound like your speed? Let’s chat 👇Our technology stack:Java 17GCPKubernetesDockerPostgreSQLRedisSpockSparkJavaJOOQ and TDD approach",
+"responsibilities-1": [
+"Building mobile APIs",
+"Developing micro services to evolve our architecture",
+"Perfecting a number of systems that our business depends on, like risk management, fraud detection, and payment processing",
+"Focusing mostly on greenfield development and improvement of existing systems"
+],
+"requirements-1": [
+"Fluency with Java",
+"6+ years of experience in back-end development",
+"A bachelor's degree in Computer Science, Maths, Physics, or similar",
+"To be a quick learner with an ambitious attitude and results-driven personality",
+"The ability to work well as part of a team in a fast-paced environment",
+"Excellent communication and organisational skills",
+"Fluency in English"
+],
+"requirements-expected-1": [
+"Fluency with Java",
+"6+ years of experience in back-end development",
+"A bachelor's degree in Computer Science, Maths, Physics, or similar",
+"To be a quick learner with an ambitious attitude and results-driven personality",
+"The ability to work well as part of a team in a fast-paced environment",
+"Excellent communication and organisational skills",
+"Fluency in English"
+],
+"requirements-optional-1": [
+"Experience with Kotlin and Scala",
+"Experience within Finance",
+"Experience in a start-up or scale-up",
+"Experience in a product-focused environment"
+],
+"work-organization-1": "This is how we organize our workThis is how we workin house",
+"work-organization-work-style-1": "This is how we workin house",
+"benefits-1": [
+"sharing the costs of sports activities",
+"private medical care",
+"life insurance",
+"remote work opportunities",
+"fruits",
+"corporate products and services at discounted prices",
+"integration events",
+"corporate gym",
+"corporate library",
+"no dress code",
+"video games at work",
+"coffee / tea",
+"drinks",
+"parking space for employees",
+"leisure zone",
+"extra social benefits",
+"employee referral program",
+"charity initiatives",
+"extra leave",
+"work from abroad policy (up to 60 days/year)"
+]
+}
+},
+"Blubina GmbH": {
+"Junior Finance Software Tool Specialist": {
+"localization": [
+"West PomeranianWest Pomeranian",
+"Munich , zagranica",
+"wielkopolskie",
+"warmińsko-mazurskie",
+"świętokrzyskie",
+"śląskie",
+"pomorskie",
+"podlaskie",
+"podkarpackie",
+"opolskie",
+"mazowieckie",
+"małopolskie",
+"lubuskie",
+"lubelskie",
+"łódzkie",
+"kujawsko-pomorskie",
+"dolnośląskie"
+],
+"background-images": "",
+"offer-view-logo": "",
+"job-title": "Junior Finance Software Tool Specialist",
+"employer-name": "Blubina GmbHAbout the company",
+"publication-dates": "valid for 2 daysuntil: 01 Jun 2023",
+"contract-types": "contract of employment, B2B contract",
+"work-schedules": "full-time",
+"position-levels": "specialist (Mid / Regular), junior specialist (Junior)",
+"work-modes": "home office work",
+"remote-recruitment": "remote recruitment",
+"technologies-1": [
+"T-SQL",
+"C#",
+"JavaScript",
+"ASP.NET"
+],
+"technologies-optional-1": [
+"T-SQL",
+"C#",
+"JavaScript",
+"ASP.NET"
+],
+"responsibilities-1": [
+"You take part in projects at the link between business requirements and software solutions",
+"You work on specific solutions and deliver on time in outstanding quality",
+"Or you get embedded into comprehensive business development projects of our customers, you quickly learn to understand their business requirements and you work on perfect solutions as part of our team",
+"You develop personally along your personal strengths and grow together with us"
+],
+"requirements-1": [
+"IT affinity and strong analytical skills",
+"Hungry and ambitious personality",
+"Quick grasp, high willingness and ability to learn",
+"Expert in Microsoft Excel; strong understanding of relational databases",
+"Programming skills in languages like VB, VBA, T-SQL, C#, Apex, JavaScript or ASP.NET are a plus",
+"Commercial training or business and accounting knowledge are advantageous",
+"Solid communication skills in English or German are a must",
+"Integrity and reliability"
+],
+"requirements-expected-1": [
+"IT affinity and strong analytical skills",
+"Hungry and ambitious personality",
+"Quick grasp, high willingness and ability to learn",
+"Expert in Microsoft Excel; strong understanding of relational databases",
+"Programming skills in languages like VB, VBA, T-SQL, C#, Apex, JavaScript or ASP.NET are a plus",
+"Commercial training or business and accounting knowledge are advantageous",
+"Solid communication skills in English or German are a must",
+"Integrity and reliability"
+],
+"requirements-optional-1": [
+"Experience in application design, REST and mobile app development are a plus"
+],
+"offered-1": "What we offerDirect cooperation with the founderVery steep learning curves in practiceIn-depth introduction to highly attractive areas such as asset management, private equity, M&AVaried challengesFlexible time managementA performance-oriented renumerationLong-term perspektives",
+"benefits-1": [
+"sharing the costs of sports activities",
+"sharing the costs of foreign language classes",
+"sharing the costs of professional training & courses",
+"remote work opportunities",
+"flexible working time"
+]
+}
+},
+"ASSECO DATA SYSTEMS S.A.": {
+"Programista Java": {
+"localization": [
+"dolnośląskiedolnośląskie",
+"kujawsko-pomorskie",
+"łódzkie",
+"lubelskie",
+"lubuskie",
+"małopolskie",
+"mazowieckie",
+"opolskie",
+"podkarpackie",
+"podlaskie",
+"pomorskie",
+"śląskie",
+"świętokrzyskie",
+"warmińsko-mazurskie",
+"wielkopolskie",
+"zachodniopomorskie"
+],
+"background-images": "",
+"offer-view-logo": "",
+"job-title": "Programista Java",
+"employer-name": "ASSECO DATA SYSTEMS S.A.O firmie",
+"publication-dates": "ważna jeszcze 4 dnido: 03 cze 2023",
+"contract-types": "umowa o pracę, kontrakt B2B",
+"work-schedules": "pełny etat",
+"position-levels": "specjalista (Mid / Regular), młodszy specjalista (Junior)",
+"work-modes": "praca stacjonarna, praca zdalna, praca hybrydowa",
+"attribute-primary-many-vacancies": "Szukamy wielu kandydatów",
+"remote-recruitment": "rekrutacja zdalna",
+"technologies-1": [
+"Java",
+"Spring Boot",
+"Hibernate",
+"Spring",
+"SQL",
+"Git",
+"JUnit"
+],
+"technologies-expected-1": [
+"Java",
+"Spring Boot",
+"Hibernate",
+"Spring",
+"SQL",
+"Git",
+"JUnit"
+],
+"technologies-os-1": "System operacyjny",
+"about-project-1": "O projekcieDołącz do zespołu naszych specjalistów i rozwijaj się w ramach różnorodnych projektów. Szukamy osób o różnych poziomach doświadczenia (mid, regular, senior).",
+"responsibilities-1": [
+"projektowanie oraz wdrażanie oprogramowania,",
+"udział w opracowywaniu koncepcji oraz planowaniu nowych modułów i funkcjonalności,",
+"optymalizacja działania istniejących systemów (m.in. poprzez doskonalenie wydajności kodu),",
+"weryfikacja jakości oprogramowania,",
+"przygotowywanie dokumentacji projektowej oraz raportów,",
+"samodzielność w projektowaniu rozwiązań oraz optymalizowaniu aplikacji,",
+"zdolność analitycznego myślenia i otwartość na poszukiwanie nowych rozwiązań."
+],
+"requirements-1": [
+"doświadczenie w pracy przy realizacji projektów komercyjnych,",
+"dobra/bardzo dobra znajomość Java 8-11,",
+"doświadczenie w pracy z Spring/Spring Boot, Hibernate,",
+"znajomość SQL i zagadnień związanych z relacyjnymi bazami danych,",
+"znajomość systemów kontroli wersji,",
+"znajomość wzorców projektowych,",
+"bardzo dobra znajomość Git,",
+"umiejętność pisania testów jednostkowych JUnit,",
+"umiejętność pracy w zespole."
+],
+"requirements-expected-1": [
+"doświadczenie w pracy przy realizacji projektów komercyjnych,",
+"dobra/bardzo dobra znajomość Java 8-11,",
+"doświadczenie w pracy z Spring/Spring Boot, Hibernate,",
+"znajomość SQL i zagadnień związanych z relacyjnymi bazami danych,",
+"znajomość systemów kontroli wersji,",
+"znajomość wzorców projektowych,",
+"bardzo dobra znajomość Git,",
+"umiejętność pisania testów jednostkowych JUnit,",
+"umiejętność pracy w zespole."
+],
+"offered-1": "To oferujemyzatrudnienie w oparciu o umowę o pracę/B2B,elastyczny czas pracy,home office,narzędzia pracy,szkolenia zawodowe,współpracę z ekspertami,dzielenie się wiedzą,ciekawe projekty,ubezpieczenie grupowe,opiekę zdrowotną,kartę sportową,fundusz kulturalny,dofinansowanie wypoczynku.",
+"benefits-1": [
+"dofinansowanie zajęć sportowych",
+"prywatna opieka medyczna",
+"dofinansowanie nauki języków",
+"dofinansowanie szkoleń i kursów",
+"ubezpieczenie na życie",
+"możliwość pracy zdalnej",
+"elastyczny czas pracy",
+"firmowa drużyna sportowa",
+"program emerytalny",
+"brak dress code’u",
+"kawa / herbata",
+"dodatkowe świadczenia socjalne",
+"dofinansowanie wypoczynku"
+],
+"about-us-gallery-1": "Tak się u nas pracujeZobacz galerię · 1Tak się u nas pracuje"
+}
+},
+"ING Bank Śląski S.A.": {
+"Senior Data Warehouse Developer": {
+"localization": [
+"dolnośląskiedolnośląskie",
+"kujawsko-pomorskie",
+"łódzkie",
+"lubelskie",
+"lubuskie",
+"małopolskie",
+"mazowieckie",
+"opolskie",
+"podkarpackie",
+"podlaskie",
+"pomorskie",
+"śląskie",
+"świętokrzyskie",
+"warmińsko-mazurskie",
+"wielkopolskie",
+"zachodniopomorskie"
+],
+"background-images": "",
+"offer-view-logo": "",
+"job-title": "Senior Data Warehouse Developer",
+"employer-name": "ING Bank Śląski S.A.O firmie",
+"contract": [
+{
+"min": "12 000–",
+"max": "28 000 zł"
+},
+{}
+],
+"publication-dates": "ważna jeszcze 5 dnido: 04 cze 2023",
+"contract-types": "umowa o pracę",
+"work-schedules": "pełny etat",
+"position-levels": "starszy specjalista (Senior)",
+"work-modes": "praca zdalna, praca hybrydowa",
+"remote-recruitment": "rekrutacja zdalna",
+"technologies-1": [
+"Oracle",
+"IBM Infosphere Data Stage",
+"PL\\SQL",
+"Linux",
+"Bash"
+],
+"technologies-expected-1": [
+"Oracle",
+"IBM Infosphere Data Stage",
+"PL\\SQL",
+"Linux",
+"Bash"
+],
+"technologies-os-1": "System operacyjny",
+"about-project-1": "O projekcieWspieramy działalność biznesową i operacyjną wszystkich departamentów w banku. Rozwijamy i utrzymujemy korporacyjną hurtownię danych, która składa się z ponad 450 faktów, 200 wymiarów, ponad 5000 tabel. Odpowiadamy za efektywne wykorzystanie danych. ​Nasze rozwiązanie jest źródłem danych dla krytycznych procesów operacyjnych i biznesowych w Banku oraz dla rozwiązań sztucznej inteligencji. ​",
+"responsibilities-1": [
+"modelowanie struktur Hurtowni Danych",
+"projektowanie i programowanie zadań ETL",
+"praca z bazą danych Oracle",
+"integracja wytwarzanych rozwiązań z innymi wewnętrznymi systemami Banku i Grupy ING",
+"przygotowywanie zmian programowych zgodnie z praktykami continuous integration i continuous delivery (konfiguracja, skrypty)",
+"automatyzacja testów"
+],
+"requirements-1": [
+"znajomość problematyki Hurtowni Danych i tworzenia procesów ETL",
+"bardzo dobra znajomość PL\\SQL",
+"bardzo dobra znajomość baz danych Oracle",
+"doświadczenia w dowolnej technologii ETL (preferowany IBM Infosphere Data Stage)",
+"znajomość Linux, umiejętność pisania skryptów powłoki",
+"znajomość języka angielskiego na poziomie min B2",
+"umiejętność pracy w samoorganizującym się zespole z wykorzystaniem metodologii Agile (Scrum)",
+"doświadczenie programistyczne w jednym z obiektowych języków programowania"
+],
+"requirements-expected-1": [
+"znajomość problematyki Hurtowni Danych i tworzenia procesów ETL",
+"bardzo dobra znajomość PL\\SQL",
+"bardzo dobra znajomość baz danych Oracle",
+"doświadczenia w dowolnej technologii ETL (preferowany IBM Infosphere Data Stage)",
+"znajomość Linux, umiejętność pisania skryptów powłoki",
+"znajomość języka angielskiego na poziomie min B2",
+"umiejętność pracy w samoorganizującym się zespole z wykorzystaniem metodologii Agile (Scrum)",
+"doświadczenie programistyczne w jednym z obiektowych języków programowania"
+],
+"benefits-1": [
+"dofinansowanie zajęć sportowych",
+"prywatna opieka medyczna",
+"ubezpieczenie na życie",
+"program emerytalny",
+"dodatkowe świadczenia socjalne",
+"paczki świąteczne",
+"inicjatywy dobroczynne"
+],
+"additional-module-3": "Masz pytania? Napisz do nas!Kandydaci często kontaktują się z nami bezpośrednio. Jeśli chcesz o coś zapytać w związku z tą lub inną rekrutacją, napisz do nas na: [email protected]",
+"about-us-gallery-1": "Tak się u nas pracujeZobacz galerię · 8Tak się u nas pracuje+ 2"
+}
+},
+"Impel S.A.": {
+"Office 365 Developer": {
+"localization": [
+"dolnośląskiedolnośląskie",
+"kujawsko-pomorskie",
+"łódzkie",
+"lubelskie",
+"lubuskie",
+"małopolskie",
+"mazowieckie",
+"opolskie",
+"podkarpackie",
+"podlaskie",
+"pomorskie",
+"śląskie",
+"świętokrzyskie",
+"warmińsko-mazurskie",
+"wielkopolskie",
+"zachodniopomorskie"
+],
+"background-images": "",
+"offer-view-logo": "",
+"job-title": "Office 365 Developer",
+"employer-name": "Impel S.A.O firmie",
+"publication-dates": "ważna jeszcze 5 dnido: 04 cze 2023",
+"contract-types": "umowa o pracę",
+"work-schedules": "pełny etat",
+"position-levels": "specjalista (Mid / Regular)",
+"work-modes": "praca hybrydowa",
+"attribute-primary-immediate-employment": "Praca od zaraz",
+"remote-recruitment": "rekrutacja zdalna",
+"technologies-1": [
+"Office 365",
+"Power Apps",
+"Power Automate",
+"SharePoint"
+],
+"technologies-expected-1": [
+"Office 365",
+"Power Apps",
+"Power Automate",
+"SharePoint"
+],
+"responsibilities-1": [
+"Identyfikacja i mapowanie procesów w obszarze HR, które można zoptymalizować poprzez narzędzia Office 365",
+"Analiza wymagań, procedur i potrzeb użytkowników oraz właścicieli procesów w celu zautomatyzowania przetwarzania lub ulepszenia istniejących przepływów biznesowych",
+"Tworzenie aplikacji w środowisku Microsoft 365 (podstawowe narzędzia: Power Apps, Power Automate, SharePoint, One Drive)",
+"Szkolenie użytkowników końcowych",
+"Współpraca z właścicielami procesów w celu ich automatyzacji"
+],
+"requirements-1": [
+"Min. 1-2 lata doświadczenia w Office 365, jako projektant lub analityk: Power Apps, Power Automate, SharePoint",
+"Znajomość Excel – poziom zaawansowany (np. łączenie baz, pisanie makr itp.)",
+"Umiejętności komunikacyjne",
+"Dobra organizacja pracy i umiejętność pracy w zespole"
+],
+"requirements-expected-1": [
+"Min. 1-2 lata doświadczenia w Office 365, jako projektant lub analityk: Power Apps, Power Automate, SharePoint",
+"Znajomość Excel – poziom zaawansowany (np. łączenie baz, pisanie makr itp.)",
+"Umiejętności komunikacyjne",
+"Dobra organizacja pracy i umiejętność pracy w zespole"
+],
+"requirements-optional-1": [
+"Doświadczenie w zarządzaniu projektami"
+],
+"offered-1": "To oferujemyPracę i realizację projektów na potrzeby wewnętrzne organizacjiStabilne zatrudnienie w ramach umowy o pracęDużą samodzielność działania oraz możliwość wdrażania inicjatywMożliwość dalszego rozwoju zawodowegoUdział w zróżnicowanych projektach w obszarze HRNarzędzia niezbędne do realizacji zadańMożliwość pracy w systemie hybrydowym (biurowo-zdalnym)Możliwość korzystania z ubezpieczenia medycznego i karty Multisport",
+"benefits-1": [
+"firmowa drużyna sportowa",
+"kawa / herbata",
+"parking dla pracowników",
+"inicjatywy dobroczynne",
+"szkolenia na platformie e-learningowej",
+"możliwość przystąpienia do ubezpieczenia prywatnego",
+"możliwość korzystania z karty MultiSport"
+]
+}
+},
+"PRAN Sp. z o.o.": {
+"Programista tokarek CNC": {
+"localization": [
+"Holandiazagranica"
+],
+"background-images": "",
+"offer-view-logo": "",
+"job-title": "Programista tokarek CNC",
+"employer-name": "PRAN Sp. z o.o.O firmie",
+"publication-dates": "ważna jeszcze 5 dnido: 04 cze 2023",
+"contract-types": "umowa agencyjna",
+"work-schedules": "pełny etat",
+"position-levels": "pracownik fizyczny",
+"work-modes": "praca stacjonarna",
+"attribute-primary-immediate-employment": "Praca od zaraz",
+"attribute-secondary-paycheck-period": "Tryb wypłaty:tygodniowa",
+"about-hr-consulting-agency-client-1": "Rekrutujemy dlaPoszukujemy Programistów tokarek CNC na systemie Mazatrol dla naszego klienta. Wymagamy doświadczenia w obsłudze tokarek CNC i umiejętności programowania, a także znajomości rysunku technicznego i materiałoznawstwa.Jeśli jesteś gotowy dołączyć do naszego zespołu, prosimy o przesłanie aplikacji. Skontaktujemy się z Tobą, aby przedyskutować więcej szczegółów na temat oferty pracy.#CNC #programista #tokarka",
+"responsibilities-1": [
+"obsługiwać i programować tokarki CNC Mazak ze sterowaniem Mazatrol",
+"sprawdzać jakość oraz wykonywać pomiary",
+"pracować z precyzyjnymi produktami mechanicznymi z wysoką dokładnością w małych i dużych seriach",
+"dbać o porządek na stanowisku pracy"
+],
+"requirements-1": [
+"komunikatywna znajomość języka angielskiego",
+"doświadczenie w pracy jako operator oraz programista tokarek CNC",
+"dobra znajomość rysunku technicznego",
+"dyspozycyjność na dłuższy czas",
+"prawo jazdy będzie warunkiem koniecznym",
+"dokładność i precyzja"
+],
+"requirements-expected-1": [
+"komunikatywna znajomość języka angielskiego",
+"doświadczenie w pracy jako operator oraz programista tokarek CNC",
+"dobra znajomość rysunku technicznego",
+"dyspozycyjność na dłuższy czas",
+"prawo jazdy będzie warunkiem koniecznym",
+"dokładność i precyzja"
+],
+"offered-1": "Pracodawca oferujewynagrodzenie 580-600€ netto/40h - po odliczeniu kosztów zakwaterowania i ubezpieczenia!legalną pracę na holenderskich warunkachzakwaterowanie i ubezpieczenie agencyjnejednoosobowy pokójtygodniowy system wynagrodzeniaopiekę koordynatorówpracę na długi okres",
+"additional-module-1": [
+"oferta pracy tymczasowej"
+],
+"about-us-gallery-1": "GaleriaZobacz galerię · 1Galeria"
+}
+},
+"ITDS Polska Sp. z o.o.": {
+".NET Developer – BaaS Engineer": {
+"localization": [
+"Company locationLondyn, United Kingdomabroad"
+],
+"background-images": "",
+"offer-view-logo": "",
+"job-title": ".NET Developer – BaaS Engineer",
+"employer-name": "ITDS Polska Sp. z o.o.About the company",
+"contract": [
+{
+"min": "21 000–",
+"max": "29 400 zł"
+},
+{}
+],
+"workplaces-wp": "Work locationPoland (remote work)",
+"publication-dates": "valid for 5 daysuntil: 04 Jun 2023",
+"contract-types": "contract of employment, B2B contract",
+"work-schedules": "full-time",
+"position-levels": "specialist (Mid / Regular), senior specialist (Senior)",
+"work-modes": "home office work",
+"attribute-primary-immediate-employment": "Immediate employment",
+"remote-recruitment": "remote recruitment",
+"technologies-1": [
+".NET",
+".NET Core",
+"ASP.NET MVC",
+"Microsoft Azure",
+"C++",
+"SQL"
+],
+"technologies-expected-1": [
+".NET",
+".NET Core",
+"ASP.NET MVC",
+"Microsoft Azure",
+"C++",
+"SQL"
+],
+"technologies-optional-1": [
+"Git",
+"Docker",
+"Kubernetes"
+],
+"technologies-os-1": "Operating system",
+"about-project-1": "About the projectAs a .NET Developer you will get the opportunity to work for our Client – high growth and cloud-based business providing governance, risk management and compliance services. You will be part of the team developing and improving a large scale and significant B2B SaaS platform. If you are self-driven, seasoned and not afraid of technological challenges – then you are exactly what we are looking for!",
+"responsibilities-1": [
+"Deliver the next generation SaaS platform",
+"Design, implement and support a highly scalable platform hosted on Microsoft Azure",
+"Integrate services in a microservices architecture with CI/CD pipelines to accelerate delivery",
+"Work on setting up and optimising CI/CD Pipelines",
+"Join a Scrum team and build a set of applications using an Agile development methodology",
+"Support requirements gathering and translating them into technical deliveries",
+"Work with .NET, .NET Core, ASP.NET MVC, C#, Open Source, Cloud, DevOps, API economy, Big Data"
+],
+"requirements-1": [
+"At least 6 years of experience as a .NET Developer",
+"Outstanding C# programming skills",
+"Strong SQL Server & SQL Programming skills",
+"Good understanding of Web Services protocols such as REST and API design",
+"Experience designing and maintaining highly scalable systems with high availability",
+"High scalability projects involving cloud-based infrastructure design and implementation, ideally Microsoft Azure",
+"Excellent problem solving and analytical skills, with proven experience of requirements gathering and translating requirements into technical deliveries",
+"Ability to work in a fast-paced, Agile environment",
+"Excellent knowledge of object-oriented design and development skills",
+"Proven experience with Microservices and Message Bus Technologies",
+"Fluent English"
+],
+"requirements-expected-1": [
+"At least 6 years of experience as a .NET Developer",
+"Outstanding C# programming skills",
+"Strong SQL Server & SQL Programming skills",
+"Good understanding of Web Services protocols such as REST and API design",
+"Experience designing and maintaining highly scalable systems with high availability",
+"High scalability projects involving cloud-based infrastructure design and implementation, ideally Microsoft Azure",
+"Excellent problem solving and analytical skills, with proven experience of requirements gathering and translating requirements into technical deliveries",
+"Ability to work in a fast-paced, Agile environment",
+"Excellent knowledge of object-oriented design and development skills",
+"Proven experience with Microservices and Message Bus Technologies",
+"Fluent English"
+],
+"requirements-optional-1": [
+"Experience with DevOps, Git, Build Pipelines. Docker and Kubernetes",
+"Ability to be a design authority to less experienced developers and perform peer reviews",
+"Understanding of industry IT Direction (Open Source, Cloud, DevOps, API economy, Big Data etc)"
+],
+"work-organization-1": "This is how we organize our workThis is how we workagilescrum",
+"work-organization-work-style-1": "This is how we workagilescrum",
+"development-practices-1": "This is how we work on a projectContinuous DeploymentContinuous Integration",
+"benefits-1": [
+"sharing the costs of sports activities",
+"private medical care",
+"remote work opportunities",
+"flexible working time",
+"fruits",
+"integration events",
+"corporate gym",
+"mobile phone available for private use",
+"computer available for private use",
+"saving & investment scheme",
+"no dress code",
+"coffee / tea",
+"drinks",
+"christmas gifts",
+"birthday celebration",
+"sharing the costs of a streaming platform subscription",
+"access to +100 projects",
+"access to Pluralsight"
+],
+"additional-module-1": "Join a revolutionary mission and disrupt the construction industry with a SaaS based subscription product!London based opportunity with the possibility to work entirely remotely.",
+"additional-module-2": "We would like to meet you. If you are interested please apply and attach your CV in English or Polish, including a statement that you agree to our processing and storing of your personal data. You can always also apply by sending us an email at [email protected]",
+"about-us-gallery-1": "This is how we workZobacz galerię · 1This is how we work"
+}
+},
+"EURO LABORA - ZOFIA CHABIN Sp.j.": {
+"Programista - Frezer CNC": {
+"localization": [
+"Schwarzach, Niemcyzagranica"
+],
+"background-images": "",
+"offer-view-logo": "",
+"job-title": "Programista - Frezer CNC",
+"employer-name": "EURO LABORA - ZOFIA CHABIN Sp.j.O firmie",
+"publication-dates": "ważna jeszcze 8 dnido: 07 cze 2023",
+"contract-types": "umowa o pracę",
+"work-schedules": "pełny etat",
+"position-levels": "pracownik fizyczny",
+"work-modes": "praca stacjonarna",
+"attribute-secondary-paycheck-period": "Tryb wypłaty:miesięczna",
+"about-hr-consulting-agency-client-1": "Rekrutujemy dlaFirma Euro Labora Sp.J. (o nr certyfikatu: 14601) dla swojego niemieckiego klienta poszukuje pracowników na stanowisko:Programista/Freze CNCMiejsce pracy: Niemcy – Schwarzach",
+"responsibilities-1": [
+"produkukcja jednostkowa modeli, form oraz narzędzi wykorzystywanych głównie w branży samochodowej,",
+"programowanie (CAD/CAM-Software Tebis),",
+"obsługa 5-osiowych frezarek CNC z oprogramowaniem Siemens i Heidenhain,",
+"obróbka elementów wykonanych z aluminium, stali oraz tworzyw sztucznych,",
+"kontrola wyprodukowanych elementów,",
+"praca od poniedziałku do piątku (7.00- 16.00),",
+"stawka: 15,00 euro brutto/h + 40,00 euro netto diety dziennej."
+],
+"requirements-1": [
+"doświadczenie zawodowe (min. 3 lata),",
+"komunikatywna znajomość j. niemieckiego lub angielskiego (poziom B1),",
+"prawo jazdy kat. B (samochód na wyjazd)."
+],
+"requirements-expected-1": [
+"doświadczenie zawodowe (min. 3 lata),",
+"komunikatywna znajomość j. niemieckiego lub angielskiego (poziom B1),",
+"prawo jazdy kat. B (samochód na wyjazd)."
+],
+"offered-1": "Pracodawca oferujeniemiecką umowę o pracę na czas nieokreślony, zawartą przed wyjazdem,ubezpieczenie oraz składki zdrowotne i emerytalne odprowadzane na terenie Niemiec,zakwaterowanie, pokój jednoosobowy,opiekę polskojęzycznego koordynatora,możliwość pracy w godzinach dodatkowych oraz godzinach nocnych płatnych od +25%,płatny urlop w wymiarze 25 dni w roku,dodatek urlopowy i świąteczny (od 180 euro po przepracowaniu 6 m-cy),płatne dni ustawowo wolne od pracy,premię za polecenie nowych pracowników,odzież ochronną,dostęp do mobilnej aplikacji pracowniczej.",
+"additional-module-1": "Zainteresowany? Wyślij swoje aktualne CV wraz z zgodą na przetwarzanie danych osobowych.",
+"about-us-gallery-1": "GaleriaZobacz galerię · 1Galeria"
+}
+},
+"BNP Paribas Bank Polska S.A.": {
+"PL/SQL Developer (IT Chapter Systemy Inwestycyjne)": {
+"localization": [
+"dolnośląskiedolnośląskie",
+"kujawsko-pomorskie",
+"łódzkie",
+"lubelskie",
+"lubuskie",
+"małopolskie",
+"mazowieckie",
+"opolskie",
+"podkarpackie",
+"podlaskie",
+"pomorskie",
+"śląskie",
+"świętokrzyskie",
+"warmińsko-mazurskie",
+"wielkopolskie",
+"zachodniopomorskie"
+],
+"background-images": "",
+"offer-view-logo": "",
+"job-title": "PL/SQL Developer (IT Chapter Systemy Inwestycyjne)",
+"employer-name": "BNP Paribas Bank Polska S.A.O firmie",
+"publication-dates": "ważna jeszcze 9 dnido: 08 cze 2023",
+"contract-types": "umowa o pracę",
+"work-schedules": "pełny etat",
+"position-levels": "specjalista (Mid / Regular)",
+"work-modes": "praca zdalna, praca hybrydowa",
+"remote-recruitment": "rekrutacja zdalna",
+"technologies-1": [
+"PL/SQL",
+"SQL",
+"PostgreSQL",
+"Oracle",
+"Microsoft SQL Server"
+],
+"technologies-expected-1": [
+"PL/SQL",
+"SQL",
+"PostgreSQL",
+"Oracle",
+"Microsoft SQL Server"
+],
+"technologies-optional-1": [
+"Java"
+],
+"about-project-1": "O projekcieZapraszamy do naszego Zespołu, w którym Twoimi głównymi zadaniami będzie zapewnienie wsparcia i rozwój systemów inwestycyjnych.Dostarczamy dane o produktach inwestycyjnych do głównych frontowych systemów Banku, tak, aby w jak najlepszy sposób wspierać obsługę produktów i procesów inwestycyjnych.Wdrażając nowoczesne rozwiązania możemy aktywnie reagować na potrzeby Klienta, zapewniając jak najlepsze warunki do inwestowania.Obszar produktów inwestycyjnych to bardzo ciekawy obszar z dużą różnorodnością instrumentów finansowych, z którymi będziesz miał okazję zapoznawać się na bieżąco.",
+"responsibilities-1": [
+"Projektowanie i programowanie procesów ETL z wykorzystaniem bazy PostgreSQL;",
+"Modelowanie, oczyszczanie oraz agregacja danych pochodzących z plików tekstowych oraz innych baz danych(różne technologie baz relacyjnych);",
+"Tworzenie struktur wspierających dla aplikacji korzystających z danych w bazie Transakcyjnej;",
+"Modyfikacja, rozszerzanie modelu bazy w aplikacji Java (Spring);",
+"Tworzenie struktur wspierających raportowanie zagregowanych danych;",
+"Optymalizacja istniejących procesów zasilania danymi."
+],
+"requirements-1": [
+"znajomość architektury relacyjnych baz danych;",
+"znajomość co najmniej jednego SZBD (Postgres, Oracle, MSSQL);",
+"znajomość SQL - stopień zaawansowany;",
+"znajomość języków proceduralnych stosowanych w bazach danych - stopień zaawansowany;",
+"znajomość SO linux w stopniu podstawowym;",
+"umiejętność projektowania schematów bazodanowych;",
+"myślenie analityczne;",
+"doświadczenie na podobnym stanowisku."
+],
+"requirements-expected-1": [
+"znajomość architektury relacyjnych baz danych;",
+"znajomość co najmniej jednego SZBD (Postgres, Oracle, MSSQL);",
+"znajomość SQL - stopień zaawansowany;",
+"znajomość języków proceduralnych stosowanych w bazach danych - stopień zaawansowany;",
+"znajomość SO linux w stopniu podstawowym;",
+"umiejętność projektowania schematów bazodanowych;",
+"myślenie analityczne;",
+"doświadczenie na podobnym stanowisku."
+],
+"requirements-optional-1": [
+"rozróżnianie baz danych OLAP i OLTP;",
+"znajomość ORM;",
+"znajomość Javy w stopniu bardzo podstawowym;",
+"znajomość podstaw analizy systemowej."
+],
+"offered-1": "To oferujemyMożliwość rozwoju jako Analityk systemowy, DevOps Engineer, Java Developer;Możliwość pracy zdalnej bądź w biurze;Praca z technologiami Spring Boot, PostgresSQL, Mssql, Docker, Jenkins, Gitlab;Profesjonalne narzędzia developerskie (Navicat – klient bazodanowy, IntelliJ IDEA Ultimate);Dołączenie do organizacji o globalnym zasięgu, która jest częścią grupy bankowej BNP Paribas obecnej w 65 krajach z 200-letnią tradycją;Pracę w miejscu, w którym możesz być sobą niezależnie od swojej orientacji seksualnej, tożsamości płciowej, koloru skóry, pochodzenia czy poziomu sprawności;Rozwój w Banku Zielonych Zmian, w którym możesz mieć wpływ na naszą planetę i otaczający nas świat;Dużą autonomię w działaniu przy jednoczesnym wsparciu przełożonego, co potwierdza ponad 90% pracowników;Możliwość podejmowania własnych decyzji, eksperymentowania i tworzenia swojej unikalnej ścieżki doświadczeń;Możliwości rozwoju zarówno w banku jak i spółkach w ramach Grupy BNP Paribas w kraju i zagranicą;Pracę w środowisku agile’owym, które wspiera elastyczność i innowacyjność organizacji, w końcu jesteśmy Bankiem zmieniającego się świata.",
+"benefits-1": [
+"dofinansowanie zajęć sportowych",
+"prywatna opieka medyczna",
+"dofinansowanie nauki języków",
+"dofinansowanie szkoleń i kursów",
+"ubezpieczenie na życie",
+"możliwość pracy zdalnej",
+"zniżki na firmowe produkty i usługi",
+"program rekomendacji pracowników",
+"inicjatywy dobroczynne",
+"pakiet kafeteryjny",
+"program wellbeingowy"
+]
+}
+}
+}
+}
 }
