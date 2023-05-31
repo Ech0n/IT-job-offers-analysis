@@ -43,7 +43,7 @@ class Loader:
 
     def open_file(self):
         try:
-            out_file = open("./data/"+self.file_name,"r")
+            out_file = open("./data/"+self.file_name,"r",encoding="utf-8")
             self.load_file(out_file)
             out_file.close()
         except Exception as ex:
@@ -61,7 +61,7 @@ class Loader:
     def get(self,url):
         res = requests.get(url,headers=hdr,allow_redirects=True)
         while res.status_code != 200:
-            print("Status code: ",res.status_code)
+            print("                                                     Status code: ",res.status_code)
             print(f"Requesting again in {self.conf['delay']} seconds...")
             time.sleep(self.conf['delay'])
             res = requests.get(url,headers=hdr,allow_redirects=True)
@@ -131,22 +131,36 @@ class Loader:
         
     def load_all_pages(self,month,year,page=1):        
         print("Loading data...")
-        executor = ThreadPoolExecutor(8)
+        # executor = ThreadPoolExecutor(8)
         does_next_exist = True
         while page<3000 and does_next_exist:
             print(f'Pobieranie strony {page} m:{month},y:{year}')
             resp = self.get(self.url(year,month,page))
+            # future = executor.submit(self.scrap, (processed_page),(year,month,page))
+            # future.result()
             print(f'Parsowanie strony {page}')
             processed_page = BeautifulSoup(resp.text, "html.parser")
-            future = executor.submit(self.scrap, (processed_page),(year,month,page))
-            future.result()
-            if(processed_page.find(class_="offers_nav_next") == None):
+            retry_amount = 3
+            i = 0
+
+            while processed_page.find(class_="offers_empty") and i < retry_amount-1: 
+                print("             Checking for page end one more time")
+                resp = self.get(self.url(year,month,page))
+                processed_page = BeautifulSoup(resp.text, "html.parser")
+
+                i+=1
+            if(processed_page.find(class_="offers_empty")):
                 does_next_exist=False
-            page+=1
-            if (page%self.auto_save_value)==0:
-                self.save_progress()
-            self.last_page=page
-            self.stats[year][month-1]["pages"] = page
+                print("                 page does not exist! ",self.url(year,month,page))
+                with open("temps.txt", 'w+', encoding="utf-8") as file:
+                    file.write(resp.text)
+            else:
+                self.scrap(processed_page,(year,month,page))
+                page+=1
+                if (page%self.auto_save_value)==0:
+                    self.save_progress()
+                self.last_page=page
+                self.stats[year][month-1]["pages"] = page
 
     def save_progress(self):
         if 'stats' in self.conf:
@@ -167,7 +181,31 @@ class Loader:
         with open('./config/pracuj_attribute_names.txt', 'w+') as file:
             for element in self.tags:
                 file.write(str(element) + "\n")
-loader = None
+
+import asyncio
+
+class Loader_Async:
+    
+    async def req(self,num):
+        print(f"Working {num}")
+        await asyncio.sleep(num)
+        print(f"Finished {num}")
+        if num < 12:
+            x = asyncio.create_task(self.req(num+3))
+            await x
+
+    async def async_loop(self):
+        a = asyncio.create_task(self.req(1))
+        b = asyncio.create_task(self.req(2))
+        c = asyncio.create_task(self.req(3))
+        await a
+        await b
+        await c
+    def start(self):
+        asyncio.run(self.async_loop())
+
+    
+
 if __name__ ==  "__main__":
-    with Loader() as loader:
-        loader.load_data()
+    loader = Loader_Async()
+    loader.start()
