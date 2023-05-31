@@ -2,14 +2,11 @@ import json
 import re
 import pandas as pd
 from bs4 import BeautifulSoup
-from concurrent.futures import ThreadPoolExecutor
-import csv
-import threading
 import requests
-import time
 from core import Loader
-
-
+import traceback
+import sys
+import asyncio
 url = "https://archiwum.pracuj.pl/archive/offers?Year=2023&Month=1&PageNumber="
 tagi = ["software","programmer","programista"]
 hdr = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11',
@@ -116,6 +113,65 @@ class Detailed_Loader(Loader):
         finally:
             self.lock.release()
 
+    async def load_offer_async(self,url,date):
+        resp = await self.get_async(url)
+        data = [0 for _ in range(10)]
+        processed_page = BeautifulSoup(resp, "html.parser")
+        name = processed_page.find(class_="offer-viewkHIhn3")
+        if(name==None):
+            print("Napotkano wadliwom oferte: ",url)
+            return
+        name = name.text
+        data[0] = name
+        attrs = processed_page.find_all(attrs={"data-scroll-id":True})
+        company = processed_page.find("h2",{"data-scroll-id":"employer-name"}).contents[0]
+        dane = {"localization":[]}
+        for i,x in enumerate(attrs):
+            if(i+1<10):
+                data[i+1]= x.text
+
+            tag = x.get("data-scroll-id")
+            if(tag=="workplaces"):
+                dane["localization"].append(x.contents[-1].text)
+            elif tag=="contract-types-salary":
+                dane["contract"] = self.get_salary_contents(x)
+            else:
+                if not any(str(tag)== ab for ab in excluded_tags):
+                    found_list = False
+                    i = 0
+                    while (not found_list) and i < len(listed_classes):
+                        class_name = listed_classes[i]
+                        lista = x.find(class_=class_name)
+                        if(lista):
+                            found_list=True
+                            elementy = self.get_element_contents(lista)
+                            dane[tag] = elementy
+                        i+=1
+                    if not found_list:
+                        dane[tag] = x.text
+                    # if lista != None:
+                    #     elementy = self.get_element_contents(lista)
+                    #     # print("Dodaje liste typu :" ,"\n",elementy)
+                    #     dane[tag] = elementy
+                    # else:
+                    #     lista = x.find(class_="offer-view6lWuAT")
+                    #     if lista != None:
+                    #         elementy = self.get_element_contents(lista)
+                    #         # print("Dodaje liste typu :" ,"\n",elementy)
+                    #         dane[tag] = elementy
+                    #     else:
+                    #         dane[tag] = x.text
+                        
+            self.tags.add(tag)
+        self.lock.acquire()
+        try:
+            # with open('./data/pracuj_detailed.csv', 'a+',newline='', encoding='utf-8') as f:
+            #     writer = csv.writer(f)
+            #     writer.writerow(data)
+            self.data[date[0]][date[1]][company] = {}
+            self.data[date[0]][date[1]][company][name] = dane
+        finally:
+            self.lock.release()
 
     def scrap(self,page,date):
         print("Started processing page ")
@@ -147,8 +203,44 @@ class Detailed_Loader(Loader):
         print(" ")
         print("Done processing page ")
 
+    async def scrap_async(self,page,date):
+        print("Started processing page ")
+        if date[0] not in self.data:
+            self.data[date[0]] = {}
+            self.data[date[0]][date[1]] = {}
+        elif date[1] not in self.data[date[0]]:
+            self.data[date[0]][date[1]] = {}
+    
+        for a in page.find_all(class_="offers_item"):
+            x = a.find_all(class_="offers_item_link_cnt_part")
+            if x[0] and x[0].text and self.check_tags(x[0].text):
+                company = x[1].text
+                stanowisko = x[0].text
+                if company in self.data[date[0]][date[1]].keys() and stanowisko in self.data[date[0]][date[1]][company].keys():
+                    self.data[date[0]][date[1]][company][stanowisko]["localization"].append(a.find(class_="offers_item_desc_loc").text)
+                    print(".",end="")
+                else:
+                    print("+",end="")
+                    x = a.find(class_="offers_item_link")
+                    if x:
+                        await self.load_offer_async(x.get("href"),date)    
+                        self.stats[date[0]][date[1]-1]["matched_offers"] += 1
+            try:
+                self.stats[date[0]][date[1]-1]["all_offers"] +=1
+            except Exception as ex:
+                print(f"Had troubles saving stats at self.stats[{date[0]}][{date[1]-1}][\"all_offers\"];",ex)
+                exit()
+        print(" ")
+        print("Done processing page ")
         
         
 if __name__ ==  "__main__":
-    loader = Detailed_Loader()
-    loader.load_data()
+    loop = asyncio.get_event_loop()
+    try:
+        loader = Detailed_Loader()
+        loader.start()
+    except KeyboardInterrupt:
+        print("Program exited;\n Ctrl + C caught!")
+
+    except Exception:
+        traceback.print_exc(file=sys.stdout)

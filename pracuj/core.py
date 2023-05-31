@@ -11,7 +11,8 @@ import time
 import numpy as np
 import threading
 import atexit
-
+import asyncio
+import aiohttp
 
 tagi = np.loadtxt("./config/search_tags.txt",dtype=str)
 hdr = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11',
@@ -40,6 +41,7 @@ class Loader:
         self.auto_save_value = self.conf["auto_save_every_n_pages"]
         for i in range(2014,2024):
             self.stats[i]=[{"pages":0,"all_offers":0,"matched_offers":0} for _ in range (12)]
+        self.chunk_size = 8
 
     def open_file(self):
         try:
@@ -181,31 +183,110 @@ class Loader:
         with open('./config/pracuj_attribute_names.txt', 'w+') as file:
             for element in self.tags:
                 file.write(str(element) + "\n")
+        
+    async def load_data_async(self):
+        inc = -1
+        
+        page = self.conf["start_from_page"]
+        year = self.conf[ "start_from_year"]
+        month = self.conf[ "start_from_month"]
 
-import asyncio
+        if self.conf["search_from_oldest_to_newer"]:
+            inc = 1
+        if self.conf["use_save_file_if_exists"]:
+            with open('./config/last_session.json', 'r') as file:
+                save = json.load(file)
+                if save["page"]:
+                    page = save["page"]
 
-class Loader_Async:
+                if save["month"]:
+                    month = save["month"]
+
+                if save["year"]:
+                    year = save["year"]
+
+        current_month = self.conf["current_month"]
+        current_year = self.conf["current_year"]
+        while year<= current_year and year>= 2014:
+            self.last_year = year
+            print(f"Scraping for year {year}")
+            if year == current_year:
+                while month <= current_month and month >0:
+                    self.last_month = month
+                    print(f"Scraping for month {month}")
+                    await self.load_all_pages_async(month,year,page)
+                    page = 1
+                    month += inc
+                    print("Scraping next month!!")
+
+            else:     
+                while month <= 12 and month >0:
+                    self.last_month = month
+                    print(f"Scraping for month {month}")
+                    await self.load_all_pages_async(month,year,page)
+                    month += inc
+                    page = 1
+                    print("Scraping next month!!")
+            if inc>0:
+                month = 0
+            else:
+                month = 12
+            year+=inc
+            print("Scraping next year!!")
+            
+    async def load_all_pages_async(self,month,year,page=1):        
+        print("Loading data...")
+        chunk = [None for _ in range(self.chunk_size)]
     
-    async def req(self,num):
-        print(f"Working {num}")
-        await asyncio.sleep(num)
-        print(f"Finished {num}")
-        if num < 12:
-            x = asyncio.create_task(self.req(num+3))
-            await x
+        for i in range(self.chunk_size):
+            chunk[i] = asyncio.create_task(self.load_page_chunk(page+i,year,month))
+        for i in range(self.chunk_size):
+            await chunk[i]
 
-    async def async_loop(self):
-        a = asyncio.create_task(self.req(1))
-        b = asyncio.create_task(self.req(2))
-        c = asyncio.create_task(self.req(3))
-        await a
-        await b
-        await c
+
+    async def get_async(self,url):
+        async with aiohttp.ClientSession() as session:
+            while True:
+                async with session.get(url,headers=hdr) as response:
+                    if response.status == 200:
+                        return await response.text()
+                    print("                                                     Status code: ",response.status)
+                    print(f"Requesting again in {self.conf['delay']} seconds...")
+                    await asyncio.sleep(self.conf['delay'])
+                
+    async def load_page_chunk(self,page,year,month):
+            print(f'Pobieranie strony {page} m:{month},y:{year}')
+            resp = await self.get_async(self.url(year,month,page))
+            print(f'Parsowanie strony {page}')
+            processed_page = BeautifulSoup(resp, "html.parser")
+            retry_amount = 3
+            i = 0
+            while processed_page.find(class_="offers_empty") and i < retry_amount-1: 
+                print("             Checking for page end one more time")
+                await asyncio.sleep(self.conf["delay"])
+                resp = await self.get_async(self.url(year,month,page))
+                processed_page = BeautifulSoup(resp, "html.parser")
+                i+=1
+            if(processed_page.find(class_="offers_empty")):
+                does_next_exist=False
+                print("                 page does not exist! ",self.url(year,month,page))
+                with open("temps.txt", 'w+', encoding="utf-8") as file:
+                    file.write(resp)
+            else:
+                await self.scrap_async(processed_page,(year,month,page))
+                page+=4
+                if (page%self.auto_save_value)==0:
+                    self.save_progress()
+                self.last_page=page
+                self.stats[year][month-1]["pages"] = page
+                next_page = asyncio.create_task(self.load_page_chunk(page,year,month))
+                await next_page
+
     def start(self):
-        asyncio.run(self.async_loop())
+        asyncio.run(self.load_data_async())
 
     
 
 if __name__ ==  "__main__":
-    loader = Loader_Async()
+    loader = Loader()
     loader.start()
