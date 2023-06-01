@@ -1,8 +1,6 @@
 import json
 import re
 import pandas as pd
-import urllib
-import urllib.request
 from bs4 import BeautifulSoup
 from concurrent.futures import ThreadPoolExecutor
 import csv
@@ -37,10 +35,17 @@ class Loader:
         atexit.register(self.save_progress)
         self.open_file()
         self.tags = set()
-        self.stats = {}
         self.auto_save_value = self.conf["auto_save_every_n_pages"]
-        for i in range(2014,2024):
-            self.stats[i]=[{"pages":0,"all_offers":0,"matched_offers":0} for _ in range (12)]
+        # for i in range(2014,2024):
+        #     self.stats[str(i)]={}
+        #     for j in range(1,13):
+        #         self.stats[str(i)][str(j)]={"pages":0,"all_offers":0,"matched_offers":0}
+        with open('./config/last_session.json',"r",encoding="utf-8") as f:
+            self.last_session = json.load(f)
+            if "stats" in self.last_session:
+                self.stats = self.last_session["stats"]
+
+                
         self.chunk_size = 8
 
     def open_file(self):
@@ -50,6 +55,10 @@ class Loader:
             out_file.close()
         except Exception as ex:
             print("Could not open json file: "+self.file_name+";",ex)
+            with open("./data/"+self.file_name,"w+",encoding="utf-8") as f:
+                f.write("{}")
+            self.data = {}
+                
 
     def load_file(self,file):
         if file != None:
@@ -162,14 +171,15 @@ class Loader:
                 if (page%self.auto_save_value)==0:
                     self.save_progress()
                 self.last_page=page
-                self.stats[year][month-1]["pages"] = page
+                self.stats[year][month]["pages"] = page
 
     def save_progress(self):
-        if 'stats' in self.conf:
-            staty_stare = self.conf['stats']
-            for key in staty_stare.keys():
-                for i in range(12):
-                    self.stats[key][i] = staty_stare[key][i]
+        # if 'stats' in self.conf:
+        #     staty_stare = self.conf['stats']
+        #     for key in staty_stare.keys():
+        #         for subkey in key.keys():
+        #             self.stats[key][subkey]+=staty_stare[key][subkey]
+        
         progress = {
             'page':self.last_page,
             'month':self.last_month,
@@ -178,7 +188,7 @@ class Loader:
         }
         with open('./config/last_session.json', 'w+') as file:
             json.dump(progress, file,indent=4)
-        with open('./data/'+self.file_name, 'w', encoding="utf-8") as file:
+        with open('./data/'+self.file_name, 'w+', encoding="utf-8") as file:
             json.dump(self.data, file,indent=self.conf["data_indent"],ensure_ascii=False)
         with open('./config/pracuj_attribute_names.txt', 'w+') as file:
             for element in self.tags:
@@ -214,18 +224,21 @@ class Loader:
                 while month <= current_month and month >0:
                     self.last_month = month
                     print(f"Scraping for month {month}")
-                    await self.load_all_pages_async(month,year,page)
+                    await self.load_all_pages_async(str(month),str(year),page)
                     page = 1
                     month += inc
+                    self.save_progress()
                     print("Scraping next month!!")
 
             else:     
                 while month <= 12 and month >0:
                     self.last_month = month
                     print(f"Scraping for month {month}")
-                    await self.load_all_pages_async(month,year,page)
+                    await self.load_all_pages_async(str(month),str(year),page)
                     month += inc
                     page = 1
+                    self.save_progress()
+
                     print("Scraping next month!!")
             if inc>0:
                 month = 0
@@ -278,7 +291,7 @@ class Loader:
                 if (page%self.auto_save_value)==0:
                     self.save_progress()
                 self.last_page=page
-                self.stats[year][month-1]["pages"] = page
+                self.stats[year][month]["pages"] = page
                 next_page = asyncio.create_task(self.load_page_chunk(page,year,month))
                 await next_page
 

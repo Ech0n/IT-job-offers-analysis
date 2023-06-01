@@ -194,11 +194,11 @@ class Detailed_Loader(Loader):
                     x = a.find(class_="offers_item_link")
                     if x:
                         self.load_offer(x.get("href"),date)    
-                        self.stats[date[0]][date[1]-1]["matched_offers"] += 1
+                        self.stats[date[0]][date[1]]["matched_offers"] += 1
             try:
-                self.stats[date[0]][date[1]-1]["all_offers"] +=1
+                self.stats[date[0]][date[1]]["all_offers"] +=1
             except Exception as ex:
-                print(f"Had troubles saving stats at self.stats[{date[0]}][{date[1]-1}][\"all_offers\"];",ex)
+                print(f"Had troubles saving stats at self.stats[{date[0]}][{int(date[1])-1}][\"all_offers\"];",ex)
                 exit()
         print(" ")
         print("Done processing page ")
@@ -224,9 +224,9 @@ class Detailed_Loader(Loader):
                     x = a.find(class_="offers_item_link")
                     if x:
                         await self.load_offer_async(x.get("href"),date)    
-                        self.stats[date[0]][date[1]-1]["matched_offers"] += 1
+                        self.stats[date[0]][date[1]]["matched_offers"] += 1
             try:
-                self.stats[date[0]][date[1]-1]["all_offers"] +=1
+                self.stats[date[0]][date[1]]["all_offers"] +=1
             except Exception as ex:
                 print(f"Had troubles saving stats at self.stats[{date[0]}][{date[1]-1}][\"all_offers\"];",ex)
                 exit()
