@@ -14,3 +14,6 @@ Scraper:
 - [x] Rozważyć zapis szczegółowych danych do json.
 - [x] Rozdzielac scrapowane dane w elementach takich jak np: one-column-list na elementy w liscie (https://www.pracuj.pl/praca/programista-net-zachodniopomorskie,oferta,9856998)
 - [x] Jeżeli kilka ofert takich samych jest w roznych wojewodztwach to jak je liczyc
+Wykresy ze Stack-Overflow:
+- [ ] Uogólnić import danych z CSV, aby nie znajdował się w funkcji realizującej konkretny wykres
+- [ ] Zaimportować pliki z lat 2011-2016, bo poziom wykształcenia był podawany w przejrzysty sposób od 2017
