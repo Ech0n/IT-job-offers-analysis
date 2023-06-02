@@ -1,19 +1,18 @@
 import json
-import re
 import pandas as pd
 from bs4 import BeautifulSoup
-from concurrent.futures import ThreadPoolExecutor
-import csv
 import requests
 import time
 import numpy as np
 import threading
 import atexit
 import asyncio
-import aiohttp
 
+#old user-agent
+#Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11
 tagi = np.loadtxt("./config/search_tags.txt",dtype=str)
-hdr = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11',
+hdr = {'User-Agent': 'scraper_for_university_project_data_will_not_be_published/1.0',
+       'Fron':'matid@spoko.pl',
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
         'Accept-Charset': 'ISO-8859-1,utf-8;q=0.7,*;q=0.3',
         'Accept-Encoding': 'none',
@@ -44,9 +43,10 @@ class Loader:
             self.last_session = json.load(f)
             if "stats" in self.last_session:
                 self.stats = self.last_session["stats"]
+                self.last_page = self.last_session["page"]
 
-                
-        self.chunk_size = 8
+        self.time_out = 0
+        self.chunk_size = self.conf["chunk_size"]
 
     def open_file(self):
         try:
@@ -259,13 +259,25 @@ class Loader:
 
     async def get_async(self,url):
         async with aiohttp.ClientSession() as session:
+            if self.time_out != 0:
+                await asyncio.sleep(self.time_out)
+            tries = 1
             while True:
                 async with session.get(url,headers=hdr) as response:
                     if response.status == 200:
                         return await response.text()
+
                     print("                                                     Status code: ",response.status)
-                    print(f"Requesting again in {self.conf['delay']} seconds...")
-                    await asyncio.sleep(self.conf['delay'])
+                    if response.headers['Retry-After']:
+                        delay = int( response.headers['Retry-After'])
+                    else:
+                        delay= min(tries*tries*self.conf["delay"],self.conf['page_end_delay'])
+                    # print(response.headers['Retry-After'])
+                    print(f"Requesting again in {delay} seconds...")
+                    self.time_out = delay
+                    await asyncio.sleep(delay)
+                    self.time_out = 0
+                    tries += 1
                 
     async def load_page_chunk(self,page,year,month):
             print(f'Pobieranie strony {page} m:{month},y:{year}')
@@ -276,15 +288,12 @@ class Loader:
             i = 0
             while processed_page.find(class_="offers_empty") and i < retry_amount-1: 
                 print("             Checking for page end one more time")
-                await asyncio.sleep(self.conf["delay"])
+                await asyncio.sleep(self.conf["page_end_delay"])
                 resp = await self.get_async(self.url(year,month,page))
                 processed_page = BeautifulSoup(resp, "html.parser")
                 i+=1
             if(processed_page.find(class_="offers_empty")):
-                does_next_exist=False
                 print("                 page does not exist! ",self.url(year,month,page))
-                with open("temps.txt", 'w+', encoding="utf-8") as file:
-                    file.write(resp)
             else:
                 await self.scrap_async(processed_page,(year,month,page))
                 page+=4

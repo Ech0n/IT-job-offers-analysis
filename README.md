@@ -3,7 +3,7 @@
 
 ## Jak uruchomić:
 1. `pip install -r requirements.txt`
-2. `python pracuj/scraper.py`
+2. `python pracuj/detailed.py`
 
 ## TODO:
 Scraper:
@@ -12,5 +12,5 @@ Scraper:
 - [x] Zaimplementować wczytywanie stanu scrapera w poprzedniej sesji, aby umożliwić wychodzenie z programu, które nie usuwa progressu.
 - [ ] Umieścić writera w __init__, co może pomóc w implementacji punktu wyżej.
 - [x] Rozważyć zapis szczegółowych danych do json.
-- [ ] Rozdzielac scrapowane dane w elementach takich jak np: one-column-list na elementy w liscie (https://www.pracuj.pl/praca/programista-net-zachodniopomorskie,oferta,9856998)
-- [ ] Jeżeli kilka ofert takich samych jest w roznych wojewodztwach to jak je liczyc
+- [x] Rozdzielac scrapowane dane w elementach takich jak np: one-column-list na elementy w liscie (https://www.pracuj.pl/praca/programista-net-zachodniopomorskie,oferta,9856998)
+- [x] Jeżeli kilka ofert takich samych jest w roznych wojewodztwach to jak je liczyc

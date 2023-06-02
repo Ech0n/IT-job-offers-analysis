@@ -1,627 +1,627 @@
 {
-    "page": 1149,
-    "month": 4,
-    "year": 2023,
+    "page": 87,
+    "month": 12,
+    "year": 2022,
     "stats": {
-        "2014": [
-            {
+        "2014": {
+            "1": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "2": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "3": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "4": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "5": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "6": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "7": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "8": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "9": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "10": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "11": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
-                "pages": 0,
-                "all_offers": 0,
-                "matched_offers": 0
-            }
-        ],
-        "2015": [
-            {
-                "pages": 0,
-                "all_offers": 0,
-                "matched_offers": 0
-            },
-            {
-                "pages": 0,
-                "all_offers": 0,
-                "matched_offers": 0
-            },
-            {
-                "pages": 0,
-                "all_offers": 0,
-                "matched_offers": 0
-            },
-            {
-                "pages": 0,
-                "all_offers": 0,
-                "matched_offers": 0
-            },
-            {
-                "pages": 0,
-                "all_offers": 0,
-                "matched_offers": 0
-            },
-            {
-                "pages": 0,
-                "all_offers": 0,
-                "matched_offers": 0
-            },
-            {
-                "pages": 0,
-                "all_offers": 0,
-                "matched_offers": 0
-            },
-            {
-                "pages": 0,
-                "all_offers": 0,
-                "matched_offers": 0
-            },
-            {
-                "pages": 0,
-                "all_offers": 0,
-                "matched_offers": 0
-            },
-            {
-                "pages": 0,
-                "all_offers": 0,
-                "matched_offers": 0
-            },
-            {
-                "pages": 0,
-                "all_offers": 0,
-                "matched_offers": 0
-            },
-            {
+            "12": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             }
-        ],
-        "2016": [
-            {
+        },
+        "2015": {
+            "1": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "2": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "3": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "4": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "5": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "6": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "7": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "8": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "9": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "10": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "11": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
-                "pages": 0,
-                "all_offers": 0,
-                "matched_offers": 0
-            }
-        ],
-        "2017": [
-            {
-                "pages": 0,
-                "all_offers": 0,
-                "matched_offers": 0
-            },
-            {
-                "pages": 0,
-                "all_offers": 0,
-                "matched_offers": 0
-            },
-            {
-                "pages": 0,
-                "all_offers": 0,
-                "matched_offers": 0
-            },
-            {
-                "pages": 0,
-                "all_offers": 0,
-                "matched_offers": 0
-            },
-            {
-                "pages": 0,
-                "all_offers": 0,
-                "matched_offers": 0
-            },
-            {
-                "pages": 0,
-                "all_offers": 0,
-                "matched_offers": 0
-            },
-            {
-                "pages": 0,
-                "all_offers": 0,
-                "matched_offers": 0
-            },
-            {
-                "pages": 0,
-                "all_offers": 0,
-                "matched_offers": 0
-            },
-            {
-                "pages": 0,
-                "all_offers": 0,
-                "matched_offers": 0
-            },
-            {
-                "pages": 0,
-                "all_offers": 0,
-                "matched_offers": 0
-            },
-            {
-                "pages": 0,
-                "all_offers": 0,
-                "matched_offers": 0
-            },
-            {
+            "12": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             }
-        ],
-        "2018": [
-            {
+        },
+        "2016": {
+            "1": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "2": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "3": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "4": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "5": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "6": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "7": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "8": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "9": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "10": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "11": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
-                "pages": 0,
-                "all_offers": 0,
-                "matched_offers": 0
-            }
-        ],
-        "2019": [
-            {
-                "pages": 0,
-                "all_offers": 0,
-                "matched_offers": 0
-            },
-            {
-                "pages": 0,
-                "all_offers": 0,
-                "matched_offers": 0
-            },
-            {
-                "pages": 0,
-                "all_offers": 0,
-                "matched_offers": 0
-            },
-            {
-                "pages": 0,
-                "all_offers": 0,
-                "matched_offers": 0
-            },
-            {
-                "pages": 0,
-                "all_offers": 0,
-                "matched_offers": 0
-            },
-            {
-                "pages": 0,
-                "all_offers": 0,
-                "matched_offers": 0
-            },
-            {
-                "pages": 0,
-                "all_offers": 0,
-                "matched_offers": 0
-            },
-            {
-                "pages": 0,
-                "all_offers": 0,
-                "matched_offers": 0
-            },
-            {
-                "pages": 0,
-                "all_offers": 0,
-                "matched_offers": 0
-            },
-            {
-                "pages": 0,
-                "all_offers": 0,
-                "matched_offers": 0
-            },
-            {
-                "pages": 0,
-                "all_offers": 0,
-                "matched_offers": 0
-            },
-            {
+            "12": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             }
-        ],
-        "2020": [
-            {
+        },
+        "2017": {
+            "1": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "2": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "3": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "4": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "5": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "6": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "7": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "8": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "9": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "10": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "11": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "12": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             }
-        ],
-        "2021": [
-            {
+        },
+        "2018": {
+            "1": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "2": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "3": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "4": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "5": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "6": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "7": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "8": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "9": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "10": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "11": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "12": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             }
-        ],
-        "2022": [
-            {
+        },
+        "2019": {
+            "1": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "2": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "3": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "4": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "5": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "6": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "7": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "8": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "9": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "10": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "11": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "12": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             }
-        ],
-        "2023": [
-            {
+        },
+        "2020": {
+            "1": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "2": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "3": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
-                "pages": 1149,
-                "all_offers": 52000,
-                "matched_offers": 1047
-            },
-            {
+            "4": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "5": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "6": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "7": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "8": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "9": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "10": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             },
-            {
+            "11": {
+                "pages": 0,
+                "all_offers": 0,
+                "matched_offers": 0
+            },
+            "12": {
                 "pages": 0,
                 "all_offers": 0,
                 "matched_offers": 0
             }
-        ]
+        },
+        "2021": {
+            "1": {
+                "pages": 0,
+                "all_offers": 0,
+                "matched_offers": 0
+            },
+            "2": {
+                "pages": 0,
+                "all_offers": 0,
+                "matched_offers": 0
+            },
+            "3": {
+                "pages": 0,
+                "all_offers": 0,
+                "matched_offers": 0
+            },
+            "4": {
+                "pages": 0,
+                "all_offers": 0,
+                "matched_offers": 0
+            },
+            "5": {
+                "pages": 0,
+                "all_offers": 0,
+                "matched_offers": 0
+            },
+            "6": {
+                "pages": 0,
+                "all_offers": 0,
+                "matched_offers": 0
+            },
+            "7": {
+                "pages": 0,
+                "all_offers": 0,
+                "matched_offers": 0
+            },
+            "8": {
+                "pages": 0,
+                "all_offers": 0,
+                "matched_offers": 0
+            },
+            "9": {
+                "pages": 0,
+                "all_offers": 0,
+                "matched_offers": 0
+            },
+            "10": {
+                "pages": 0,
+                "all_offers": 0,
+                "matched_offers": 0
+            },
+            "11": {
+                "pages": 0,
+                "all_offers": 0,
+                "matched_offers": 0
+            },
+            "12": {
+                "pages": 0,
+                "all_offers": 0,
+                "matched_offers": 0
+            }
+        },
+        "2022": {
+            "1": {
+                "pages": 0,
+                "all_offers": 0,
+                "matched_offers": 0
+            },
+            "2": {
+                "pages": 0,
+                "all_offers": 0,
+                "matched_offers": 0
+            },
+            "3": {
+                "pages": 0,
+                "all_offers": 0,
+                "matched_offers": 0
+            },
+            "4": {
+                "pages": 0,
+                "all_offers": 0,
+                "matched_offers": 0
+            },
+            "5": {
+                "pages": 0,
+                "all_offers": 0,
+                "matched_offers": 0
+            },
+            "6": {
+                "pages": 0,
+                "all_offers": 0,
+                "matched_offers": 0
+            },
+            "7": {
+                "pages": 0,
+                "all_offers": 0,
+                "matched_offers": 0
+            },
+            "8": {
+                "pages": 0,
+                "all_offers": 0,
+                "matched_offers": 0
+            },
+            "9": {
+                "pages": 0,
+                "all_offers": 0,
+                "matched_offers": 0
+            },
+            "10": {
+                "pages": 0,
+                "all_offers": 0,
+                "matched_offers": 0
+            },
+            "11": {
+                "pages": 0,
+                "all_offers": 0,
+                "matched_offers": 0
+            },
+            "12": {
+                "pages": 87,
+                "all_offers": 5211,
+                "matched_offers": 266
+            }
+        },
+        "2023": {
+            "1": {
+                "pages": 1727,
+                "all_offers": 125845,
+                "matched_offers": 2350
+            },
+            "2": {
+                "pages": 1458,
+                "all_offers": 68250,
+                "matched_offers": 1208
+            },
+            "3": {
+                "pages": 1644,
+                "all_offers": 137416,
+                "matched_offers": 2303
+            },
+            "4": {
+                "pages": 1432,
+                "all_offers": 78758,
+                "matched_offers": 1362
+            },
+            "5": {
+                "pages": 1577,
+                "all_offers": 121015,
+                "matched_offers": 1906
+            },
+            "6": {
+                "pages": 0,
+                "all_offers": 0,
+                "matched_offers": 0
+            },
+            "7": {
+                "pages": 0,
+                "all_offers": 0,
+                "matched_offers": 0
+            },
+            "8": {
+                "pages": 0,
+                "all_offers": 0,
+                "matched_offers": 0
+            },
+            "9": {
+                "pages": 0,
+                "all_offers": 0,
+                "matched_offers": 0
+            },
+            "10": {
+                "pages": 0,
+                "all_offers": 0,
+                "matched_offers": 0
+            },
+            "11": {
+                "pages": 0,
+                "all_offers": 0,
+                "matched_offers": 0
+            },
+            "12": {
+                "pages": 0,
+                "all_offers": 0,
+                "matched_offers": 0
+            }
+        }
     }
 }

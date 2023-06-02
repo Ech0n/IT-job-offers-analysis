@@ -1,5 +1,8 @@
 {
-    "delay":5,
+    "chunk_size":6,
+    "delay":30,
+    "page_end_delay":10,
+    "max_delay":1800,
     "auto_save_every_n_pages":50,
     "search_from_oldest_to_newer":false,
     "use_save_file_if_exists":true,
