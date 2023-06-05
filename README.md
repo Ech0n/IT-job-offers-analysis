@@ -16,5 +16,5 @@ Scraper:
 - [x] Jeżeli kilka ofert takich samych jest w roznych wojewodztwach to jak je liczyc
 
 Wykresy ze Stack-Overflow:
-- [ ] Uogólnić import danych z CSV, aby nie znajdował się w funkcji realizującej konkretny wykres
+- [x] Uogólnić import danych z CSV, aby nie znajdował się w funkcji realizującej konkretny wykres
 - [ ] Zaimportować pliki z lat 2011-2016, bo poziom wykształcenia był podawany w przejrzysty sposób od 2017
