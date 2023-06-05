@@ -1,8 +1,11 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
+# data_source = "/content/drive/MyDrive/Wizualizacja danych/stack-overflow/"
+data_source = "../data/stack-overflow/"
+
 def degrees_through_years():
-    df = pd.read_csv("/content/drive/MyDrive/Wizualizacja danych/stack-overflow/survey_results_public_2017.csv")
+    df = pd.read_csv(data_source + "survey_results_public_2017.csv")
     poland_data = df[df["Country"] == "Poland"]
     levels2017 = poland_data["FormalEducation"].value_counts()
     levels2017["NDoctoral degree"] = levels2017["Doctoral degree"]
@@ -10,28 +13,28 @@ def degrees_through_years():
     levels2017 = levels2017.drop(labels=["Doctoral degree", "I prefer not to answer"])
     levels2017 = levels2017.sort_index()
 
-    df = pd.read_csv("/content/drive/MyDrive/Wizualizacja danych/stack-overflow/survey_results_public_2018.csv")
+    df = pd.read_csv(data_source + "survey_results_public_2018.csv", dtype="unicode")
     poland_data = df[df["Country"] == "Poland"]
     levels2018 = poland_data["FormalEducation"].value_counts()
     levels2018["Something else"] = levels2018["Associate degree"]
     levels2018 = levels2018.drop(labels=["Associate degree"])
     levels2018 = levels2018.sort_index()
 
-    df = pd.read_csv("/content/drive/MyDrive/Wizualizacja danych/stack-overflow/survey_results_public_2019.csv")
+    df = pd.read_csv(data_source + "survey_results_public_2019.csv")
     poland_data = df[df["Country"] == "Poland"]
     levels2019 = poland_data["EdLevel"].value_counts()
     levels2019["Something else"] = levels2019["Associate degree"]
     levels2019 = levels2019.drop(labels=["Associate degree"])
     levels2019 = levels2019.sort_index()
 
-    df = pd.read_csv("/content/drive/MyDrive/Wizualizacja danych/stack-overflow/survey_results_public_2020.csv")
+    df = pd.read_csv(data_source + "survey_results_public_2020.csv")
     poland_data = df[df["Country"] == "Poland"]
     levels2020 = poland_data["EdLevel"].value_counts()
     levels2020["Something else"] = levels2020["Associate degree (A.A., A.S., etc.)"]
     levels2020 = levels2020.drop(labels=["Associate degree (A.A., A.S., etc.)"])
     levels2020 = levels2020.sort_index()
 
-    df = pd.read_csv("/content/drive/MyDrive/Wizualizacja danych/stack-overflow/survey_results_public_2021.csv")
+    df = pd.read_csv(data_source + "survey_results_public_2021.csv")
     poland_data = df[df["Country"] == "Poland"]
     levels2021 = poland_data["EdLevel"].value_counts()
     levels2021["I have never completed any formal education"] = 0
@@ -39,7 +42,7 @@ def degrees_through_years():
     levels2021 = levels2021.drop(labels=["Associate degree (A.A., A.S., etc.)"])
     levels2021 = levels2021.sort_index()
 
-    df = pd.read_csv("/content/drive/MyDrive/Wizualizacja danych/stack-overflow/survey_results_public_2022.csv")
+    df = pd.read_csv(data_source + "survey_results_public_2022.csv")
     poland_data = df[df["Country"] == "Poland"]
     levels2022 = poland_data["EdLevel"].value_counts()
     levels2022["I have never completed any formal education"] = 0
