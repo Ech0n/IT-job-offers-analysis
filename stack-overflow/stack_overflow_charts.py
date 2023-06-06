@@ -6,20 +6,21 @@ data_source = "../data/stack-overflow/"
 
 """df2013 = pd.read_csv(data_source + "2013 Stack Overflow Survey Responses.csv", low_memory=False)
 df2014 = pd.read_csv(data_source + "2014 Stack Overflow Survey Responses.csv")
-df2015 = pd.read_csv(data_source + "2015 Stack Overflow Developer Survey Responses.csv", low_memory=False)
-df2016 = pd.read_csv(data_source + "2016 Stack Overflow Survey Responses.csv")"""
-
+df2015 = pd.read_csv(data_source + "2015 Stack Overflow Developer Survey Responses.csv", low_memory=False)"""
+df2016 = pd.read_csv(data_source + "2016 Stack Overflow Survey Responses.csv")
 df2017 = pd.read_csv(data_source + "survey_results_public_2017.csv")
-df2017 = df2017[df2017["Country"] == "Poland"]
 df2018 = pd.read_csv(data_source + "survey_results_public_2018.csv", low_memory=False)
-df2018 = df2018[df2018["Country"] == "Poland"]
 df2019 = pd.read_csv(data_source + "survey_results_public_2019.csv")
-df2019 = df2019[df2019["Country"] == "Poland"]
 df2020 = pd.read_csv(data_source + "survey_results_public_2020.csv")
-df2020 = df2020[df2020["Country"] == "Poland"]
 df2021 = pd.read_csv(data_source + "survey_results_public_2021.csv")
-df2021 = df2021[df2021["Country"] == "Poland"]
 df2022 = pd.read_csv(data_source + "survey_results_public_2022.csv")
+
+df2016 = df2016[df2016["country"] == "Poland"]
+df2017 = df2017[df2017["Country"] == "Poland"]
+df2018 = df2018[df2018["Country"] == "Poland"]
+df2019 = df2019[df2019["Country"] == "Poland"]
+df2020 = df2020[df2020["Country"] == "Poland"]
+df2021 = df2021[df2021["Country"] == "Poland"]
 df2022 = df2022[df2022["Country"] == "Poland"]
 
 def degrees_through_years():
