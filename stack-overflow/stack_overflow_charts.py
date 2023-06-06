@@ -4,9 +4,8 @@ import matplotlib.pyplot as plt
 # data_source = "/content/drive/MyDrive/Wizualizacja danych/stack-overflow/"
 data_source = "../data/stack-overflow/"
 
-"""df2013 = pd.read_csv(data_source + "2013 Stack Overflow Survey Responses.csv", low_memory=False)
 df2014 = pd.read_csv(data_source + "2014 Stack Overflow Survey Responses.csv")
-df2015 = pd.read_csv(data_source + "2015 Stack Overflow Developer Survey Responses.csv", low_memory=False)"""
+df2015 = pd.read_csv(data_source + "2015 Stack Overflow Developer Survey Responses.csv", low_memory=False, skiprows=[0])
 df2016 = pd.read_csv(data_source + "2016 Stack Overflow Survey Responses.csv")
 df2017 = pd.read_csv(data_source + "survey_results_public_2017.csv")
 df2018 = pd.read_csv(data_source + "survey_results_public_2018.csv", low_memory=False)
@@ -15,6 +14,8 @@ df2020 = pd.read_csv(data_source + "survey_results_public_2020.csv")
 df2021 = pd.read_csv(data_source + "survey_results_public_2021.csv")
 df2022 = pd.read_csv(data_source + "survey_results_public_2022.csv")
 
+df2014 = df2014[df2014["What Country do you live in?"] == "Poland"]
+df2015 = df2015[df2015["Country"] == "Poland"]
 df2016 = df2016[df2016["country"] == "Poland"]
 df2017 = df2017[df2017["Country"] == "Poland"]
 df2018 = df2018[df2018["Country"] == "Poland"]
