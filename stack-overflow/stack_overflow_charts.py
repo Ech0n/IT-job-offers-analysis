@@ -1,9 +1,12 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# data_source = "/content/drive/MyDrive/Wizualizacja danych/stack-overflow/"
+#data_source = "/content/drive/MyDrive/Wizualizacja danych/stack-overflow/"
 data_source = "../data/stack-overflow/"
 
+df2011 = pd.read_csv(data_source + "2011 Stack Overflow Survey Results.csv", encoding="cp1252")
+df2012 = pd.read_csv(data_source + "2012 Stack Overflow Survey Results.csv", encoding="cp1252")
+df2013 = pd.read_csv(data_source + "2013 Stack Overflow Survey Responses.csv", low_memory=False)
 df2014 = pd.read_csv(data_source + "2014 Stack Overflow Survey Responses.csv")
 df2015 = pd.read_csv(data_source + "2015 Stack Overflow Developer Survey Responses.csv", low_memory=False, skiprows=[0])
 df2016 = pd.read_csv(data_source + "2016 Stack Overflow Survey Responses.csv")
@@ -14,6 +17,9 @@ df2020 = pd.read_csv(data_source + "survey_results_public_2020.csv")
 df2021 = pd.read_csv(data_source + "survey_results_public_2021.csv")
 df2022 = pd.read_csv(data_source + "survey_results_public_2022.csv")
 
+df2011 = df2011[df2011["What Country or Region do you live in?"] == "Poland"]
+df2012 = df2012[df2012["What Country or Region do you live in?"] == "Poland"]
+df2013 = df2013[df2013["What Country or Region do you live in?"] == "Poland"]
 df2014 = df2014[df2014["What Country do you live in?"] == "Poland"]
 df2015 = df2015[df2015["Country"] == "Poland"]
 df2016 = df2016[df2016["country"] == "Poland"]
@@ -82,4 +88,82 @@ def degrees_through_years():
     plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
     plt.show()
 
+def gender_through_years():
+    gender2014 = df2014["What is your gender?"].value_counts()
+
+    gender2015 = df2015["Gender"].value_counts()
+    gender2015["Prefer not to disclose"] += gender2015["Other"]
+    gender2015 = gender2015.drop(labels=["Other"])
+
+    gender2016 = df2016["gender"].value_counts()
+    gender2016["Prefer not to disclose"] += gender2016["Other"]
+    gender2016 = gender2016.drop(labels=["Other"])
+
+    gender2017 = df2017["Gender"].value_counts()
+    for g in gender2017.index:
+      if g != "Male" and g != "Female" and g != "Other":
+        gender2017["Other"] += gender2017[g]
+        gender2017 = gender2017.drop(labels=[g])
+
+    gender2018 = df2018["Gender"].value_counts()
+    gender2018["Other"] = 0
+    for g in gender2018.index:
+      if g != "Male" and g != "Female" and g != "Other":
+        gender2018["Other"] += gender2018[g]
+        gender2018 = gender2018.drop(labels=[g])
+
+    gender2019 = df2019["Gender"].value_counts()
+    gender2019["Other"] = 0
+    for g in gender2019.index:
+      if g != "Man" and g != "Woman" and g != "Other":
+        gender2019["Other"] += gender2019[g]
+        gender2019 = gender2019.drop(labels=[g])
+
+    gender2020 = df2020["Gender"].value_counts()
+    gender2020["Other"] = 0
+    for g in gender2020.index:
+      if g != "Man" and g != "Woman" and g != "Other":
+        gender2020["Other"] += gender2020[g]
+        gender2020 = gender2020.drop(labels=[g])
+
+    gender2021 = df2021["Gender"].value_counts()
+    gender2021["Other"] = 0
+    for g in gender2021.index:
+      if g != "Man" and g != "Woman" and g != "Other":
+        gender2021["Other"] += gender2021[g]
+        gender2021 = gender2021.drop(labels=[g])
+
+    gender2022 = df2022["Gender"].value_counts()
+    gender2022["Other"] = 0
+    for g in gender2022.index:
+      if g != "Man" and g != "Woman" and g != "Other":
+        gender2022["Other"] += gender2022[g]
+        gender2022 = gender2022.drop(labels=[g])
+
+    data = []
+    for i in range(3):
+      data.append([])
+      data[i].append(gender2014.values[i])
+      data[i].append(gender2015.values[i])
+      data[i].append(gender2016.values[i])
+      data[i].append(gender2017.values[i])
+      data[i].append(gender2018.values[i])
+      data[i].append(gender2019.values[i])
+      data[i].append(gender2020.values[i])
+      data[i].append(gender2021.values[i])
+      data[i].append(gender2022.values[i])
+    
+    keys = ["Mężczyźni", "Kobiety", "Inne / odmowa odp."]
+    df = pd.DataFrame()
+    for i in range(3):
+      df[keys[i]] = data[i]
+    df = df[keys]
+    df = df.divide(df.sum(axis=1), axis=0)
+    years = range(2014, 2023)
+    plt.stackplot(years, df.values.T, labels=keys)
+    plt.title("Rozkład płci w latach 2014-2022")
+    plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+    plt.show()
+
 degrees_through_years()
+gender_through_years()
