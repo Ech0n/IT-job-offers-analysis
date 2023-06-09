@@ -17,4 +17,4 @@ Scraper:
 
 Wykresy ze Stack-Overflow:
 - [x] Uogólnić import danych z CSV, aby nie znajdował się w funkcji realizującej konkretny wykres
-- [ ] Zaimportować pliki z lat 2011-2016, bo poziom wykształcenia był podawany w przejrzysty sposób od 2017
+- [x] Zaimportować pliki z lat 2011-2016 => zaimportowano od 2014, bo wcześniej nie ma żadnych rekordów o Polakach
