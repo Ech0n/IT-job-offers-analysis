@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 data_source = "../data/stack-overflow/"
 
 
-df2014 = pd.read_csv(data_source + "2014 Stack Overflow Survey Responses.csv")
+df2014 = pd.read_csv(data_source + "2014 Stack Overflow Survey Responses.csv", skiprows=[1])
 df2015 = pd.read_csv(data_source + "2015 Stack Overflow Developer Survey Responses.csv", low_memory=False, skiprows=[0])
 df2016 = pd.read_csv(data_source + "2016 Stack Overflow Survey Responses.csv")
 df2017 = pd.read_csv(data_source + "survey_results_public_2017.csv")
@@ -173,6 +173,17 @@ def remote_work():
     plt.title("Praca zdalna w roku 2022")
     plt.show()
 
+def company_size():
+    size2022 = df2022["OrgSize"].value_counts()
+    size2022 = size2022.drop(labels=["I don’t know"])
+    # keys = ["Własna (jednoosobowa) firma", "2 do 9", "10 do 19", "20 do 99", "100 do 499", "500 do 999", "1,000 do 4,999", "5000 do 9999", "10,000 i więcej"]
+    keys = ["20 do 99", "100 do 499", "10,000 i więcej", "1,000 do 4,999", "2 do 9", "500 do 999", "5000 do 9999", "10 do 19", "Własna (jednoosobowa) firma"]
+    plt.pie(size2022.values, labels=keys)
+    plt.suptitle("Wielkość firm w których pracowali programiści w 2022 roku")
+    plt.title("Wykres przedstawia liczbę pracowników w firmach", fontsize=10)
+    plt.show()
+    
 degrees_through_years()
 gender_through_years()
 remote_work()
+company_size()
