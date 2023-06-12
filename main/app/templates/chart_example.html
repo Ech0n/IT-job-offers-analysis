@@ -5,7 +5,6 @@
 {% block head %}
 <!-- <head> -->
 
-
 <!-- </head> -->
 {% endblock %}
 
@@ -14,7 +13,32 @@
 {% block body %}
 <!-- <body> -->
 
-{{ chart | safe }}
+    <div class="container">
+
+        <div class="row">
+          <div class="col-md-1">
+            <!-- ADD THE responsive-plot CLASS -->
+            <div id="plot1" class="responsive-plot"></div>
+          </div>
+          <div class="col-lg">
+            <!-- ADD THE responsive-plot CLASS -->
+            <div id="bubble_graph1" class="responsive-plot" style="width: 8000px"></div>
+          </div>
+          
+      
+        </div>
+
+
+<script defer>
+    GRAPH = document.getElementById('bubble_graph1');
+    var config = {responsive : true};
+    const graphData = {{ graphJSON | safe}}
+    Plotly.newPlot(GRAPH, graphData, config);
+
+</script>
 
 <!-- </body> -->
 {% endblock %}
+
+
+
