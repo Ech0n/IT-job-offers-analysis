@@ -4,8 +4,10 @@ import matplotlib.pyplot as plt
 #data_source = "/content/drive/MyDrive/Wizualizacja danych/stack-overflow/"
 data_source = "../data/stack-overflow/"
 
-
-df2014 = pd.read_csv(data_source + "2014 Stack Overflow Survey Responses.csv", skiprows=[1])
+df2011 = pd.read_csv(data_source + "2011 Stack Overflow Survey Results.csv", encoding="cp1252")
+df2012 = pd.read_csv(data_source + "2012 Stack Overflow Survey Results.csv", encoding="cp1252")
+df2013 = pd.read_csv(data_source + "2013 Stack Overflow Survey Responses.csv", low_memory=False)
+df2014 = pd.read_csv(data_source + "2014 Stack Overflow Survey Responses.csv")
 df2015 = pd.read_csv(data_source + "2015 Stack Overflow Developer Survey Responses.csv", low_memory=False, skiprows=[0])
 df2016 = pd.read_csv(data_source + "2016 Stack Overflow Survey Responses.csv")
 df2017 = pd.read_csv(data_source + "survey_results_public_2017.csv")
@@ -15,6 +17,9 @@ df2020 = pd.read_csv(data_source + "survey_results_public_2020.csv")
 df2021 = pd.read_csv(data_source + "survey_results_public_2021.csv")
 df2022 = pd.read_csv(data_source + "survey_results_public_2022.csv")
 
+df2011 = df2011[df2011["What Country or Region do you live in?"] == "Poland"]
+df2012 = df2012[df2012["What Country or Region do you live in?"] == "Poland"]
+df2013 = df2013[df2013["What Country or Region do you live in?"] == "Poland"]
 df2014 = df2014[df2014["What Country do you live in?"] == "Poland"]
 df2015 = df2015[df2015["Country"] == "Poland"]
 df2016 = df2016[df2016["country"] == "Poland"]
@@ -162,23 +167,28 @@ def gender_through_years():
 
 def remote_work():
     remote2014 = df2014["Do you work remotely?"].value_counts()
-    keys = ["Okazjonalnie zdalnie", "Tylko stacjonarnie", "Hybrydowo", "Tylko zdalnie"]
-    plt.pie(remote2014.values, labels=keys, colors=["gray", "#c93636", "#405ebf", "#cba034"])
+    remote2014 = pd.Series([remote2014["Full-time Remote"], remote2014["Part-time Remote"], remote2014["Never"], remote2014["Occasionally"]], index=["Full-time Remote", "Part-time Remote", "Never", "Occasionally"])
+    keys = ["Tylko zdalnie", "Hybrydowo", "Tylko stacjonarnie", "Okazjonalnie zdalnie"]
+    plt.pie(remote2014.values, labels=keys) #colors=["gray", "#c93636", "#405ebf", "#cba034"]
     plt.title("Praca zdalna w roku 2014")
     plt.show()
+    print(remote2014)
 
     remote2022 = df2022["RemoteWork"].value_counts()
     keys = ["Tylko zdalnie", "Hybrydowo", "Tylko stacjonarnie"]
-    plt.pie(remote2022.values, labels=keys, colors=["#cba034", "#405ebf", "#c93636"])
+    plt.pie(remote2022.values, labels=keys)
     plt.title("Praca zdalna w roku 2022")
     plt.show()
 
 def company_size():
     size2022 = df2022["OrgSize"].value_counts()
     size2022 = size2022.drop(labels=["I don’t know"])
-    # keys = ["Własna (jednoosobowa) firma", "2 do 9", "10 do 19", "20 do 99", "100 do 499", "500 do 999", "1,000 do 4,999", "5000 do 9999", "10,000 i więcej"]
-    keys = ["20 do 99", "100 do 499", "10,000 i więcej", "1,000 do 4,999", "2 do 9", "500 do 999", "5000 do 9999", "10 do 19", "Własna (jednoosobowa) firma"]
-    plt.pie(size2022.values, labels=keys)
+    size2022 = pd.Series([size2022["Just me - I am a freelancer, sole proprietor, etc."], size2022["2 to 9 employees"], size2022["10 to 19 employees"], size2022["20 to 99 employees"], size2022["100 to 499 employees"],
+                          size2022["500 to 999 employees"], size2022["1,000 to 4,999 employees"], size2022["5,000 to 9,999 employees"], size2022["10,000 or more employees"]],
+                         index=["Just me - I am a freelancer, sole proprietor, etc.", "2 to 9 employees", "10 to 19 employees", "20 to 99 employees", "100 to 499 employees", "500 to 999 employees",
+                                "1,000 to 4,999 employees", "5,000 to 9,999 employees", "10,000 or more employees"])
+    keys = ["Własna (jednoosobowa) firma", "2 do 9", "10 do 19", "20 do 99", "100 do 499", "500 do 999", "1,000 do 4,999", "5000 do 9999", "10,000 i więcej"]
+    plt.pie(size2022.values, labels=keys, colors=("#cce0ff", "#99c2ff", "#66a3ff", "#3385ff", "#0066ff", "#0052cc", "#003d99", "#002966", "#001433"))
     plt.suptitle("Wielkość firm w których pracowali programiści w 2022 roku")
     plt.title("Wykres przedstawia liczbę pracowników w firmach", fontsize=10)
     plt.show()
