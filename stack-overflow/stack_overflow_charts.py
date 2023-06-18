@@ -1,5 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import plotly.graph_objects as go
 
 #data_source = "/content/drive/MyDrive/Wizualizacja danych/stack-overflow/"
 data_source = "../data/stack-overflow/"
@@ -68,7 +69,7 @@ def degrees_through_years():
       data[i].append(levels2020.values[i])
       data[i].append(levels2021.values[i])
       data[i].append(levels2022.values[i])
-    
+
     keys = ["Licencjackie / inżynierskie", "Brak", "Magisterskie", "Doktorskie", "Podstawowe", "Wyższe niż doktorskie", "Średnie", "Nieukończone studia", "Inne"]
     df = pd.DataFrame()
     for i in range(9):
@@ -146,48 +147,70 @@ def gender_through_years():
       data[i].append(gender2020.values[i])
       data[i].append(gender2021.values[i])
       data[i].append(gender2022.values[i])
-    
+
     keys = ["Mężczyźni", "Kobiety", "Inne / odmowa odp."]
     df = pd.DataFrame()
     for i in range(3):
       df[keys[i]] = data[i]
     df = df[keys]
-    df = df.divide(df.sum(axis=1), axis=0)
+    df = df.divide(df.sum(axis = 1), axis = 0)
     years = range(2014, 2023)
-    plt.stackplot(years, df.values.T, labels=keys)
+    plt.stackplot(years, df.values.T, labels = keys)
     plt.title("Rozkład płci w latach 2014-2022")
-    plt.legend(loc="center left", bbox_to_anchor=(1, 0.5))
+    plt.legend(loc = "center left", bbox_to_anchor = (1, 0.5))
     plt.show()
 
 def remote_work():
     remote2014 = df2014["Do you work remotely?"].value_counts()
     remote2014 = pd.Series([remote2014["Full-time Remote"], remote2014["Part-time Remote"], remote2014["Never"], remote2014["Occasionally"]], index=["Full-time Remote", "Part-time Remote", "Never", "Occasionally"])
     keys = ["Tylko zdalnie", "Hybrydowo", "Tylko stacjonarnie", "Okazjonalnie zdalnie"]
-    plt.pie(remote2014.values, labels=keys) #colors=["gray", "#c93636", "#405ebf", "#cba034"]
+    plt.pie(remote2014.values, labels = keys) #colors=["gray", "#c93636", "#405ebf", "#cba034"]
     plt.title("Praca zdalna w roku 2014")
     plt.show()
-    print(remote2014)
 
     remote2022 = df2022["RemoteWork"].value_counts()
     keys = ["Tylko zdalnie", "Hybrydowo", "Tylko stacjonarnie"]
-    plt.pie(remote2022.values, labels=keys)
+    plt.pie(remote2022.values, labels = keys)
     plt.title("Praca zdalna w roku 2022")
     plt.show()
 
 def company_size():
     size2022 = df2022["OrgSize"].value_counts()
-    size2022 = size2022.drop(labels=["I don’t know"])
+    size2022 = size2022.drop(labels = ["I don’t know"])
     size2022 = pd.Series([size2022["Just me - I am a freelancer, sole proprietor, etc."], size2022["2 to 9 employees"], size2022["10 to 19 employees"], size2022["20 to 99 employees"], size2022["100 to 499 employees"],
                           size2022["500 to 999 employees"], size2022["1,000 to 4,999 employees"], size2022["5,000 to 9,999 employees"], size2022["10,000 or more employees"]],
-                         index=["Just me - I am a freelancer, sole proprietor, etc.", "2 to 9 employees", "10 to 19 employees", "20 to 99 employees", "100 to 499 employees", "500 to 999 employees",
+                         index = ["Just me - I am a freelancer, sole proprietor, etc.", "2 to 9 employees", "10 to 19 employees", "20 to 99 employees", "100 to 499 employees", "500 to 999 employees",
                                 "1,000 to 4,999 employees", "5,000 to 9,999 employees", "10,000 or more employees"])
     keys = ["Własna (jednoosobowa) firma", "2 do 9", "10 do 19", "20 do 99", "100 do 499", "500 do 999", "1,000 do 4,999", "5000 do 9999", "10,000 i więcej"]
-    plt.pie(size2022.values, labels=keys, colors=("#cce0ff", "#99c2ff", "#66a3ff", "#3385ff", "#0066ff", "#0052cc", "#003d99", "#002966", "#001433"))
+    plt.pie(size2022.values, labels = keys, colors = ("#cce0ff", "#99c2ff", "#66a3ff", "#3385ff", "#0066ff", "#0052cc", "#003d99", "#002966", "#001433"))
     plt.suptitle("Wielkość firm w których pracowali programiści w 2022 roku")
-    plt.title("Wykres przedstawia liczbę pracowników w firmach", fontsize=10)
+    plt.title("Wykres przedstawia liczbę pracowników w firmach", fontsize = 10)
     plt.show()
-    
+
+def languages(df, year, field_name, separator = ";"):
+    langs = df[field_name].value_counts()
+    ps = pd.Series(dtype = float)
+    for ans in langs.index:
+      langs = ans.split(separator)
+      for l in langs:
+        if l in ps.index:
+          ps[l] = ps[l] + 1
+        else:
+          ps[l] = 0
+    ps = ps.sort_values(ascending=False)
+    fig = go.Figure(data=[go.Bar(x = ps.index, y = ps.values)])
+    fig.update_layout(title = f"Liczba osób, które pracowały w poszczególnych językach w {year}")
+    fig.show()
+
 degrees_through_years()
 gender_through_years()
 remote_work()
 company_size()
+
+languages(df2016, 2016, "tech_do", separator = "; ")
+languages(df2017, 2017, "HaveWorkedLanguage", separator = "; ")
+languages(df2018, 2018, "LanguageWorkedWith")
+languages(df2019, 2019, "LanguageWorkedWith")
+languages(df2020, 2020, "LanguageWorkedWith")
+languages(df2021, 2021, "LanguageHaveWorkedWith")
+languages(df2022, 2022, "LanguageHaveWorkedWith")
