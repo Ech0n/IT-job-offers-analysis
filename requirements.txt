@@ -1,3 +1,9 @@
 beautifulsoup4==4.12.2
 pandas==2.0.1
+requests
 aiohttp
+ipywidgets
+IPython
+flask
+plotly
+matplotlib
