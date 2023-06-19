@@ -1,6 +1,10 @@
+import IPython
 import pandas as pd
 import matplotlib.pyplot as plt
 import plotly.graph_objects as go
+import ipywidgets as widgets
+from IPython.display import display, clear_output
+from ipywidgets import interact
 
 #data_source = "/content/drive/MyDrive/Wizualizacja danych/stack-overflow/"
 data_source = "../data/stack-overflow/"
@@ -191,26 +195,42 @@ def languages(df, year, field_name, separator = ";"):
     langs = df[field_name].value_counts()
     ps = pd.Series(dtype = float)
     for ans in langs.index:
-      langs = ans.split(separator)
-      for l in langs:
-        if l in ps.index:
-          ps[l] = ps[l] + 1
-        else:
-          ps[l] = 0
+        langs = ans.split(separator)
+        for l in langs:
+            if l in ps.index:
+              ps[l] = ps[l] + 1
+            else:
+              ps[l] = 1
     ps = ps.sort_values(ascending=False)
-    fig = go.Figure(data=[go.Bar(x = ps.index, y = ps.values)])
+    fig = go.Figure(data=[go.Bar(x=ps.index, y=ps.values)])
     fig.update_layout(title = f"Liczba osób, które pracowały w poszczególnych językach w {year}")
+    return fig
+
+def on_year_change(year):
+    print(year)
+    fig = 0
+    if year == "2016":
+        fig = languages(df2016, 2016, "tech_do", separator = "; ")
+    elif year == "2017":
+        fig = languages(df2017, 2017, "HaveWorkedLanguage", separator = "; ")
+    elif year == "2018":
+        fig = languages(df2018, 2018, "LanguageWorkedWith")
+    elif year == "2019":
+        fig = languages(df2019, 2019, "LanguageWorkedWith")
+    elif year == "2020":
+        fig = languages(df2020, 2020, "LanguageWorkedWith")
+    elif year == "2021":
+        fig = languages(df2021, 2021, "LanguageHaveWorkedWith")
+    elif year == "2022":
+        fig = languages(df2022, 2022, "LanguageHaveWorkedWith")
     fig.show()
+
+def languages_through_years():
+    selected_year = widgets.Dropdown(options=["2016", "2017", "2018", "2019", "2020", "2021", "2022"], description="Wybierz rok")
+    widgets.interact(on_year_change, year=selected_year)
 
 degrees_through_years()
 gender_through_years()
 remote_work()
 company_size()
-
-languages(df2016, 2016, "tech_do", separator = "; ")
-languages(df2017, 2017, "HaveWorkedLanguage", separator = "; ")
-languages(df2018, 2018, "LanguageWorkedWith")
-languages(df2019, 2019, "LanguageWorkedWith")
-languages(df2020, 2020, "LanguageWorkedWith")
-languages(df2021, 2021, "LanguageHaveWorkedWith")
-languages(df2022, 2022, "LanguageHaveWorkedWith")
+languages_through_years()
