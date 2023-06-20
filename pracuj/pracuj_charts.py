@@ -2,15 +2,14 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 import plotly.express as px
+import plotly.io as pio
 
 file_columns = open("kolumny_pracuj.txt", "r", encoding="cp1252")
 columns_list = []
 for line in file_columns:
   columns_list = line.split()
 
-#pracuj = pd.read_csv("./data/pracuj.csv", encoding="utf-8", dtype=str, delimiter=";", names=columns_list, header=None, low_memory=False)
-pracuj = pd.read_csv("https://ujchmura-my.sharepoint.com/:x:/g/personal/mateusz_dyszewski_student_uj_edu_pl/EW4sIqwewZNCi9TDr48LbKYB2LfgHRwa1-66ROBmmzXSKg?e=OXcFMd",
-                     encoding="utf-8", dtype=str, delimiter=";", names=columns_list, header=None, low_memory=False)
+pracuj = pd.read_csv("../data/pracuj.csv", encoding="utf-8", dtype=str, delimiter=";", names=columns_list, header=None, low_memory=False)
 
 def number_of_offers():
   pracuj["month"] = pd.to_numeric(pracuj["month"])
@@ -37,4 +36,26 @@ def number_of_offers():
                   )
   fig.show()
 
+def types_of_contract():
+  types = ["umowa-o-prace", "b2b", "umowa-zlecenie", "umowa-o-dzielo", "umowa-o-staz", "umowa-agencyjna", "umowa-na-zastepstwo"]
+  names = ["Umowa o pracę", "B2B", "Umowa zlecenie", "Umowa o dzieło", "Umowa o staż", "Umowa agencyjna", "Umowa na zastępstwo"]
+  number_of_offers = []
+  for t in types:
+    pracuj[t] = pd.to_numeric(pracuj[t])
+    number = 0
+    for i in range(len(pracuj[t])):
+      if pracuj[t][i] == 1:
+        number += 1
+    number_of_offers.append(number)
+  
+  fig = dict({
+    "data": [{"type": "bar",
+              "x": names,
+              "y": number_of_offers}],
+    "layout": {"title": {"text": "Liczba ofert pracy z określonymi formami umów"}}
+  })
+  
+  pio.show(fig)
+
 number_of_offers()
+types_of_contract()
