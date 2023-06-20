@@ -8,7 +8,9 @@ columns_list = []
 for line in file_columns:
   columns_list = line.split()
 
-pracuj = pd.read_csv("./data/pracuj.csv", encoding="utf-8", dtype=str, delimiter=";", names=columns_list, header=None, low_memory=False)
+#pracuj = pd.read_csv("./data/pracuj.csv", encoding="utf-8", dtype=str, delimiter=";", names=columns_list, header=None, low_memory=False)
+pracuj = pd.read_csv("https://ujchmura-my.sharepoint.com/:x:/g/personal/mateusz_dyszewski_student_uj_edu_pl/EW4sIqwewZNCi9TDr48LbKYB2LfgHRwa1-66ROBmmzXSKg?e=OXcFMd",
+                     encoding="utf-8", dtype=str, delimiter=";", names=columns_list, header=None, low_memory=False)
 
 def number_of_offers():
   pracuj["month"] = pd.to_numeric(pracuj["month"])
@@ -30,7 +32,7 @@ def number_of_offers():
                   title="Liczba ofert w poszczególnych latach i miesiącach",
                   labels=dict(x="Miesiąc", y="Rok", color="Liczba ofert"),
                   x=["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
-                  y=["2019", "2020", "2022", "2023"],
+                  y=counts.index.get_level_values("rok").unique(),
                   color_continuous_scale="Blues"
                   )
   fig.show()
