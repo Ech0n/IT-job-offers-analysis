@@ -8,6 +8,7 @@
 ## TODO:
 Wykresy z Pracuj:
 - [ ] sprawdzić, czy dla ostatecznych danych nie wyjdą jakieś nieprzewidziane luki
+- [ ] dokończyć wykres "requirements" - usunąć ostrzeżenia i spróbować, zrobić tak, żeby domyślnie wyświetlały się tylko te najpopularniejsze (typu C, C++, Python, SQL...)
       
 Scraper:
 - [ ] Zaimplementować blackliste słów kluczowych. (Żeby przy wyszukiwaniu nie brało pod uwage pozycji takich jak np. Programista CNC, w tym wypadku CNC było by słowem wykluczonym)
