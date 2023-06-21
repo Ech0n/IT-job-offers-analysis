@@ -8,6 +8,7 @@
 ## TODO:
 Wykresy z Pracuj:
 - [ ] sprawdzić, czy dla ostatecznych danych nie wyjdą jakieś nieprzewidziane luki
+      
 Scraper:
 - [ ] Zaimplementować blackliste słów kluczowych. (Żeby przy wyszukiwaniu nie brało pod uwage pozycji takich jak np. Programista CNC, w tym wypadku CNC było by słowem wykluczonym)
 - [x] Dodać kolejne pola do scrapowanych danych
