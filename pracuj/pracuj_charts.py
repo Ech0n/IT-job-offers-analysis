@@ -3,6 +3,11 @@ import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 import plotly.express as px
 import plotly.io as pio
+import geopandas
+import re
+import zipfile
+import os
+import requests
 
 file_columns = open("../data/kolumny_pracuj.txt", "r", encoding="utf-8")
 columns_list = []
@@ -67,15 +72,38 @@ def location():
       if pracuj[l][i] == 1:
         number += 1
     number_of_offers.append(number)
-  
+
+  url = "https://www.gis-support.pl/downloads/2022/wojewodztwa.zip"
+  r = requests.get(url, allow_redirects=True)
+  open('wojewodztwa.zip', 'wb').write(r.content)
+
+  voivodeships = read_shape_from_zip("wojewodztwa.zip", "wojewodztwa")
+  voivodeships = geopandas.read_file("wojewodztwa.zip")
+  data = pd.DataFrame({'JPT_NAZWA_': locations, 'number_of_offers': number_of_offers})
+  voivodeships = pd.merge(data, voivodeships, on='JPT_NAZWA_', how='left')
+  print(voivodeships)
+    
+  fig, ax = plt.subplots(figsize=(10, 10))
+  voivodeships.plot(column="number_of_offers", ax=ax)
+  vmin, vmax = voivodeships["number_of_offers"].min(), voivodeships["number_of_offers"].max()
+  sm = plt.cm.ScalarMappable(norm=plt.Normalize(vmin=vmin, vmax=vmax))
+  sm.set_array([])
+  fig.colorbar(sm, shrink=0.5, ax=ax)
+  ax.grid(True)
+  ax.set_axis_off()
+  ax.set_title("Liczba ofert pracy w województwach")
+  plt.tight_layout()
+  plt.show()
+
   fig = dict({
     "data": [{"type": "bar",
               "x": locations,
               "y": number_of_offers}],
     "layout": {"title": {"text": "Liczba ofert pracy w województwach"}}
   })
-  
+
   pio.show(fig)
+
 
 def experience_level():
   level = ["-1", "intern", "junior", "mid", "senior"]
