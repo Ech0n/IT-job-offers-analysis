@@ -4,7 +4,7 @@ import plotly.graph_objects as go
 import plotly.express as px
 import plotly.io as pio
 
-file_columns = open("kolumny_pracuj.txt", "r", encoding="utf-8")
+file_columns = open("../data/kolumny_pracuj.txt", "r", encoding="utf-8")
 columns_list = []
 for line in file_columns:
   columns_list = line.split()
