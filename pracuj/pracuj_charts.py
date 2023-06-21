@@ -78,6 +78,21 @@ def location():
   
   pio.show(fig)
 
+def experience_level():
+  level = ["-1", "intern", "junior", "mid", "senior"]
+  d = dict()
+  for l in level:
+    d[l] = 0
+  for i in range(len(pracuj["experience-level"])):
+    d[pracuj["experience-level"][i]] += 1
+  d.pop("-1")
+  k = list(d.keys())
+  v = list(d.values())
+  
+  fig = px.pie(values=v, names=k)
+  fig.show()
+
 number_of_offers()
 types_of_contract()
 location()
+experience_level()
