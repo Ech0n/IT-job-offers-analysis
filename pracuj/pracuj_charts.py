@@ -91,7 +91,7 @@ def experience_level():
   fig = px.pie(values=v, names=k, title="Liczba osób na poszczególnych stanowiskach")
   fig.show()
 
-def benefits(number_of_benefits, is_visible=False):
+def benefits(number_of_benefits, is_visible=False, show_all = False):
   benefits = {}
 
   for c in pracuj.columns:
@@ -102,17 +102,20 @@ def benefits(number_of_benefits, is_visible=False):
   
   df = pd.DataFrame(benefits).T
   df.columns = ["Oferowany"]
-  df = df.sort_values("Oferowany", ascending=False).head(number_of_benefits)
-
+  df = df.sort_values("Oferowany", ascending=False)
+  if show_all == False:
+    df = df.head(number_of_benefits)
+  df = df = df.sort_values("Oferowany")
   fig = go.Bar(y=df.index, x=df["Oferowany"], visible=is_visible, orientation="h")
   return fig
 
 def different_benefits():
-  fig = go.Figure(benefits(10, True))
+  fig = go.Figure(benefits(10, is_visible=True))
   fig.add_trace(benefits(15))
   fig.add_trace(benefits(20))
   fig.add_trace(benefits(25))
   fig.add_trace(benefits(30))
+  fig.add_trace(benefits(10, show_all=True))
   fig.update_layout(title = "10 najczęściej oferowanych benefitów")
 
   fig.update_layout(
@@ -122,31 +125,36 @@ def different_benefits():
           buttons=list(
               [dict(label = "10",
                     method ="update",
-                    args = [{"visible" : [True, False, False, False, False]},
+                    args = [{"visible" : [True, False, False, False, False, False]},
                             {"title" : "10 najczęściej oferowanych benefitów"}]),
                dict(label = "15",
                     method ="update",
-                    args = [{"visible" : [False, True, False, False, False]},
+                    args = [{"visible" : [False, True, False, False, False, False]},
                             {"title" : "15 najczęściej oferowanych benefitów"}]),
                dict(label = "20",
                     method ="update",
-                    args = [{"visible" : [False, False, True, False, False]},
+                    args = [{"visible" : [False, False, True, False, False, False]},
                             {"title" : "20 najczęściej oferowanych benefitów"}]),
               dict(label = "25",
                     method ="update",
-                    args = [{"visible" : [False, False, False, True, False]},
+                    args = [{"visible" : [False, False, False, True, False, False]},
                             {"title" : "25 najczęściej oferowanych benefitów"}]),
                dict(label = "30",
                     method ="update",
-                    args = [{"visible" : [False, False, False, False, True]},
-                            {"title" : "30 najczęściej oferowanych benefitów"}])
-               ]
+                    args = [{"visible" : [False, False, False, False, True, False]},
+                            {"title" : "30 najczęściej oferowanych benefitów"}]),
+               dict(label = "Pokaż wszystkie",
+                    method ="update",
+                    args = [{"visible" : [False, False, False, False, False, True]},
+                            {"title" : "Wszystkie benefity oferowane przez pracodawcę"}])
+               ],
           ),
           x=1,
-          y=1
+          y=1.1
       )]
   )
-  fig.update_layout(margin=dict(l=20, r=20, t=60, b=20))
+  
+  fig.update_layout(margin=dict(l=20, r=20, t=60, b=20), height=700)
   fig.show()
 
 number_of_offers()
