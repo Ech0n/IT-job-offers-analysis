@@ -180,9 +180,32 @@ def requirements():
   fig.update_layout(xaxis_title="Rok", yaxis_title="Liczba", legend_title="Wymaganie")
   fig.show()
 
+def salaries():
+  locations = ["mazowieckie", "dolnośląskie", "małopolskie", "śląskie", "łódzkie", "wielkopolskie", "opolskie", "podlaskie", "zachodnio-pomorskie", "podkarpackie", "lubelskie", "lubuskie", "świętokrzyskie", "warmińsko-mazurskie", "kujawsko-pomorskie", "pomorskie"]
+  salaries = []
+  pracuj["salary"] = pd.to_numeric(pracuj["salary"])
+  for l in locations:
+    pracuj[l] = pd.to_numeric(pracuj[l])
+    salaries_sum = 0
+    number = 0
+    for i in range(len(pracuj[l])):
+      if pracuj[l][i] == 1 and pracuj["salary"][i] != -1:
+        number += 1
+        salaries_sum += pracuj["salary"][i]
+    salaries.append(salaries_sum/number)
+  
+  fig = dict({
+    "data": [{"type": "bar",
+              "x": locations,
+              "y": salaries}],
+    "layout": {"title": {"text": "Średnie wynagrodzenie w województwach (w zł)"}}
+  })
+  pio.show(fig)
+
 number_of_offers()
 types_of_contract()
 location()
 experience_level()
 different_benefits()
 requirements()
+salaries()
