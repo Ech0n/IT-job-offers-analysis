@@ -4,6 +4,8 @@ from dash import html, dcc, callback, Output, Input
 import plotly.express as px
 
 import os
+import dash_daq as daq
+
 
 colors_dict = {
             'programming' : '#2F3C7E',
@@ -29,8 +31,14 @@ def create_chart():
     df = pd.read_csv(os.path.join('app', 'assets','github_data29_05_2023_with_category.csv')
 )
     layout = [
+        daq.ToggleSwitch(
+            id='my-toggle-switch',
+            value=False,
+            color='black',
+        ),
         html.H1(children='Popularnosc technologii wedlug liczby repozytoriow na githubie:', style={'textAlign':'center'}),
         dcc.Dropdown(list(df.category.unique()) + ['all'], 'all', id='dropdown-selection2', style={"color" : 'black'}),
+        
         
         dcc.Graph(id='graph-content2', responsive=True)
     ]
@@ -38,9 +46,11 @@ def create_chart():
 
     @callback(
         Output('graph-content2', 'figure'),
-        Input('dropdown-selection2', 'value')
+        [Input('dropdown-selection2', 'value'),
+        Input('my-toggle-switch', 'value' )]
     )
-    def update_graph(value):
+    
+    def update_graph(value, value2):
         dff = None
         
         if value == 'all':
@@ -50,12 +60,47 @@ def create_chart():
             dff =  df[df.category==value]
             
 
-        return github_tree_chart(dff)
+        return github_tree_chart(dff, 'total_num_of_repos', value2)
     return layout
-    
-def github_tree_chart(df):
 
-    df = df.sort_values('total_num_of_repos', ascending=False)
+def create_chart2():
+    df = pd.read_csv(os.path.join('app', 'assets','github_data29_05_2023_with_category.csv')
+    )
+    layout = [
+        daq.ToggleSwitch(
+            id='my-toggle-switch2',
+            value=False,
+            color='black',
+        ),
+        html.H1(children='Popularnosc technologii wedlug TOP 1 repozytorium(liczby gwiazdek) na githubie:', style={'textAlign':'center'}),
+        dcc.Dropdown(list(df.category.unique()) + ['all'], 'all', id='dropdown-selection3', style={"color" : 'black'}),
+        
+        dcc.Graph(id='graph-content3', responsive=True)
+    ]
+    
+
+    @callback(
+        Output('graph-content3', 'figure'),
+        [Input('dropdown-selection3', 'value'),
+         Input('my-toggle-switch2', 'value')]
+        
+    )
+    def update_graph(value, color_scale):
+        dff = None
+        
+        if value == 'all' or value is None:
+            dff = df
+            
+        else:
+            dff =  df[df.category==value]
+            
+
+        return github_tree_chart(dff, 'stars', color_scale)
+    return layout
+
+def github_tree_chart(df, sort_by, color_scale):
+
+    df = df.sort_values(sort_by, ascending=False)
    
     #x, y = distribute_xy(0, 150000, 5000, -22000, len(df))
     
@@ -74,11 +119,11 @@ def github_tree_chart(df):
 
 
     #fig = px.scatter(x=x, y=y,
-	         #size=df['total_num_of_repos'],
+	         #size=df[sort_by],
                #  hover_name=df['desc'],
                #  labels={"x" : " ", "y" : " "},
                #  )
-#     size = df['total_num_of_repos']
+#     size = df[sort_by]
 #     colors = prepare_colors(df['desc'])
 
 #     fig = go.Figure(data=[go.Scatter(
@@ -102,15 +147,18 @@ def github_tree_chart(df):
 # )
 # ])
     #fig.update_layout( showlegend=False, autosize=True)
-
-
-    fig = px.treemap(df, path=[px.Constant("all"), 'category', 'title'], values='total_num_of_repos', hover_name='desc',
-                        color='total_num_of_repos'
+    fig = None
+    if (color_scale):
+        fig = px.treemap(df, path=[px.Constant("all"), 'category', 'title'], values=sort_by, hover_name='desc',
+                        color=sort_by
+                     )
+    elif color_scale is False: fig = px.treemap(df, path=[px.Constant("all"), 'category', 'title'], values=sort_by, hover_name='desc',
+                        
                      )
     
     fig.update_traces(root_color="lightgrey")
     #fig.update_traces(hovertemplate='num%{desc}<br>total number of repos=%{value}<extra></extra>')
-    fig.update_traces(hovertemplate='<b>%{label}</b><br><br><b>%{hovertext}</b><br><br><br>Total number of repos : %{value}<extra></extra>')
+    fig.update_traces(hovertemplate='<b>%{label}</b><br><br><b>%{hovertext}</b><br><br><br>Number : %{value}<extra></extra>')
     fig.update_layout(margin = dict(t=50, l=25, r=25, b=25))
     
     #x axis
