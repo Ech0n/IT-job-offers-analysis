@@ -4,7 +4,7 @@ import plotly.graph_objects as go
 import plotly.express as px
 import plotly.io as pio
 
-file_columns = open("kolumny_pracuj.txt", "r", encoding="cp1252")
+file_columns = open("kolumny_pracuj.txt", "r", encoding="utf-8")
 columns_list = []
 for line in file_columns:
   columns_list = line.split()
@@ -37,7 +37,7 @@ def number_of_offers():
   fig.show()
 
 def types_of_contract():
-  types = ["umowa-o-prace", "b2b", "umowa-zlecenie", "umowa-o-dzielo", "umowa-o-staz", "umowa-agencyjna", "umowa-na-zastepstwo"]
+  types = ["umowa-o-prace", "b2b", "umowa-zlecenie", "umowa-o-dzieło", "umowa-o-staż", "umowa-agencyjna", "umowa-na-zastępstwo"]
   names = ["Umowa o pracę", "B2B", "Umowa zlecenie", "Umowa o dzieło", "Umowa o staż", "Umowa agencyjna", "Umowa na zastępstwo"]
   number_of_offers = []
   for t in types:
@@ -58,8 +58,7 @@ def types_of_contract():
   pio.show(fig)
 
 def location():
-  locations = ["mazowieckie", "dolnoslaskie", "malopolskie", "slaskie", "lodzkie", "wielkopolskie", "opolskie", "podlaskie", "zachodnio-pomorskie", "podkarpackie", "lubelskie", "lubuskie", "swietokrzyskie", "warminsko-mazurskie", "kujawsko-pomorskie", "pomorskie"]
-  names = ["mazowieckie", "dolnośląskie", "małopolskie", "śląskie", "łódzkie", "wielkopolskie", "opolskie", "podlaskie", "zachodnio-pomorskie", "podkarpackie", "lubelskie", "lubuskie", "świętokrzyskie", "warmińsko-mazurskie", "kujawsko-pomorskie", "pomorskie"]
+  locations = ["mazowieckie", "dolnośląskie", "małopolskie", "śląskie", "łódzkie", "wielkopolskie", "opolskie", "podlaskie", "zachodnio-pomorskie", "podkarpackie", "lubelskie", "lubuskie", "świętokrzyskie", "warmińsko-mazurskie", "kujawsko-pomorskie", "pomorskie"]
   number_of_offers = []
   for l in locations:
     pracuj[l] = pd.to_numeric(pracuj[l])
@@ -71,7 +70,7 @@ def location():
   
   fig = dict({
     "data": [{"type": "bar",
-              "x": names,
+              "x": locations,
               "y": number_of_offers}],
     "layout": {"title": {"text": "Liczba ofert pracy w województwach"}}
   })
