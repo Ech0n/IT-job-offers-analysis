@@ -157,8 +157,32 @@ def different_benefits():
   fig.update_layout(margin=dict(l=20, r=20, t=60, b=20), height=700)
   fig.show()
 
+def requirements():
+  requirements = {}
+  for c in pracuj.columns:
+    if c.startswith("wymagane-"):
+      row = {}
+      groupped = pracuj.groupby([c, "rok"])
+      values = groupped["company"].count()
+      if "1" not in values.index:
+        continue
+      for y in values["1"].index:
+        row[y] = values["1"][y]
+      for y in values.index.get_level_values("rok").unique():
+        if y not in row:
+          row[y] = 0
+      requirements[c[9:]] = row
+
+  df = pd.DataFrame(requirements)
+  df = df.sort_index()
+
+  fig = px.line(df, title="Liczba ofert z określonymi wymaganiami", markers=True)
+  fig.update_layout(xaxis_title="Rok", yaxis_title="Liczba", legend_title="Wymaganie")
+  fig.show()
+
 number_of_offers()
 types_of_contract()
 location()
 experience_level()
 different_benefits()
+requirements()
