@@ -91,7 +91,66 @@ def experience_level():
   fig = px.pie(values=v, names=k)
   fig.show()
 
+def benefits(number_of_benefits, is_visible=False):
+  benefits = {}
+
+  for c in pracuj.columns:
+    if c.startswith("benefit-"):
+      groupped = pracuj.groupby(c)
+      values = groupped["company"].count()
+      benefits[c] = [values[2]]
+  
+  df = pd.DataFrame(benefits).T
+  df.columns = ["Oferowany"]
+  df = df.sort_values("Oferowany", ascending=False).head(number_of_benefits)
+
+  fig = go.Bar(y=df.index, x=df["Oferowany"], visible=is_visible, orientation="h")
+  return fig
+
+def different_benefits():
+  fig = go.Figure(benefits(10, True))
+  fig.add_trace(benefits(15))
+  fig.add_trace(benefits(20))
+  fig.add_trace(benefits(25))
+  fig.add_trace(benefits(30))
+  fig.update_layout(title = "10 najczęściej oferowanych benefitów")
+
+  fig.update_layout(
+      updatemenus=[go.layout.Updatemenu(
+          active=0,
+          direction="down",
+          buttons=list(
+              [dict(label = "10",
+                    method ="update",
+                    args = [{"visible" : [True, False, False, False, False]},
+                            {"title" : "10 najczęściej oferowanych benefitów"}]),
+               dict(label = "15",
+                    method ="update",
+                    args = [{"visible" : [False, True, False, False, False]},
+                            {"title" : "15 najczęściej oferowanych benefitów"}]),
+               dict(label = "20",
+                    method ="update",
+                    args = [{"visible" : [False, False, True, False, False]},
+                            {"title" : "20 najczęściej oferowanych benefitów"}]),
+              dict(label = "25",
+                    method ="update",
+                    args = [{"visible" : [False, False, False, True, False]},
+                            {"title" : "25 najczęściej oferowanych benefitów"}]),
+               dict(label = "30",
+                    method ="update",
+                    args = [{"visible" : [False, False, False, False, True]},
+                            {"title" : "30 najczęściej oferowanych benefitów"}])
+               ]
+          ),
+          x=1,
+          y=1
+      )]
+  )
+  fig.update_layout(margin=dict(l=20, r=20, t=60, b=20))
+  fig.show()
+
 number_of_offers()
 types_of_contract()
 location()
 experience_level()
+different_benefits()
