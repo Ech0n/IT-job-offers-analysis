@@ -57,5 +57,27 @@ def types_of_contract():
   
   pio.show(fig)
 
+def location():
+  locations = ["mazowieckie", "dolnoslaskie", "malopolskie", "slaskie", "lodzkie", "wielkopolskie", "opolskie", "podlaskie", "zachodnio-pomorskie", "podkarpackie", "lubelskie", "lubuskie", "swietokrzyskie", "warminsko-mazurskie", "kujawsko-pomorskie", "pomorskie"]
+  names = ["mazowieckie", "dolnośląskie", "małopolskie", "śląskie", "łódzkie", "wielkopolskie", "opolskie", "podlaskie", "zachodnio-pomorskie", "podkarpackie", "lubelskie", "lubuskie", "świętokrzyskie", "warmińsko-mazurskie", "kujawsko-pomorskie", "pomorskie"]
+  number_of_offers = []
+  for l in locations:
+    pracuj[l] = pd.to_numeric(pracuj[l])
+    number = 0
+    for i in range(len(pracuj[l])):
+      if pracuj[l][i] == 1:
+        number += 1
+    number_of_offers.append(number)
+  
+  fig = dict({
+    "data": [{"type": "bar",
+              "x": names,
+              "y": number_of_offers}],
+    "layout": {"title": {"text": "Liczba ofert pracy w województwach"}}
+  })
+  
+  pio.show(fig)
+
 number_of_offers()
 types_of_contract()
+location()
