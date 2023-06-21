@@ -88,7 +88,7 @@ def experience_level():
   k = list(d.keys())
   v = list(d.values())
   
-  fig = px.pie(values=v, names=k)
+  fig = px.pie(values=v, names=k, title="Liczba osób na poszczególnych stanowiskach")
   fig.show()
 
 def benefits(number_of_benefits, is_visible=False):
