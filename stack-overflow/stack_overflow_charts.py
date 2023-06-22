@@ -1,10 +1,10 @@
+import IPython
 import pandas as pd
 import matplotlib.pyplot as plt
 import plotly.graph_objects as go
-#import IPython
-#import ipywidgets as widgets
-#from IPython.display import display, clear_output
-#from ipywidgets import interact
+import ipywidgets as widgets
+from IPython.display import display, clear_output
+from ipywidgets import interact
 
 #data_source = "/content/drive/MyDrive/Wizualizacja danych/stack-overflow/"
 data_source = "../data/stack-overflow/"
@@ -165,17 +165,44 @@ def gender_through_years():
     plt.show()
 
 def remote_work():
+    keys = ["Tylko zdalnie", "Hybrydowo", "Tylko stacjonarnie", "Okazjonalnie zdalnie"]
+
     remote2014 = df2014["Do you work remotely?"].value_counts()
     remote2014 = pd.Series([remote2014["Full-time Remote"], remote2014["Part-time Remote"], remote2014["Never"], remote2014["Occasionally"]], index=["Full-time Remote", "Part-time Remote", "Never", "Occasionally"])
-    keys = ["Tylko zdalnie", "Hybrydowo", "Tylko stacjonarnie", "Okazjonalnie zdalnie"]
-    plt.pie(remote2014.values, labels = keys) #colors=["gray", "#c93636", "#405ebf", "#cba034"]
-    plt.title("Praca zdalna w roku 2014")
-    plt.show()
+
+    remote2015 = df2015["Remote Status"].value_counts()
+    remote2015 = pd.Series([remote2015["Full-time Remote"], remote2015["Part-time Remote"], remote2015["Never"], remote2015["I rarely work remote"]], index=["Full-time Remote", "Part-time Remote", "Never", "Occasionally"])
+
+    remote2016 = df2016["remote"].value_counts()
+    remote2016 = pd.Series([remote2016["Full-time remote"], remote2016["Part-time remote"], remote2016["Never"], remote2016["I rarely work remotely"]], index=["Full-time Remote", "Part-time Remote", "Never", "I rarely work remotely"])
+
+    remote2019 = df2019["WorkRemote"].value_counts()
+    remote2019 = pd.Series([remote2019["All or almost all the time (I'm full-time remote)"], remote2019["Less than half the time, but at least one day each week"] + 
+                            remote2019["It's complicated"] + remote2019["About half the time"] + remote2019["More than half, but not all, the time"], remote2019["Less than once per month / Never"],
+                            remote2019["A few days each month"]], index=["Full-time Remote", "Part-time Remote", "Never", "Occasionally"])
 
     remote2022 = df2022["RemoteWork"].value_counts()
-    keys = ["Tylko zdalnie", "Hybrydowo", "Tylko stacjonarnie"]
-    plt.pie(remote2022.values, labels = keys)
-    plt.title("Praca zdalna w roku 2022")
+    remote2022 = pd.Series([remote2022["Fully remote"], remote2022["Hybrid (some remote, some in-person)"], remote2022["Full in-person"]], index=["Full-time Remote", "Part-time Remote", "Never"])
+    remote2022["Okazjonalnie zdalnie"] = 0
+
+    data = []
+    for i in range(4):
+      data.append([])
+      data[i].append(remote2014.values[i])
+      data[i].append(remote2015.values[i])
+      data[i].append(remote2016.values[i])
+      data[i].append(remote2019.values[i])
+      data[i].append(remote2022.values[i])
+
+    df = pd.DataFrame(data, columns=[["2014", "2015", "2016", "2019", "2022"]])
+    df = df.transpose()
+    df = df.divide(df.sum(axis=1), axis=0)
+    df.plot(kind="bar", stacked=True)
+    
+    plt.xlabel("Rok")
+    plt.ylabel("Odsetek pracowników")
+    plt.title("Praca zdalna w różnych latach")
+    plt.legend(labels=keys, loc = "center left", bbox_to_anchor = (1, 0.5))
     plt.show()
 
 def company_size():
@@ -191,7 +218,7 @@ def company_size():
     plt.title("Wykres przedstawia liczbę pracowników w firmach", fontsize = 10)
     plt.show()
 
-def languages(df, year, field_name, separator = ";", is_visible = False):
+def languages(df, year, field_name, separator = ";"):
     langs = df[field_name].value_counts()
     ps = pd.Series(dtype = float)
     for ans in langs.index:
@@ -202,55 +229,32 @@ def languages(df, year, field_name, separator = ";", is_visible = False):
             else:
               ps[l] = 1
     ps = ps.sort_values(ascending=False)
-    return go.Bar(x=ps.index, y=ps.values, visible=is_visible)
+    fig = go.Figure(data=[go.Bar(x=ps.index, y=ps.values)])
+    fig.update_layout(title = f"Liczba osób, które pracowały w poszczególnych językach w {year}")
+    return fig
+
+def on_year_change(year):
+    print(year)
+    fig = 0
+    if year == "2016":
+        fig = languages(df2016, 2016, "tech_do", separator = "; ")
+    elif year == "2017":
+        fig = languages(df2017, 2017, "HaveWorkedLanguage", separator = "; ")
+    elif year == "2018":
+        fig = languages(df2018, 2018, "LanguageWorkedWith")
+    elif year == "2019":
+        fig = languages(df2019, 2019, "LanguageWorkedWith")
+    elif year == "2020":
+        fig = languages(df2020, 2020, "LanguageWorkedWith")
+    elif year == "2021":
+        fig = languages(df2021, 2021, "LanguageHaveWorkedWith")
+    elif year == "2022":
+        fig = languages(df2022, 2022, "LanguageHaveWorkedWith")
+    fig.show()
 
 def languages_through_years():
-    fig = go.Figure(languages(df2016, 2016, "tech_do", separator = "; ", is_visible = True))
-    fig.add_trace(languages(df2017, 2017, "HaveWorkedLanguage", separator = "; "))
-    fig.add_trace(languages(df2018, 2018, "LanguageWorkedWith"))
-    fig.add_trace(languages(df2019, 2019, "LanguageWorkedWith"))
-    fig.add_trace(languages(df2020, 2020, "LanguageWorkedWith"))
-    fig.add_trace(languages(df2021, 2021, "LanguageHaveWorkedWith"))
-    fig.add_trace(languages(df2022, 2022, "LanguageHaveWorkedWith"))
-    fig.update_layout(title = "Liczba osób, które pracowały w poszczególnych językach w 2016")
-    
-    fig.update_layout(
-        updatemenus=[go.layout.Updatemenu(
-            active=0,
-            buttons=list(
-                [dict(label = '2016',
-                  method = 'update',
-                  args = [{'visible': [True, False, False, False, False, False, False]},
-                  {'title': "Liczba osób, które pracowały w poszczególnych językach w 2016"}]),
-                 dict(label = '2017',
-                  method = 'update',
-                  args = [{'visible': [False, True, False, False, False, False, False]},
-                  {'title': "Liczba osób, które pracowały w poszczególnych językach w 2017"}]),
-                 dict(label = '2018',
-                  method = 'update',
-                  args = [{'visible': [False, False, True, False, False, False, False]},
-                  {'title': "Liczba osób, które pracowały w poszczególnych językach w 2018"}]),
-                 dict(label = '2019',
-                  method = 'update',
-                  args = [{'visible': [False, False, False, True, False, False, False]},
-                  {'title': "Liczba osób, które pracowały w poszczególnych językach w 2019"}]),
-                 dict(label = '2020',
-                  method = 'update',
-                  args = [{'visible': [False, False, False, False, True, False, False]},
-                  {'title': "Liczba osób, które pracowały w poszczególnych językach w 2020"}]),
-                 dict(label = '2021',
-                  method = 'update',
-                  args = [{'visible': [False, False, False, False, False, True, False]},
-                  {'title': "Liczba osób, które pracowały w poszczególnych językach w 2021"}]),
-                 dict(label = '2022',
-                  method = 'update',
-                  args = [{'visible': [False, False, False, False, False, False, True]},
-                  {'title': "Liczba osób, które pracowały w poszczególnych językach w 2022"}]),
-                ])
-            )
-        ])
-    
-    fig.show()
+    selected_year = widgets.Dropdown(options=["2016", "2017", "2018", "2019", "2020", "2021", "2022"], description="Wybierz rok")
+    widgets.interact(on_year_change, year=selected_year)
 
 degrees_through_years()
 gender_through_years()
