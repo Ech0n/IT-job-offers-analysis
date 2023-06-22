@@ -1,10 +1,6 @@
-import IPython
 import pandas as pd
 import matplotlib.pyplot as plt
 import plotly.graph_objects as go
-import ipywidgets as widgets
-from IPython.display import display, clear_output
-from ipywidgets import interact
 
 #data_source = "/content/drive/MyDrive/Wizualizacja danych/stack-overflow/"
 data_source = "../data/stack-overflow/"
@@ -218,7 +214,7 @@ def company_size():
     plt.title("Wykres przedstawia liczbę pracowników w firmach", fontsize = 10)
     plt.show()
 
-def languages(df, year, field_name, separator = ";"):
+def languages(df, year, field_name, separator = ";", is_visible = False):
     langs = df[field_name].value_counts()
     ps = pd.Series(dtype = float)
     for ans in langs.index:
@@ -229,32 +225,55 @@ def languages(df, year, field_name, separator = ";"):
             else:
               ps[l] = 1
     ps = ps.sort_values(ascending=False)
-    fig = go.Figure(data=[go.Bar(x=ps.index, y=ps.values)])
-    fig.update_layout(title = f"Liczba osób, które pracowały w poszczególnych językach w {year}")
-    return fig
-
-def on_year_change(year):
-    print(year)
-    fig = 0
-    if year == "2016":
-        fig = languages(df2016, 2016, "tech_do", separator = "; ")
-    elif year == "2017":
-        fig = languages(df2017, 2017, "HaveWorkedLanguage", separator = "; ")
-    elif year == "2018":
-        fig = languages(df2018, 2018, "LanguageWorkedWith")
-    elif year == "2019":
-        fig = languages(df2019, 2019, "LanguageWorkedWith")
-    elif year == "2020":
-        fig = languages(df2020, 2020, "LanguageWorkedWith")
-    elif year == "2021":
-        fig = languages(df2021, 2021, "LanguageHaveWorkedWith")
-    elif year == "2022":
-        fig = languages(df2022, 2022, "LanguageHaveWorkedWith")
-    fig.show()
+    return go.Bar(x=ps.index, y=ps.values, visible=is_visible)
 
 def languages_through_years():
-    selected_year = widgets.Dropdown(options=["2016", "2017", "2018", "2019", "2020", "2021", "2022"], description="Wybierz rok")
-    widgets.interact(on_year_change, year=selected_year)
+    fig = go.Figure(languages(df2016, 2016, "tech_do", separator = "; ", is_visible = True))
+    fig.add_trace(languages(df2017, 2017, "HaveWorkedLanguage", separator = "; "))
+    fig.add_trace(languages(df2018, 2018, "LanguageWorkedWith"))
+    fig.add_trace(languages(df2019, 2019, "LanguageWorkedWith"))
+    fig.add_trace(languages(df2020, 2020, "LanguageWorkedWith"))
+    fig.add_trace(languages(df2021, 2021, "LanguageHaveWorkedWith"))
+    fig.add_trace(languages(df2022, 2022, "LanguageHaveWorkedWith"))
+    fig.update_layout(title = "Liczba osób, które pracowały w poszczególnych językach w 2016")
+    
+    fig.update_layout(
+        updatemenus=[go.layout.Updatemenu(
+            active=0,
+            buttons=list(
+                [dict(label = '2016',
+                  method = 'update',
+                  args = [{'visible': [True, False, False, False, False, False, False]},
+                  {'title': "Liczba osób, które pracowały w poszczególnych językach w 2016"}]),
+                 dict(label = '2017',
+                  method = 'update',
+                  args = [{'visible': [False, True, False, False, False, False, False]},
+                  {'title': "Liczba osób, które pracowały w poszczególnych językach w 2017"}]),
+                 dict(label = '2018',
+                  method = 'update',
+                  args = [{'visible': [False, False, True, False, False, False, False]},
+                  {'title': "Liczba osób, które pracowały w poszczególnych językach w 2018"}]),
+                 dict(label = '2019',
+                  method = 'update',
+                  args = [{'visible': [False, False, False, True, False, False, False]},
+                  {'title': "Liczba osób, które pracowały w poszczególnych językach w 2019"}]),
+                 dict(label = '2020',
+                  method = 'update',
+                  args = [{'visible': [False, False, False, False, True, False, False]},
+                  {'title': "Liczba osób, które pracowały w poszczególnych językach w 2020"}]),
+                 dict(label = '2021',
+                  method = 'update',
+                  args = [{'visible': [False, False, False, False, False, True, False]},
+                  {'title': "Liczba osób, które pracowały w poszczególnych językach w 2021"}]),
+                 dict(label = '2022',
+                  method = 'update',
+                  args = [{'visible': [False, False, False, False, False, False, True]},
+                  {'title': "Liczba osób, które pracowały w poszczególnych językach w 2022"}]),
+                ])
+            )
+        ])
+    
+    fig.show()
 
 degrees_through_years()
 gender_through_years()
