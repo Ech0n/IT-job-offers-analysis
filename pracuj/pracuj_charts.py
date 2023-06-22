@@ -201,12 +201,14 @@ def requirements():
           row[y] = 0
       requirements[c[9:]] = row
 
-  df = pd.DataFrame(requirements)
-  df = df.sort_index()
+  with warnings.catch_warnings():
+    warnings.filterwarnings("ignore")
+    df = pd.DataFrame(requirements)
+    df = df.sort_index()
 
-  fig = px.line(df, title="Liczba ofert z określonymi wymaganiami", markers=True)
-  fig.update_layout(xaxis_title="Rok", yaxis_title="Liczba", legend_title="Wymaganie")
-  fig.show()
+    fig = px.line(df, title="Liczba ofert z określonymi wymaganiami", markers=True)
+    fig.update_layout(xaxis_title="Rok", yaxis_title="Liczba", legend_title="Wymaganie")
+    fig.show()
 
 def salaries():
   locations = ["mazowieckie", "dolnośląskie", "małopolskie", "śląskie", "łódzkie", "wielkopolskie", "opolskie", "podlaskie", "zachodnio-pomorskie", "podkarpackie", "lubelskie", "lubuskie", "świętokrzyskie", "warmińsko-mazurskie", "kujawsko-pomorskie", "pomorskie"]
