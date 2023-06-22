@@ -39,7 +39,7 @@ navbar = dbc.Navbar(
             dbc.Row( children = [
             dbc.Col(dbc.NavItem(dbc.NavLink("Home", href="/"))),
             dbc.Col(dbc.NavItem(dbc.NavLink("Github Charts", href="github"))),
-            dbc.Col(dbc.NavItem(dbc.NavLink("Page 1", href="#"))),
+            dbc.Col(dbc.NavItem(dbc.NavLink("Pracuj", href="pracuj"))),
             
             ],
             className="ml-5"),
