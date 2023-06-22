@@ -188,9 +188,11 @@ def different_benefits():
 def requirements():
   with warnings.catch_warnings():
     requirements = {}
+    chosen = ("wymagane-c", "wymagane+-c++", "wymagane-c#", "wymagane-html", "wymagane-css", "wymagane-javascript", "wymagane-java", "wymagane-python", "wymagane-git", "wymagane-android",
+              "wymagane-sql")
     pracuj2 = pracuj[pracuj["rok"] > "2020"]
     for c in pracuj2.columns:
-      if c.startswith("wymagane-"):
+      if c in chosen:
         requirements[c] = []
         pracuj3 = pracuj2[pracuj2["rok"] == "2021"]
         for m in range(1, 13):
@@ -233,7 +235,8 @@ def requirements():
     fig = px.line(df, title="Liczba ofert z określonymi wymaganiami", markers=True)
     fig.update_layout(xaxis_title="Czas", yaxis_title="Liczba", legend_title="Wymaganie")
     fig.show()
-
+  print(df)
+  
 def salaries():
   locations = ["mazowieckie", "dolnośląskie", "małopolskie", "śląskie", "łódzkie", "wielkopolskie", "opolskie", "podlaskie", "zachodnio-pomorskie", "podkarpackie", "lubelskie", "lubuskie", "świętokrzyskie", "warmińsko-mazurskie", "kujawsko-pomorskie", "pomorskie"]
   salaries = []
