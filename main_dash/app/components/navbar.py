@@ -23,22 +23,10 @@ search_bar = dbc.Row(
 navbar = dbc.Navbar(
     dbc.Container(
         [
-            html.A(
-                # Use row and col to control vertical alignment of logo / brand
-                dbc.Row(
-                    [
-                        dbc.Col(html.Img(src=PLOTLY_LOGO, height="30px")),
-                        dbc.Col(dbc.NavbarBrand("Navbar", className="ms-2")),
-                    ],
-                    align="center",
-                    className="g-0",
-                ),
-                href="https://plotly.com",
-                style={"textDecoration": "none"},
-            ),
             dbc.Row( children = [
             dbc.Col(dbc.NavItem(dbc.NavLink("Home", href="/"))),
             dbc.Col(dbc.NavItem(dbc.NavLink("Github Charts", href="github"))),
+            dbc.Col(dbc.NavItem(dbc.NavLink("Stack Overflow", href="stack-overflow"))),
             dbc.Col(dbc.NavItem(dbc.NavLink("Pracuj", href="pracuj"))),
             
             ],
