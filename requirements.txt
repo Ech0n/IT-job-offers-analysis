@@ -7,3 +7,5 @@ IPython
 flask
 plotly
 matplotlib
+dash
+geopandas
