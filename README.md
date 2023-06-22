@@ -8,6 +8,10 @@
 ## Zrobione wykresy:
 - trend średnich zarobków
 - średnia ilość ofert w poszczególnych miesiącach
+- rozmiar firmy
+- poziom stanowiska (intern/junior/mid/senior)
+- średnie zarobki w województwach
+- liczba ogłoszeń w województwach
 
 ## TODO:
 Wykresy z Pracuj:
