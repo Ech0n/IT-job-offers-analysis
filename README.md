@@ -12,6 +12,7 @@
 - poziom stanowiska (intern/junior/mid/senior)
 - średnie zarobki w województwach
 - liczba ogłoszeń w województwach
+- procent ofert wymagających wyksztalcenia wyższego
 
 ## TODO:
 Wykresy z Pracuj:
