@@ -16,8 +16,9 @@
 
 ## TODO:
 Wykresy z Pracuj:
+- [ ] naprawić wczytywanie danych na przykładzie z C i R
 - [ ] sprawdzić, czy dla ostatecznych danych nie wyjdą jakieś nieprzewidziane luki
-- [ ] dokończyć wykres "requirements" - usunąć ostrzeżenia i spróbować, zrobić tak, żeby domyślnie wyświetlały się tylko te najpopularniejsze (typu C, C++, Python, SQL...)
+- [ ] dokończyć wykres "requirements" - spróbować, zrobić tak, żeby domyślnie wyświetlały się tylko te najpopularniejsze (typu C, C++, Python, SQL...)
 - [x] zmienić typ wykresów słupkowych z lokalizacją na mapy
 - [ ] naprawić mapę
       
