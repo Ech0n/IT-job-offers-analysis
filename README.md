@@ -14,6 +14,7 @@
 - liczba ogłoszeń w województwach
 - procent ofert wymagających wyksztalcenia wyższego
 - W TRAKCIE ROBIENIA : inne wymagania - prawo jazdy i angielski
+- W TRAKCIE ROBIENIA : minimalne lata doświadczenia
 
 ## TODO:
 Wykresy z Pracuj:
