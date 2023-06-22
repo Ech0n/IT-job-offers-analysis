@@ -186,28 +186,52 @@ def different_benefits():
   fig.show()
 
 def requirements():
-  requirements = {}
-  for c in pracuj.columns:
-    if c.startswith("wymagane-"):
-      row = {}
-      groupped = pracuj.groupby([c, "rok"])
-      values = groupped["company"].count()
-      if "1" not in values.index:
-        continue
-      for y in values["1"].index:
-        row[y] = values["1"][y]
-      for y in values.index.get_level_values("rok").unique():
-        if y not in row:
-          row[y] = 0
-      requirements[c[9:]] = row
-
   with warnings.catch_warnings():
-    warnings.filterwarnings("ignore")
-    df = pd.DataFrame(requirements)
-    df = df.sort_index()
+    requirements = {}
+    pracuj2 = pracuj[pracuj["rok"] > "2020"]
+    for c in pracuj2.columns:
+      if c.startswith("wymagane-"):
+        requirements[c] = []
+        pracuj3 = pracuj2[pracuj2["rok"] == "2021"]
+        for m in range(1, 13):
+          pracuj4 = pracuj3[pracuj3["month"] == m]
+          number_of_requirements = 0
+          for _, p in pracuj4.iterrows():
+            if p[c] == "1":
+              number_of_requirements += 1
+          '''pracuj5 = pracuj4[pracuj4[c == "1"]]
+          number_of_requirements = len(pracuj5)'''
+          requirements[c].append(number_of_requirements)
 
+        pracuj3 = pracuj2[pracuj2["rok"] == "2022"]
+        for m in range(1, 13):
+          pracuj4 = pracuj3[pracuj3["month"] == m]
+          number_of_requirements = 0
+          for _, p in pracuj4.iterrows():
+            if p[c] == "1":
+              number_of_requirements += 1
+          '''pracuj5 = pracuj4[pracuj4[c == "1"]]
+          number_of_requirements = len(pracuj5)'''
+          requirements[c].append(number_of_requirements)
+
+        pracuj3 = pracuj2[pracuj2["rok"] == "2023"]
+        for m in range(1, 6):
+          pracuj4 = pracuj3[pracuj3["month"] == m]
+          number_of_requirements = 0
+          for _, p in pracuj4.iterrows():
+            if p[c] == "1":
+              number_of_requirements += 1
+          '''pracuj5 = pracuj4[pracuj4[c == "1"]]
+          number_of_requirements = len(pracuj5)'''
+          requirements[c].append(number_of_requirements)
+
+    months = ["2021-01", "2021-02", "2021-03", "2021-04", "2021-05", "2021-06", "2021-07", "2021-08", "2021-09", "2021-10", "2021-11", "2021-12",
+              "2022-01", "2022-02", "2022-03", "2022-04", "2022-05", "2022-06", "2022-07", "2022-08", "2022-09", "2022-10", "2022-11", "2022-12",
+              "2023-01", "2023-02", "2023-03", "2023-04", "2023-05"
+              ]
+    df = pd.DataFrame(requirements, index=months)
     fig = px.line(df, title="Liczba ofert z określonymi wymaganiami", markers=True)
-    fig.update_layout(xaxis_title="Rok", yaxis_title="Liczba", legend_title="Wymaganie")
+    fig.update_layout(xaxis_title="Czas", yaxis_title="Liczba", legend_title="Wymaganie")
     fig.show()
 
 def salaries():
