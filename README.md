@@ -18,6 +18,7 @@
 
 ## TODO:
 - [ ] Przenieść wykresy z pracuj/pracuj_charts.py do DASH-a
+      
 Wykresy z Pracuj:
 - [ ] naprawić wczytywanie danych na przykładzie z C i R
 - [ ] sprawdzić, czy dla ostatecznych danych nie wyjdą jakieś nieprzewidziane luki
