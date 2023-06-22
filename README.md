@@ -17,7 +17,7 @@
 - W TRAKCIE ROBIENIA : minimalne lata doświadczenia
 
 ## TODO:
-- [ ] Przenieść wykresy z pracuj/pracuj_charts.py do DASH-a
+- [ ] Przenieść wykresy z pracuj/pracuj_charts.py i stack-overflow/... do DASH-a
       
 Wykresy z Pracuj:
 - [ ] naprawić wczytywanie danych na przykładzie z C i R
