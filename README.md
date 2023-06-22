@@ -5,6 +5,10 @@
 1. `pip install -r requirements.txt`
 2. `python pracuj/detailed.py`
 
+## Zrobione wykresy:
+- trend średnich zarobków
+- średnia ilość ofert w poszczególnych miesiącach
+
 ## TODO:
 Wykresy z Pracuj:
 - [ ] sprawdzić, czy dla ostatecznych danych nie wyjdą jakieś nieprzewidziane luki
@@ -24,3 +28,5 @@ Scraper:
 Wykresy ze Stack-Overflow:
 - [x] Uogólnić import danych z CSV, aby nie znajdował się w funkcji realizującej konkretny wykres
 - [x] Zaimportować pliki z lat 2011-2016 => zaimportowano od 2014, bo wcześniej nie ma żadnych rekordów o Polakach
+
+
