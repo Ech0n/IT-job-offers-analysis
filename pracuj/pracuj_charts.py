@@ -232,6 +232,25 @@ def salaries():
   })
   pio.show(fig)
 
+def other_requirements():
+  others = {}
+
+  groupped = pracuj.groupby("prawo-jazdy")
+  values = groupped["company"].count()
+  others["Prawo jazdy"] = [values["-1"], values["0"], values["1"]]
+
+  groupped = pracuj.groupby("znajomość-angielskiego")
+  values = groupped["company"].count()
+  others["Znajomość języka angielskiego"] = [values["-1"], values["0"], values["1"]]
+  
+  df = pd.DataFrame(others)
+  df = df.transpose()
+  df.columns = ["Brak informacji", "Nie", "Tak"]
+  fig = px.bar(df)
+  fig.update_layout(legend_title="Czy wymagane?")
+  fig.show()
+other_requirements()
+
 number_of_offers()
 types_of_contract()
 location()
@@ -239,3 +258,4 @@ experience_level()
 different_benefits()
 requirements()
 salaries()
+other_requirements()
