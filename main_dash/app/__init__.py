@@ -10,7 +10,7 @@ app = Dash(__name__, use_pages=True, external_stylesheets=[dbc.themes.QUARTZ])
 app.layout = html.Div([
 
     html.Div([nv.navbar]),
-    html.H1('Multi-page app with Dash Pages'),
+    html.Hr(),
 
 	dash.page_container
 ])
