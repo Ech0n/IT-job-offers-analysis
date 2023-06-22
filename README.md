@@ -13,6 +13,7 @@
 - średnie zarobki w województwach
 - liczba ogłoszeń w województwach
 - procent ofert wymagających wyksztalcenia wyższego
+- W TRAKCIE ROBIENIA : inne wymagania - prawo jazdy i angielski
 
 ## TODO:
 Wykresy z Pracuj:
