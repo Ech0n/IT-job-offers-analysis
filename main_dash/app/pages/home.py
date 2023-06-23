@@ -10,10 +10,14 @@ layout = html.Div(children=[
         W ramach projektu z zajęć z wizualizacji danych przygotowaliśmy graficzną analizę danych dotyczącą branży informatycznej oraz informatyków w Polsce.
         Jest ona podzielona na trzy części:
     '''),
+    
+    html.Br(),
 
     html.H3(children='1. Analiza ofert pracy dla informatyków'),
 
     html.Div(children='Tutaj wykorzystano dane z portalu PRACUJ.PL z lat 2018-2023'),
+    
+    html.Br(),
 
     html.H3(children='2. Analiza działalności zawodowej informatyków'),
 
