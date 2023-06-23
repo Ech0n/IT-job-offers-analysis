@@ -20,3 +20,4 @@ layout = html.Div(children=[
     html.Div(children='''Wykorzystano tutaj dane z dwóch źródeł: STACK OVERFLOW, gdzie od 2011 r. programiści wypełniają ankiety dotyczące ich działalności, zatrudnienia i 
              umiejętności. Polacy uczestniczą w tych ankietach od 2014 r., jednak co roku rubryki w ankietach zmieniają się. Drugim źródłem danych jest GITHUB,
              gdzie znajdziemy statystyki na temat repozytoriów.'''),
+])
