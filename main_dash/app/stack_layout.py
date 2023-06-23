@@ -8,7 +8,6 @@ import dash_daq as daq
 from app import stack_charts
 
 
-# languages_through_years = [
-#         html.H1(children='Zarobki programistów:', style={'textAlign':'center'}),
-#         dcc.Graph(id='graph-content-pracuj-5',figure=stack_charts.languages_through_years()),
-#     ]
+languages_through_years = [
+        dcc.Graph(id='graph-content-pracuj-5',figure=stack_charts.languages_through_years()),
+    ]
