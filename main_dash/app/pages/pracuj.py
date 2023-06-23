@@ -10,6 +10,14 @@ layout = html.Div(children=[
     html.H1(children=''),
     
     
+        html.Div(children=pracuj_layouts.liczba_ofert, style={"min-height" : "550px"}),
+        html.Hr(),
+        html.Div(children=pracuj_layouts.offers_by_region, style={"min-height" : "650px","width":"100%",
+        'display':'flex',
+        'flex-direction':'column',
+        'justify-content':'center',
+        'align-items' : 'center'}),
+        html.Hr(),
        html.Div(children=pracuj_layouts.create_chart(), style={"min-height" : "450px"}),
         #html.H1(children='', style={"height": "450px"}),
         #html.Div(children=tree_chart_github.create_chart2())
@@ -18,14 +26,6 @@ layout = html.Div(children=[
         # dbc.Row([
         #     html.Div(children=pracuj_layouts.create_chart_driving_license, style={"min-height" : "450px",'width':"50%"}),
         # ]),
-        html.Hr(),
-        html.Div(children=pracuj_layouts.liczba_ofert, style={"min-height" : "550px"}),
-        html.Hr(),
-        html.Div(children=pracuj_layouts.offers_by_region, style={"min-height" : "650px","width":"100%",
-        'display':'flex',
-        'flex-direction':'column',
-        'justify-content':'center',
-        'align-items' : 'center'}),
         html.Hr(),
         html.Div(children=pracuj_layouts.types_of_contract, style={"min-height" : "450px"}),
         html.Hr(),
@@ -47,5 +47,4 @@ layout = html.Div(children=[
         html.Hr(),
         html.Div(children=pracuj_layouts.requirements, style={"min-height" : "800px"}),
 ])
-
 
