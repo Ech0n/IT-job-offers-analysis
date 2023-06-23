@@ -12,9 +12,8 @@ def create_chart():
     layout = [
         
         html.H1(children='Liczba wymaganych technologii w  ofertach pracy na pracuj.pl', style={'textAlign':'center'}),
-        
+        html.Div(children=dcc.Dropdown([str(i) for i in range(2023, 2020, -1)], '2023', id='dropdown-selection-pracuj-1', style={"color" : 'black','width':"50vw"}),style={"display":"flex","justify-content": "center"}),
         dcc.Graph(id='graph-content-pracuj-1'),
-        dcc.Dropdown([str(i) for i in range(2023, 2020, -1)], '2023', id='dropdown-selection-pracuj-1', style={"color" : 'black'}),
         daq.ToggleSwitch(
             id='my-toggle-switch-pracuj-1',
             value=False,
@@ -22,9 +21,7 @@ def create_chart():
             label='Pokaz wiecej',
             style={"color" : 'black', 'font-size' : '50%'},
             labelPosition='bottom',
-            
         ),
-        daq.BooleanSwitch(id='my-boolean-switch-pracuj1', on=False),
         
     ]
     @callback(
@@ -49,9 +46,10 @@ def create_chart2():
     layout = [
         
         html.H1(children='Liczba opcjonalnych (nice to have) technologii w  ofertach pracy na pracuj.pl', style={'textAlign':'center'}),
+        html.Div(children=dcc.Dropdown([str(i) for i in range(2023, 2020, -1)], '2023', id='dropdown-selection-pracuj-2', style={"color" : 'black','width':"50vw"}),style={"display":"flex","justify-content": "center"}),
         
+        # dcc.Dropdown([str(i) for i in range(2023, 2020, -1)], '2023', id='dropdown-selection-pracuj-2', style={"color" : 'black','width':"50vw"}),
         dcc.Graph(id='graph-content-pracuj-2'),
-        dcc.Dropdown([str(i) for i in range(2023, 2020, -1)], '2023', id='dropdown-selection-pracuj-2', style={"color" : 'black'}),
         daq.ToggleSwitch(
             id='my-toggle-switch-pracuj-2',
             value=False,
@@ -61,7 +59,6 @@ def create_chart2():
             labelPosition='bottom',
             
         ),
-        daq.BooleanSwitch(id='my-boolean-switch-pracuj-2', on=False),   
     ]
 
     @callback(
@@ -117,8 +114,8 @@ types_of_contract = [
     ]
 
 experience_level = [
-        html.H1(children='Czy pracodawcy wymagają wykształcenia wyższego?', style={'textAlign':'center'}),
-        dcc.Graph(id='graph-content-pracuj-5',figure=pracuj_charts.chart_types_of_contract()),
+        # html.H1(children='Stanowisko', style={'textAlign':'center'}),
+        dcc.Graph(id='graph-content-pracuj-5',figure=pracuj_charts.chart_experience_level()),
     ]
 
 # benefits = [
@@ -127,7 +124,7 @@ experience_level = [
 #     ]
 
 diffrent_benefits = [
-        html.H1(children='Czy pracodawcy wymagają wykształcenia wyższego?', style={'textAlign':'center'}),
+        html.H1(children='Jakie benefity oferują pracodawcy', style={'textAlign':'center'}),
         dcc.Graph(id='graph-content-pracuj-5',figure=pracuj_charts.different_benefits()),
     ]
 
@@ -137,18 +134,30 @@ salaries = [
     ]
 
 other_requirements = [
-        html.H1(children='Zarobki programistów:', style={'textAlign':'center'}),
+        html.H1(children='Wymagania pracodawców:', style={'textAlign':'center'}),
         dcc.Graph(id='graph-content-pracuj-5',figure=pracuj_charts.other_requirements()),
     ]
 
 salary_by_region = [
-        html.H1(children='Zarobki programistów:', style={'textAlign':'center'}),
+        html.H1(children='Zarobki programistów według województwa:', style={'textAlign':'center'}),
         dcc.Graph(id='graph-content-pracuj-5',figure=pracuj_charts.salary_by_region()),
     ]
-# requirements = [
-#         html.H1(children='Zarobki programistów:', style={'textAlign':'center'}),
-#         dcc.Graph(id='graph-content-pracuj-5',figure=pracuj_charts.requirements()),
-#     ]
+
+salary_trend = [
+        html.H1(children='Zarobki programistów:', style={'textAlign':'center'}),
+        dcc.Graph(id='graph-content-pracuj-5',figure=pracuj_charts.salaries_trend()),
+    ]
+
+requirements = [
+        html.H1(children='Trend technologi deklarowanych jako wymagane przez pracodawców:', style={'textAlign':'center'}),
+        dcc.Graph(id='graph-content-pracuj-5',figure=pracuj_charts.requirements()),
+    ]
+
+offers_by_region = [
+        html.H1(children='Liczba ofert pracy w poszczególnych województwach:', style={'textAlign':'center'}),
+        dcc.Graph(id='graph-content-pracuj-5',figure=pracuj_charts.offers_by_region(),style={'width': '90vh', 'height': '90vh'}),
+    ]
+
 
 # offers_by_region = [
 #     html.H1(children='Zarobki programistów:', style={'textAlign':'center'}),

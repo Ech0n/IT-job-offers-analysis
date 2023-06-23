@@ -2,6 +2,7 @@ import plotly.graph_objects as go
 import pandas as pd
 from dash import html, dcc, callback, Output, Input
 import plotly.express as px
+import dash_bootstrap_components as dbc
 
 import os
 import dash_daq as daq
@@ -31,14 +32,21 @@ def create_chart():
     df = pd.read_csv(os.path.join('app', 'assets','github_data29_05_2023_with_category.csv')
 )
     layout = [
-        daq.ToggleSwitch(
-            id='my-toggle-switch',
-            value=False,
-            color='black',
-        ),
         html.H1(children='Popularnosc technologii wedlug liczby repozytoriow na githubie:', style={'textAlign':'center'}),
-        dcc.Dropdown(list(df.category.unique()) + ['all'], 'all', id='dropdown-selection2', style={"color" : 'black'}),
         
+        # dcc.Dropdown(list(df.category.unique()) + ['all'], 'all', id='dropdown-selection2', style={"display":"flex","color" : 'black','width':"50vw","justify-content":"center"}),
+
+        dbc.Row([
+            
+            html.Div(children=dcc.Dropdown(list(df.category.unique()) + ['all'], 'all', id='dropdown-selection2',style={"display":"block","width":"200px"}), style={"display":"flex","color" : 'black','width':"200px","justify-content":"center"}),
+            html.Div(children="Koloruj po absolutniej populatności: ",style={"margin-left":"50px","width":"300px"}),
+            daq.ToggleSwitch(
+                id='my-toggle-switch',
+                value=False,
+                color='black',
+                style={"width":"10%"}
+            ),
+        ],justify="center"),
         
         dcc.Graph(id='graph-content2', responsive=True)
     ]
@@ -67,13 +75,19 @@ def create_chart2():
     df = pd.read_csv(os.path.join('app', 'assets','github_data29_05_2023_with_category.csv')
     )
     layout = [
-        daq.ToggleSwitch(
-            id='my-toggle-switch2',
-            value=False,
-            color='black',
-        ),
         html.H1(children='Popularnosc technologii wedlug TOP 1 repozytorium(liczby gwiazdek) na githubie:', style={'textAlign':'center'}),
-        dcc.Dropdown(list(df.category.unique()) + ['all'], 'all', id='dropdown-selection3', style={"color" : 'black'}),
+
+        dbc.Row([
+            
+            html.Div(children=dcc.Dropdown(list(df.category.unique()) + ['all'], 'all', id='dropdown-selection3',style={"display":"block","width":"200px"}), style={"display":"flex","color" : 'black','width':"200px","justify-content":"center"}),
+            html.Div(children="Koloruj po absolutniej populatności: ",style={"margin-left":"50px","width":"300px"}),
+            daq.ToggleSwitch(
+                id='my-toggle-switch2',
+                value=False,
+                color='black',
+                style={"width":"10%"}
+            ),
+        ],justify="center"),
         
         dcc.Graph(id='graph-content3', responsive=True)
     ]
@@ -173,7 +187,13 @@ def github_tree_chart(df, sort_by, color_scale):
         size=18,  # Set the font size here
         color="black",
     )
-        )
+    )
+    fig.update_layout( # make transparent background
+        paper_bgcolor='rgba(0,0,0,0)',
+        plot_bgcolor='rgba(0,0,0,0)',
+        font_family="Courier New",
+        font_color="white",
+    ) 
     
     
     #graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)

@@ -5,12 +5,12 @@ import dash_bootstrap_components as dbc
 
 
 
-app = Dash(__name__, use_pages=True, external_stylesheets=[dbc.themes.QUARTZ])
+app = Dash(__name__, use_pages=True, external_stylesheets=[dbc.themes.SLATE])
 
 app.layout = html.Div([
 
     html.Div([nv.navbar]),
-    html.Hr(),
+    html.Hr(style={"color":"white"}),
 
 	dash.page_container
 ])

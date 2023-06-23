@@ -9,6 +9,13 @@ import os
 import geojson
 import dash_daq as daq
 
+# stajl = {        
+#         paper_bgcolor='rgba(0,0,0,0)',
+#         plot_bgcolor='rgba(0,0,0,0)',
+#         geo_bgcolor='rgba(0,0,0,0)',
+#         font_family="Courier New",
+#         font_color="blue",}
+
 #### ŁADUJEMY DANE
 with open("./app/assets/poland.geojson","r",encoding="utf-8") as f:
     polmap = geojson.load(f)
@@ -60,42 +67,27 @@ def load_data(filename_columns, filename_main, column_prefix):
 
 
 ### PRZETWARZANIE DANYCH
-with warnings.catch_warnings():
-  requirements = {}
-  pracuj2 = pracuj[pracuj["rok"] > "2020"]
-  for c in pracuj2.columns:
-    if c.startswith("wymagane-"):
-      requirements[c] = []
-      pracuj3 = pracuj2[pracuj2["rok"] == "2021"]
-      for m in range(1, 13):
-        pracuj4 = pracuj3[pracuj3["month"] == m]
-        number_of_requirements = 0
-        for _, p in pracuj4.iterrows():
-          if p[c] == "1":
-            number_of_requirements += 1
-        '''pracuj5 = pracuj4[pracuj4[c == "1"]]
-        number_of_requirements = len(pracuj5)'''
-        requirements[c].append(number_of_requirements)
-      pracuj3 = pracuj2[pracuj2["rok"] == "2022"]
-      for m in range(1, 13):
-        pracuj4 = pracuj3[pracuj3["month"] == m]
-        number_of_requirements = 0
-        for _, p in pracuj4.iterrows():
-          if p[c] == "1":
-            number_of_requirements += 1
-        '''pracuj5 = pracuj4[pracuj4[c == "1"]]
-        number_of_requirements = len(pracuj5)'''
-        requirements[c].append(number_of_requirements)
-      pracuj3 = pracuj2[pracuj2["rok"] == "2023"]
-      for m in range(1, 6):
-        pracuj4 = pracuj3[pracuj3["month"] == m]
-        number_of_requirements = 0
-        for _, p in pracuj4.iterrows():
-          if p[c] == "1":
-            number_of_requirements += 1
-        '''pracuj5 = pracuj4[pracuj4[c == "1"]]
-        number_of_requirements = len(pracuj5)'''
-        requirements[c].append(number_of_requirements)
+
+# Assuming your dataframe is named 'pracuj'
+pracuj2 = pracuj[pracuj["rok"] > "2020"]
+
+# Convert "rok" and "month" to datetime format, creating a new column "date"
+pracuj2["date"] = pd.to_datetime(pracuj2["rok"].astype(str) + pracuj2["month"].astype(str), format='%Y%m')
+
+requirements_values = {}
+
+# Select columns that start with 'wymagane-'
+wymagane_cols = [c for c in pracuj2.columns if c.startswith("wymagane-")]
+
+for col in wymagane_cols:
+    # Filter dataframe to only include rows where 'col' is equal to "1"
+    pracuj_filtered = pracuj2[pracuj2[col] == "1"]
+
+    # Count occurrences for each year-month combination
+    counts = pracuj_filtered.groupby(pracuj_filtered["date"].dt.to_period("M")).size()
+    
+    # Save counts to the dictionary
+    requirements_values[col] = counts 
 
 all_df_exptected = load_data("kolumny_pracuj(3).txt","pracuj(5).csv", 'wymagane-')
 all_df_optional = load_data("kolumny_pracuj(3).txt","pracuj(5).csv", 'opcjonalne-')
@@ -124,6 +116,51 @@ for i , r in pracuj.iterrows():
     team_size = r["rozmiar-zespolu"]
     team_sizes.add(team_size)
 
+lata = pracuj.loc[:,"rok"]
+zarobki = {}
+for r in lata:
+    zarobki[r] = {}
+    for i in range(12):
+        zarobki[r][str(i+1)] = {"ile":0,"suma":0,"sen":0,"suma_sen":0,"mid":0,"suma_mid":0,"jun":0,"suma_jun":0}
+for i ,r in pracuj.iterrows():
+    if float(r["salary"]) > 500 and r["fulltime"] == "1":
+        zarobki[r["rok"]][r["month"]]["ile"] +=1
+        zarobki[r["rok"]][r["month"]]["suma"] += float(r["salary"])
+        if r["experience-level"]=="senior":
+            zarobki[r["rok"]][r["month"]]["sen"] += 1
+            zarobki[r["rok"]][r["month"]]["suma_sen"] +=float( r["salary"])
+        if r["experience-level"]=="junior":
+            zarobki[r["rok"]][r["month"]]["jun"] += 1
+            zarobki[r["rok"]][r["month"]]["suma_jun"] += float(r["salary"])
+        if r["experience-level"]=="mid":
+            zarobki[r["rok"]][r["month"]]["mid"] += 1
+            zarobki[r["rok"]][r["month"]]["suma_mid"] +=float( r["salary"])
+        
+daty = []
+avg = []
+avg_sen = []
+avg_jun = []
+avg_mid = []
+for r in zarobki:
+    if(int(r)>2019):
+        for m in zarobki[r]:
+            if(int(r)==2020 and int(m)<4):
+               continue
+            if zarobki[r][m]["ile"]!= 0:
+                daty.append(str(r)+"-"+str(m))
+                avg.append( zarobki[r][m]["suma"]/zarobki[r][m]["ile"])
+                if zarobki[r][m]["sen"] != 0:
+                    avg_sen.append( zarobki[r][m]["suma_sen"]/zarobki[r][m]["sen"])
+                else:
+                    avg_sen.append(1)
+                if zarobki[r][m]["mid"] != 0:
+                    avg_mid.append( zarobki[r][m]["suma_mid"]/zarobki[r][m]["mid"])
+                else:
+                    avg_mid.append(1)
+                if zarobki[r][m]["jun"] != 0:
+                    avg_jun.append( zarobki[r][m]["suma_jun"]/zarobki[r][m]["jun"])
+                else:
+                    avg_jun.append(1)
 
 
 #### TWORZENIE WYKRESOW
@@ -131,6 +168,18 @@ def chart_is_degree_required():
     values = [wykształcenie_count,required_count-wykształcenie_count]
     labels = ["Oferty wymagające wykształcenia wyższego","Oferty nie wymagające wykształcenia wyższego"]
     fig = go.Figure(data=[go.Pie(labels=labels, values=values)])
+    fig.update_layout(legend=dict(
+        yanchor="bottom",
+        y=0.99,
+        xanchor="center",
+        x=0.01
+    ))
+    fig.update_layout( # make transparent background
+        paper_bgcolor='rgba(0,0,0,0)',
+        plot_bgcolor='rgba(0,0,0,0)',
+        font_family="Courier New",
+        font_color="white",
+    ) 
     return fig
 
 
@@ -138,6 +187,12 @@ def chart_is_driving_license_required():
     values = [prawko_count,required_count-prawko_count]
     labels = ["Oferty wymagające prawa jazdy","Oferty nie wymagające prawa jazdy"]
     fig = go.Figure(data=[go.Pie(labels=labels, values=values)])
+    fig.update_layout( # make transparent background
+        paper_bgcolor='rgba(0,0,0,0)',
+        plot_bgcolor='rgba(0,0,0,0)',
+        font_family="Courier New",
+        font_color="white",
+    ) 
     return fig
 
 
@@ -145,7 +200,7 @@ def pracuj_exptected_chart(how_many_listed, full, year):
     
     fig = None
     if full:
-           fig = px.bar(all_df_exptected[year].iloc[:how_many_listed], x='Number', y='Name', orientation='h', height=4000, color='Name')
+        fig = px.bar(all_df_exptected[year].iloc[:how_many_listed], x='Number', y='Name', orientation='h', height=4000, color='Name')
     else:
         fig = px.bar(all_df_exptected[year].iloc[:how_many_listed], x='Number', y='Name', orientation='h',height=450,  color='Name')
 
@@ -167,14 +222,16 @@ def pracuj_optional_chart(how_many_listed, full, year):
     
     fig = None
     if full:
-           fig = px.bar(all_df_optional[year].iloc[:how_many_listed], x='Number', y='Name', orientation='h', height=4000, color='Name')
+        fig = px.bar(all_df_optional[year].iloc[:how_many_listed], x='Number', y='Name', orientation='h', height=4000, color='Name')
     else:
         fig = px.bar(all_df_optional[year].iloc[:how_many_listed], x='Number', y='Name', orientation='h',height=450,  color='Name')
 
 
     fig.update_layout( # make transparent background
         paper_bgcolor='rgba(0,0,0,0)',
-        plot_bgcolor='rgba(0,0,0,0)'
+        plot_bgcolor='rgba(0,0,0,0)',
+        font_family="Courier New",
+        font_color="white",
     ) 
     fig.update_layout(
     font=dict(
@@ -208,6 +265,12 @@ def chart_number_of_offers():
                   y=counts.index.get_level_values("rok").unique(),
                   color_continuous_scale="Blues"
                   )
+  fig.update_layout( # make transparent background
+        paper_bgcolor='rgba(0,0,0,0)',
+        plot_bgcolor='rgba(0,0,0,0)',
+        font_family="Courier New",
+        font_color="white",
+    ) 
   return fig
 
 
@@ -227,9 +290,12 @@ def chart_types_of_contract():
     "data": [{"type": "bar",
               "x": names,
               "y": number_of_offers}],
-    "layout": {"title": {"text": "Liczba ofert pracy z określonymi formami umów"}}
+    "layout": {"title": {"text": "Liczba ofert pracy z określonymi formami umów","paper_bgcolor":'rgba(0,0,0,0)',  "plot_bgcolor":'rgba(0,0,0,0)'}}
   })
-  
+#   fig.update_layout( # make transparent background
+#         paper_bgcolor='rgba(0,0,0,0)',
+#         plot_bgcolor='rgba(0,0,0,0)'
+#     ) 
 #   pio.show(fig)
   return fig
 
@@ -245,6 +311,12 @@ def chart_experience_level():
   v = list(d.values())
   
   fig = px.pie(values=v, names=k, title="Liczba osób na poszczególnych stanowiskach")
+  fig.update_layout( # make transparent background
+        paper_bgcolor='rgba(0,0,0,0)',
+        plot_bgcolor='rgba(0,0,0,0)',
+        font_family="Courier New",
+        font_color="white",
+    ) 
   return fig
 
 
@@ -265,6 +337,7 @@ def benefits(number_of_benefits, is_visible=False, show_all = False):
     df = df.sort_values("Oferowany")
     #   fig = go.Bar(y=df.index, x=df["Oferowany"])
     fig = go.Bar(y=df.index, x=df["Oferowany"], visible=is_visible, orientation="h")
+
     return fig
 
 
@@ -312,8 +385,10 @@ def different_benefits():
           y=1.1
       )]
   )
-  
-  fig.update_layout(margin=dict(l=20, r=20, t=60, b=20), height=700)
+  fig.update_layout(margin=dict(l=20, r=20, t=60, b=20), height=700,paper_bgcolor='rgba(0,0,0,0)',
+        plot_bgcolor='rgba(0,0,0,0)',
+        font_family="Courier New",
+        font_color="white",)
   return fig
 
 
@@ -335,8 +410,14 @@ def salaries():
     "data": [{"type": "bar",
               "x": locations,
               "y": salaries}],
-    "layout": {"title": {"text": "Średnie wynagrodzenie w województwach (w zł)"}}
-  })
+    "layout": {"title": {"text": "Średnie wynagrodzenie w województwach (w zł)","paper_bgcolor":'rgba(0,0,0,0)', "plot_bgcolor":'rgba(0,0,0,0)',
+        "font_family":"Courier New",
+        "font_color":"white"}}
+    })
+#   fig.update_layout( # make transparent background
+#         paper_bgcolor='rgba(0,0,0,0)',
+#         plot_bgcolor='rgba(0,0,0,0)'
+#     ) 
   return fig
 
 
@@ -356,54 +437,14 @@ def other_requirements():
   df.columns = ["Brak informacji", "Nie", "Tak"]
   fig = px.bar(df)
   fig.update_layout(legend_title="Czy wymagane?")
+  fig.update_layout( # make transparent background
+        paper_bgcolor='rgba(0,0,0,0)',
+        plot_bgcolor='rgba(0,0,0,0)',
+        font_family="Courier New",
+        font_color="white",
+    ) 
   return fig
 
-import requests
-import geopandas
-import matplotlib.pyplot as plt
-import zipfile
-
-def location():
-  locations = ["mazowieckie", "dolnośląskie", "małopolskie", "śląskie", "łódzkie", "wielkopolskie", "opolskie", "podlaskie", "zachodnio-pomorskie", "podkarpackie", "lubelskie", "lubuskie", "świętokrzyskie", "warmińsko-mazurskie", "kujawsko-pomorskie", "pomorskie"]
-  number_of_offers = []
-  for l in locations:
-    pracuj[l] = pd.to_numeric(pracuj[l])
-    number = 0
-    for i in range(len(pracuj[l])):
-      if pracuj[l][i] == 1:
-        number += 1
-    number_of_offers.append(number)
-
-  url = "https://www.gis-support.pl/downloads/2022/wojewodztwa.zip"
-  r = requests.get(url, allow_redirects=True)
-  open('wojewodztwa.zip', 'wb').write(r.content)
-
-  voivodeships = read_shape_from_zip("wojewodztwa.zip", "wojewodztwa")
-  voivodeships = geopandas.read_file("wojewodztwa.zip")
-  data = pd.DataFrame({'JPT_NAZWA_': locations, 'number_of_offers': number_of_offers})
-  voivodeships = pd.merge(data, voivodeships, on='JPT_NAZWA_', how='left')
-  print(voivodeships)
-    
-  fig, ax = plt.subplots(figsize=(10, 10))
-  voivodeships.plot(column="number_of_offers", ax=ax)
-  vmin, vmax = voivodeships["number_of_offers"].min(), voivodeships["number_of_offers"].max()
-  sm = plt.cm.ScalarMappable(norm=plt.Normalize(vmin=vmin, vmax=vmax))
-  sm.set_array([])
-  fig.colorbar(sm, shrink=0.5, ax=ax)
-  ax.grid(True)
-  ax.set_axis_off()
-  ax.set_title("Liczba ofert pracy w województwach")
-  plt.tight_layout()
-  plt.show()
-
-  fig = dict({
-    "data": [{"type": "bar",
-              "x": locations,
-              "y": number_of_offers}],
-    "layout": {"title": {"text": "Liczba ofert pracy w województwach"}}
-  })
-
-  return fig
 
 def salary_by_region():
     locations = ["mazowieckie", "dolnośląskie", "małopolskie", "śląskie", "łódzkie", "wielkopolskie", "opolskie", "podlaskie", "zachodnio-pomorskie", "podkarpackie", "lubelskie", "lubuskie", "świętokrzyskie", "warmińsko-mazurskie", "kujawsko-pomorskie", "pomorskie"]
@@ -428,6 +469,13 @@ def salary_by_region():
         projection="mercator", range_color=[min(salaries), max(salaries)])
     fig.update_geos(fitbounds="locations", visible=False)
     fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
+    fig.update_layout( # make transparent background
+        paper_bgcolor='rgba(0,0,0,0)',
+        plot_bgcolor='rgba(0,0,0,0)',
+        geo_bgcolor="rgba(0,0,0,0)",
+        font_family="Courier New",
+        font_color="white",
+    ) 
     return fig
 
 def requirements():
@@ -436,7 +484,54 @@ def requirements():
               "2022-01", "2022-02", "2022-03", "2022-04", "2022-05", "2022-06", "2022-07", "2022-08", "2022-09", "2022-10", "2022-11", "2022-12",
               "2023-01", "2023-02", "2023-03", "2023-04", "2023-05"
               ]
-    df = pd.DataFrame(requirements, index=months)
+    df = pd.DataFrame(requirements_values, index=months)
     fig = px.line(df, title="Liczba ofert z określonymi wymaganiami", markers=True)
     fig.update_layout(xaxis_title="Czas", yaxis_title="Liczba", legend_title="Wymaganie")
-    fig.show()
+    fig.update_layout( # make transparent background
+        paper_bgcolor='rgba(0,0,0,0)',
+        plot_bgcolor='rgba(0,0,0,0)',
+        font_family="Courier New",
+        font_color="white",
+    ) 
+    return fig
+
+def salaries_trend():
+
+    avg_df = pd.DataFrame(data={"date":daty,"avg":avg,"avg_senior":avg_sen,"avg_junior":avg_jun,"avg_mid":avg_mid})
+    fig = px.line(avg_df,x="date",y=["avg","avg_senior","avg_mid","avg_junior"])
+    fig.update_layout( # make transparent background
+        paper_bgcolor='rgba(0,0,0,0)',
+        plot_bgcolor='rgba(0,0,0,0)',
+        font_family="Courier New",
+        font_color="white",
+    ) 
+    return fig
+
+def offers_by_region():
+    locations = ["mazowieckie", "dolnośląskie", "małopolskie", "śląskie", "łódzkie", "wielkopolskie", "opolskie", "podlaskie", "zachodnio-pomorskie", "podkarpackie", "lubelskie", "lubuskie", "świętokrzyskie", "warmińsko-mazurskie", "kujawsko-pomorskie", "pomorskie"]
+    number_of_offers = []
+    for l in locations:
+        pracuj[l] = pd.to_numeric(pracuj[l])
+        number = 0
+        for i in range(len(pracuj[l])):
+            if pracuj[l][i] == 1:
+                number += 1
+        number_of_offers.append(number)
+
+    df = pd.DataFrame(data={"województwo":locations,"Liczba ofert":number_of_offers})
+    geojson = polmap
+    fig = px.choropleth(
+        df, geojson=geojson, color="Liczba ofert",
+        locations="województwo", featureidkey="properties.name",
+        projection="mercator", range_color=[min(number_of_offers), max(number_of_offers)])
+    fig.update_geos(fitbounds="locations", visible=False)
+    fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
+    fig.update_layout( # make transparent background
+        paper_bgcolor='rgba(0,0,0,0)',
+        plot_bgcolor='rgba(0,0,0,0)',
+        geo_bgcolor='rgba(0,0,0,0)',
+        font_family="Courier New",
+        font_color="white",
+    ) 
+    return fig
+
