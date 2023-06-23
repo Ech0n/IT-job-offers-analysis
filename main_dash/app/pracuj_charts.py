@@ -68,6 +68,7 @@ def load_data(filename_columns, filename_main, column_prefix):
 
 ### PRZETWARZANIE DANYCH
 
+
 # Assuming your dataframe is named 'pracuj'
 pracuj2 = pracuj[pracuj["rok"] > "2020"]
 
@@ -295,13 +296,9 @@ def chart_types_of_contract():
     "data": [{"type": "bar",
               "x": names,
               "y": number_of_offers}],
-    "layout": {"title": {"text": "Liczba ofert pracy z określonymi formami umów","paper_bgcolor":'rgba(0,0,0,0)',  "plot_bgcolor":'rgba(0,0,0,0)'}}
+    "layout": {"title": {"text": "Liczba ofert pracy z określonymi formami umów"},"paper_bgcolor":'rgba(0,0,0,0)',  "plot_bgcolor":'rgba(0,0,0,0)',"font_family":"Courier New","font_color":"white",}
   })
-#   fig.update_layout( # make transparent background
-#         paper_bgcolor='rgba(0,0,0,0)',
-#         plot_bgcolor='rgba(0,0,0,0)'
-#     ) 
-#   pio.show(fig)
+
   return fig
 
 def chart_experience_level():
@@ -320,8 +317,7 @@ def chart_experience_level():
         paper_bgcolor='rgba(0,0,0,0)',
         plot_bgcolor='rgba(0,0,0,0)',
         font_family="Courier New",
-        font_color="white",
-    ) 
+        font_color="white") 
   return fig
 
 
@@ -502,8 +498,8 @@ def requirements():
 
 def salaries_trend():
 
-    avg_df = pd.DataFrame(data={"date":daty,"avg":avg,"avg_senior":avg_sen,"avg_junior":avg_jun,"avg_mid":avg_mid})
-    fig = px.line(avg_df,x="date",y=["avg","avg_senior","avg_mid","avg_junior"])
+    avg_df = pd.DataFrame(data={"date":daty,"średnie zarobki":avg,"średnie zarobki seniorów":avg_sen,"średnie zarobki juniorów":avg_jun,"średnie zarobki mid'ów":avg_mid})
+    fig = px.line(avg_df,x="date",y=["średnie zarobki","średnie zarobki seniorów","średnie zarobki mid'ów","średnie zarobki juniorów"],labels={"date":"","value":"[PLN]" })
     fig.update_layout( # make transparent background
         paper_bgcolor='rgba(0,0,0,0)',
         plot_bgcolor='rgba(0,0,0,0)',
@@ -539,4 +535,3 @@ def offers_by_region():
         font_color="white",
     ) 
     return fig
-

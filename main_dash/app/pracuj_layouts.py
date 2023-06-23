@@ -144,7 +144,7 @@ salary_by_region = [
     ]
 
 salary_trend = [
-        html.H1(children='Zarobki programistów:', style={'textAlign':'center'}),
+        html.H1(children='Zarobki programistów na przestrzeni czasu:', style={'textAlign':'center'}),
         dcc.Graph(id='graph-content-pracuj-5',figure=pracuj_charts.salaries_trend()),
     ]
 
