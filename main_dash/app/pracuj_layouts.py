@@ -18,8 +18,8 @@ def create_chart():
             id='my-toggle-switch-pracuj-1',
             value=False,
             color='black',
-            label='Pokaz wiecej',
-            style={"color" : 'black', 'font-size' : '50%'},
+            label='Pokaż więcej',
+            style={"color" : 'white', 'font-size' : '50%'},
             labelPosition='bottom',
         ),
         
@@ -54,8 +54,8 @@ def create_chart2():
             id='my-toggle-switch-pracuj-2',
             value=False,
             color='black',
-            label='Pokaz wiecej',
-            style={"color" : 'black', 'font-size' : '50%'},
+            label='Pokaż więcej',
+            style={"color" : 'white', 'font-size' : '50%'},
             labelPosition='bottom',
             
         ),
@@ -155,7 +155,11 @@ requirements = [
 
 offers_by_region = [
         html.H1(children='Liczba ofert pracy w poszczególnych województwach:', style={'textAlign':'center'}),
-        dcc.Graph(id='graph-content-pracuj-5',figure=pracuj_charts.offers_by_region(),style={'width': '90vh', 'height': '90vh'}),
+        dcc.Graph(id='graph-content-pracuj-5',figure=pracuj_charts.offers_by_region(),style={'width': '80vh', 'height': '80vh', 
+        'display':'flex',
+        'flex-direction':'column',
+        'justify-content':'center',
+        'align-items' : 'center'}),
     ]
 
 

@@ -56,7 +56,7 @@ def load_data(filename_columns, filename_main, column_prefix):
 
             if ('1' not in number):
                 number['1'] = 0
-            df.loc[i] = [column.removeprefix(column_prefix),number['1']]
+            df.loc[i] = [column[len(column_prefix):],number['1']]
 
         df = df.sort_values('Number', ascending=False)
         all_df[year] = df
@@ -213,9 +213,11 @@ def pracuj_exptected_chart(how_many_listed, full, year):
     font=dict(
         family="Courier New, monospace",
         size=18,  # Set the font size here
-        color="black",
+        color="white",
     )
         )
+    fig.update_layout(xaxis_title="Liczba", yaxis_title="Nazwa technologii", legend_title="Nazwa technologii")
+
     return fig
 
 def pracuj_optional_chart(how_many_listed, full, year):
@@ -237,9 +239,12 @@ def pracuj_optional_chart(how_many_listed, full, year):
     font=dict(
         family="Courier New, monospace",
         size=18,  # Set the font size here
-        color="black",
+        color="white",
     )
         )
+    
+    fig.update_layout(xaxis_title="Liczba", yaxis_title="Nazwa technologii", legend_title="Nazwa technologii")
+
     return fig
 
 

@@ -32,7 +32,7 @@ def create_chart():
     df = pd.read_csv(os.path.join('app', 'assets','github_data29_05_2023_with_category.csv')
 )
     layout = [
-        html.H1(children='Popularnosc technologii wedlug liczby repozytoriow na githubie:', style={'textAlign':'center'}),
+        html.H1(children='Popularność technologii według liczby publicznych repozytoriów na githubie:', style={'textAlign':'center'}),
         
         # dcc.Dropdown(list(df.category.unique()) + ['all'], 'all', id='dropdown-selection2', style={"display":"flex","color" : 'black','width':"50vw","justify-content":"center"}),
 
@@ -75,7 +75,7 @@ def create_chart2():
     df = pd.read_csv(os.path.join('app', 'assets','github_data29_05_2023_with_category.csv')
     )
     layout = [
-        html.H1(children='Popularnosc technologii wedlug TOP 1 repozytorium(liczby gwiazdek) na githubie:', style={'textAlign':'center'}),
+        html.H1(children='Popularność technologii według TOP 1 repozytorium (liczby gwiazdek) na githubie:', style={'textAlign':'center'}),
 
         dbc.Row([
             
