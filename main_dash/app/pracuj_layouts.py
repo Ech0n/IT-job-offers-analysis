@@ -156,10 +156,7 @@ requirements = [
 offers_by_region = [
         html.H1(children='Liczba ofert pracy w poszczególnych województwach:', style={'textAlign':'center'}),
         dcc.Graph(id='graph-content-pracuj-5',figure=pracuj_charts.offers_by_region(),style={'width': '80vh', 'height': '80vh', 
-        'display':'flex',
-        'flex-direction':'column',
-        'justify-content':'center',
-        'align-items' : 'center'}),
+       }),
     ]
 
 
