@@ -32,13 +32,13 @@ navbar = dbc.Navbar(
             ],
             className="ml-5"),
             
-            dbc.NavbarToggler(id="navbar-toggler", n_clicks=0),
-            dbc.Collapse(
-                search_bar,
-                id="navbar-collapse",
-                is_open=False,
-                navbar=True,
-            ),
+            # dbc.NavbarToggler(id="navbar-toggler", n_clicks=0),
+            # dbc.Collapse(
+            #     search_bar,
+            #     id="navbar-collapse",
+            #     is_open=False,
+            #     navbar=True,
+            # ),
         ]
     ),
     color="dark",
@@ -46,13 +46,13 @@ navbar = dbc.Navbar(
 )
 
 
-# add callback for toggling the collapse on small screens
-@callback(
-    Output("navbar-collapse", "is_open"),
-    [Input("navbar-toggler", "n_clicks")],
-    [State("navbar-collapse", "is_open")],
-)
-def toggle_navbar_collapse(n, is_open):
-    if n:
-        return not is_open
-    return is_open
+# # add callback for toggling the collapse on small screens
+# @callback(
+#     Output("navbar-collapse", "is_open"),
+#     [Input("navbar-toggler", "n_clicks")],
+#     [State("navbar-collapse", "is_open")],
+# )
+# def toggle_navbar_collapse(n, is_open):
+#     if n:
+#         return not is_open
+#     return is_open
