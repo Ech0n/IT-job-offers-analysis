@@ -64,7 +64,8 @@ layout = html.Div(children=[
             imag4
         ], style=style_div),
         html.Br(),
-#         # html.Div(children=stack_layout.languages_through_years, style={"min-height" : "450px"}),
+        html.Hr(),
+        html.Div(children=stack_layout.languages_through_years, style={"min-height" : "450px"}),
 
 ]
 )
