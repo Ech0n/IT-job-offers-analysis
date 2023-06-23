@@ -104,12 +104,12 @@ create_chart_degree  = [
     ]
 
 liczba_ofert = [
-        html.H1(children='Czy pracodawcy wymagają wykształcenia wyższego?', style={'textAlign':'center'}),
+#        html.H1(children='Czy pracodawcy wymagają wykształcenia wyższego?', style={'textAlign':'center'}),
         dcc.Graph(id='graph-content-pracuj-5',figure=pracuj_charts.chart_number_of_offers()),
     ]
 
 types_of_contract = [
-        html.H1(children='Czy pracodawcy wymagają wykształcenia wyższego?', style={'textAlign':'center'}),
+#        html.H1(children='Czy pracodawcy wymagają wykształcenia wyższego?', style={'textAlign':'center'}),
         dcc.Graph(id='graph-content-pracuj-5',figure=pracuj_charts.chart_types_of_contract()),
     ]
 
